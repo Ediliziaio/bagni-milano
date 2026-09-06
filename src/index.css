@@ -73,7 +73,7 @@
 
   /* ── Etichette in maiuscoletto spaziato, come nel prototipo ── */
   .eyebrow {
-    @apply font-sans text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-gold-deep;
+    @apply font-sans text-[0.75rem] sm:text-[0.7rem] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.24em] text-gold-deep;
   }
   .on-dark .eyebrow { @apply text-gold; }
 
@@ -84,7 +84,7 @@
   .btn {
     @apply inline-flex items-center justify-center gap-2.5 rounded-[2px]
            px-7 py-4 min-h-[52px]
-           text-[0.72rem] font-semibold uppercase tracking-[0.18em]
+           text-[0.75rem] sm:text-[0.72rem] font-semibold uppercase tracking-[0.16em] sm:tracking-[0.18em]
            transition-colors duration-200;
   }
   .btn-gold   { @apply btn bg-gold text-ink hover:bg-gold-soft; }
@@ -94,6 +94,11 @@
 
   /* ── Superfici: filo di bordo, nessun raggio morbido, nessuna ombra ── */
   .card { @apply rounded-[2px] border border-line bg-cream-hi p-6 sm:p-7; }
+
+  /* Consenso privacy: la casella resta 16px per convenzione, ma l'etichetta
+     accanto e' cliccabile e porta l'area utile oltre i 44px. */
+  .consent { @apply flex items-start gap-3 py-2; }
+  .consent input { @apply mt-2 h-5 w-5; }
   .on-dark .card,
   .card-dark { @apply rounded-[2px] border border-line-dark bg-ink-3 p-6 sm:p-7 text-cream/80; }
   .on-dark .card h3, .card-dark h3 { @apply text-cream; }
@@ -114,13 +119,16 @@
   /* Titolo di articolo: piu' contenuto dell'hero, che deve restare l'elemento piu' grande della pagina */
   .h1-article { @apply text-[clamp(1.6rem,4.4vw,2.9rem)] leading-[1.12]; }
 
-  .prose-bm { @apply max-w-prose text-ink-soft leading-relaxed; }
+  .prose-bm { @apply min-w-0 max-w-prose text-ink-soft leading-relaxed; }
   .prose-bm h2 { @apply mt-14 mb-4 text-ink; }
   .prose-bm h3 { @apply mt-9 mb-3 text-ink; }
   .prose-bm p { @apply mb-4; }
   .prose-bm ul { @apply mb-5 space-y-2 pl-5 list-disc marker:text-gold-deep; }
   .prose-bm ol { @apply mb-5 space-y-2 pl-5 list-decimal marker:text-gold-deep; }
   .prose-bm a { @apply text-gold-deep underline underline-offset-4 hover:text-ink; }
+  /* Contenitore delle tabelle: scorre da solo, il body resta fermo. */
+  .table-scroll { @apply my-7 w-full max-w-full overflow-x-auto; }
+  .table-scroll table { @apply my-0 w-auto min-w-[520px]; }
   .prose-bm table { @apply w-full my-7 text-sm border-collapse; }
   .prose-bm th { @apply bg-sand text-ink text-left font-semibold p-3 border border-line; }
   .prose-bm td { @apply p-3 border border-line align-top; }
@@ -138,6 +146,29 @@
 }
 
 @layer utilities {
+  /* I link inline che fungono da CTA sono alti ~20px: sotto i 640px ricevono
+     spazio verticale sufficiente a essere colpiti col pollice. */
+  /* Su mobile un link deve essere colpibile col pollice: 44px è la soglia
+     raccomandata. I link inline dentro un paragrafo non possono essere alzati
+     senza rompere il flusso del testo, quindi ricevono solo spazio verticale;
+     quelli autonomi diventano inline-flex con altezza minima. */
+  @media (max-width: 640px) {
+    .prose-bm p > a,
+    .prose-bm li > a {
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+    }
+    li > a.underline,
+    p > a.underline,
+    a.text-sm.underline,
+    a.inline-block,
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+  }
+
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
 }

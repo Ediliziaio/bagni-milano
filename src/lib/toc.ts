@@ -14,6 +14,15 @@ const slugify = (s: string) =>
     .replace(/^-|-$/g, "")
     .slice(0, 60);
 
+/**
+ * Le tabelle nel corpo degli articoli sforano il viewport su mobile e generano
+ * scorrimento orizzontale dell'intera pagina. Vanno avvolte in un contenitore che
+ * scorre per conto proprio: il body non deve mai scorrere di lato.
+ */
+function wrapTables(html: string): string {
+  return html.replace(/<table>([\s\S]*?)<\/table>/g, '<div class="table-scroll"><table>$1</table></div>');
+}
+
 export function withToc(html: string): { html: string; headings: Heading[] } {
   const headings: Heading[] = [];
   const seen = new Set<string>();
@@ -28,5 +37,5 @@ export function withToc(html: string): { html: string; headings: Heading[] } {
     return `<h2 id="${id}">${inner}</h2>`;
   });
 
-  return { html: out, headings };
+  return { html: wrapTables(out), headings };
 }

@@ -22,7 +22,7 @@ export const Footer = () => (
           {site.legalName} · P.IVA {site.vatId}
         </p>
         <div className="mt-6 border-t border-line-dark pt-5">
-          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-cream/40">Partner</p>
+          <p className="text-[0.75rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-cream/40">Partner</p>
           <img src="/img/partner-gruppo-bea.png" alt="Gruppo BEA, partner di Bagni Milano" width={600} height={200} loading="lazy" className="mt-3 h-9 w-auto opacity-80" />
         </div>
       </div>

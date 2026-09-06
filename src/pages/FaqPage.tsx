@@ -38,7 +38,7 @@ export default function FaqPage() {
         </figure>
         <nav aria-label="Argomenti" className="mt-8 flex flex-wrap gap-2.5">
           {faqTopics.map((t) => (
-            <a key={t.key} href={`#${t.key}`} className="rounded-full border border-line bg-white px-4 py-2 text-sm text-ink-soft transition-colors hover:border-gold hover:text-gold-deep">
+            <a key={t.key} href={`#${t.key}`} className="rounded-full border border-line bg-white px-4 py-3 text-sm text-ink-soft transition-colors hover:border-gold hover:text-gold-deep">
               {t.label}
             </a>
           ))}

@@ -54,7 +54,7 @@ export default function BlogPage() {
               <p className="eyebrow">In evidenza · {blogCategories.find((c) => c.slug === articles[0].category)?.name}</p>
               <h2 className="mt-3 transition-colors group-hover:text-gold-deep">{articles[0].title}</h2>
               <p className="lede mt-4">{articles[0].excerpt}</p>
-              <span className="mt-6 inline-block text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+              <span className="mt-6 inline-block text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
                 Leggi la guida — {articles[0].readingTime}
               </span>
             </div>
@@ -92,7 +92,7 @@ export default function BlogPage() {
               <Reveal as="li" key={a.slug} delay={(i % 3) * 80}>
                 <Link to={`/blog/${a.slug}`} className="group block">
                   <Img id={imageForArticle(a.slug, a.category)} ratio="16 / 9" />
-                  <p className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
+                  <p className="mt-4 text-[0.75rem] sm:text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
                     {blogCategories.find((c) => c.slug === a.category)?.name} · {a.readingTime}
                   </p>
                   <h3 className="mt-2 text-lg transition-colors group-hover:text-gold-deep">{a.title}</h3>

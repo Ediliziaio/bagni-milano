@@ -52,7 +52,7 @@ export const PhaseOverview = ({ dark = true }: { dark?: boolean }) => (
             </span>
 
             <h3 className="mt-5 text-xl">{m.name}</h3>
-            <p className={`mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] ${dark ? "text-gold" : "text-gold-deep"}`}>
+            <p className={`mt-1 text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] ${dark ? "text-gold" : "text-gold-deep"}`}>
               {m.range} · {m.duration}
             </p>
             <p className={`mt-3 text-sm leading-relaxed ${dark ? "text-cream/65" : "text-ink-soft"}`}>{m.text}</p>

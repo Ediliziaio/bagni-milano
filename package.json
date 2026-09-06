@@ -17,7 +17,8 @@
     "assets": "tsx scripts/generate-assets.ts",
     "check": "tsx scripts/check.ts",
     "images": "tsx scripts/generate-image-brief.ts",
-    "feed": "tsx scripts/generate-feed.ts"
+    "feed": "tsx scripts/generate-feed.ts",
+    "audit:mobile": "tsx scripts/audit-mobile.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.11",

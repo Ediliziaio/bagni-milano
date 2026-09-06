@@ -84,7 +84,7 @@ export default function ProgettiPage() {
                 {projects.map((p, i) => (
                   <li key={p.slug}>
                     <Img id={["ba-porta-nuova-dopo", "ba-brera-dopo", "ba-navigli-dopo", "ba-padronale-dopo"][i % 4]} ratio="4 / 3" />
-                    <p className="mt-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
+                    <p className="mt-3 text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
                     <h3 className="mt-1.5 text-lg">{p.title}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{p.before}</p>
                   </li>
@@ -97,7 +97,7 @@ export default function ProgettiPage() {
                 <li key={p.slug}>
                   <Link to={`/progetti/${p.slug}`} className="group block">
                     <Img id="art-progettazione" ratio="4 / 3" />
-                    <p className="mt-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
+                    <p className="mt-3 text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
                     <h2 className="mt-1.5 text-lg transition-colors group-hover:text-gold-deep">{p.title}</h2>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{p.result}</p>
                   </Link>

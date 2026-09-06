@@ -13,9 +13,7 @@ import { services } from "@/data/services";
 import { cities } from "@/data/cities";
 import { faqs } from "@/data/faqs";
 import { costBySize, costsDisclaimer } from "@/data/costs";
-import { articles } from "@/data/articles";
-import { blogCategories } from "@/data/blog-categories";
-import { imageForArticle } from "@/data/images";
+import { featuredGuides } from "@/data/featured";
 
 const homeFaqs = faqs.filter((f) =>
   ["Quanto costa rifare un bagno a Milano?", "Quanto tempo serve per rifare un bagno?", "Posso vivere in casa durante i lavori?", "In quali zone operate?", "Offrite un servizio chiavi in mano?", "Chi coordina idraulico, elettricista e muratore?"].includes(f.q)
@@ -104,7 +102,7 @@ export default function HomePage() {
       {/* PARTNER */}
       <section className="border-b border-line bg-sand/60">
         <div className="container-x flex flex-col items-center gap-4 py-7 sm:flex-row sm:justify-center sm:gap-8">
-          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-ink-muted">Partner</p>
+          <p className="text-[0.75rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-ink-muted">Partner</p>
           <img src="/img/partner-gruppo-bea.png" alt="Gruppo BEA, partner di Bagni Milano" width={600} height={200} loading="lazy" className="h-10 w-auto" />
         </div>
       </section>
@@ -328,7 +326,7 @@ export default function HomePage() {
 
       {/* FASCIA IMMAGINE */}
       <section aria-hidden className="relative h-[220px] overflow-hidden sm:h-[300px] lg:h-[380px]">
-        <Img id="home-banda" ratio="3 / 1" className="!h-full !border-0 !rounded-none" />
+        <Img id="home-banda" ratio="auto" className="!absolute !inset-0 !h-full !w-full !rounded-none" />
       </section>
 
       {/* IL CANTIERE — le lavorazioni che non si vedono */}
@@ -350,7 +348,7 @@ export default function HomePage() {
               <Reveal as="figure" key={x.id} delay={i * 90}>
                 <Img id={x.id} ratio="3 / 2" />
                 <figcaption className="mt-4">
-                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{x.t}</p>
+                  <p className="text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{x.t}</p>
                   <p className="mt-2 text-sm leading-relaxed text-cream/65">{x.d}</p>
                 </figcaption>
               </Reveal>
@@ -399,21 +397,18 @@ export default function HomePage() {
             />
           </Reveal>
           <ul className="mt-12 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-            {["quanto-costa-rifare-un-bagno", "come-progettare-un-bagno", "muffa-in-bagno-cause-e-soluzioni"]
-              .map((slug) => articles.find((a) => a.slug === slug))
-              .filter(Boolean)
-              .map((a, i) => (
-                <Reveal as="li" key={a!.slug} delay={i * 90}>
-                  <Link to={`/blog/${a!.slug}`} className="group block">
-                    <Img id={imageForArticle(a!.slug, a!.category)} ratio="16 / 9" />
-                    <p className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
-                      {blogCategories.find((c) => c.slug === a!.category)?.name} · {a!.readingTime}
-                    </p>
-                    <h3 className="mt-2 text-lg transition-colors group-hover:text-gold-deep">{a!.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-muted">{a!.excerpt}</p>
-                  </Link>
-                </Reveal>
-              ))}
+            {featuredGuides.map((a, i) => (
+              <Reveal as="li" key={a.slug} delay={i * 90}>
+                <Link to={`/blog/${a.slug}`} className="group block">
+                  <Img id={a.image} ratio="16 / 9" />
+                  <p className="mt-4 text-[0.75rem] sm:text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
+                    {a.categoryName} · {a.readingTime}
+                  </p>
+                  <h3 className="mt-2 text-lg transition-colors group-hover:text-gold-deep">{a.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{a.excerpt}</p>
+                </Link>
+              </Reveal>
+            ))}
           </ul>
           <div className="mt-10">
             <Link to="/blog" className="btn-outline">Tutte le guide <ArrowRight size={16} aria-hidden /></Link>

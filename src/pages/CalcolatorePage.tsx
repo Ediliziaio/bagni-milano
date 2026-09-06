@@ -142,7 +142,7 @@ export default function CalcolatorePage() {
               <p className="mt-2 text-sm text-cream/55">Valore centrale intorno a {eur(mid)} €, IVA esclusa.</p>
 
               <div className="mt-7 border-t border-line-dark pt-6">
-                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-cream/50">Ripartizione del valore centrale</p>
+                <p className="text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-cream/50">Ripartizione del valore centrale</p>
                 <ul className="mt-4 space-y-2.5 text-sm">
                   {breakdown.map((b) => (
                     <li key={b.voice} className="flex items-baseline justify-between gap-4">

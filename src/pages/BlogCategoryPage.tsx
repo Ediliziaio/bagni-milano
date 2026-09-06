@@ -60,7 +60,7 @@ export default function BlogCategoryPage() {
                 <Reveal as="li" key={a.slug} delay={(i % 3) * 80}>
                   <Link to={`/blog/${a.slug}`} className="group block">
                     <Img id={imageForArticle(a.slug, a.category)} ratio="16 / 9" />
-                    <p className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">{a.readingTime}</p>
+                    <p className="mt-4 text-[0.75rem] sm:text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">{a.readingTime}</p>
                     <h2 className="mt-2 text-lg transition-colors group-hover:text-gold-deep">{a.title}</h2>
                     <p className="mt-2 text-sm leading-relaxed text-ink-muted">{a.excerpt}</p>
                   </Link>
@@ -73,7 +73,7 @@ export default function BlogCategoryPage() {
             <p className="eyebrow">Altre categorie</p>
             <div className="mt-4 flex flex-wrap gap-2.5">
               {blogCategories.filter((c) => c.slug !== cat.slug).map((c) => (
-                <Link key={c.slug} to={`/blog/categoria/${c.slug}`} className="rounded-full border border-line bg-white px-4 py-2 text-sm text-ink-soft transition-colors hover:border-gold hover:text-gold-deep">
+                <Link key={c.slug} to={`/blog/categoria/${c.slug}`} className="rounded-full border border-line bg-white px-4 py-3 text-sm text-ink-soft transition-colors hover:border-gold hover:text-gold-deep">
                   {c.name}
                 </Link>
               ))}

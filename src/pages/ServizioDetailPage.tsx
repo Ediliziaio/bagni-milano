@@ -84,7 +84,7 @@ export default function ServizioDetailPage() {
           <SectionHead eyebrow="Dove operiamo" title="Zone servite" />
           <div className="mt-6 flex flex-wrap gap-3">
             {cities.map((c) => (
-              <Link key={c.slug} to={`/ristrutturazione-bagno-${c.slug}`} className="rounded-full border border-line bg-white px-4 py-2 text-sm text-ink-soft transition-colors hover:border-gold hover:text-gold-deep">
+              <Link key={c.slug} to={`/ristrutturazione-bagno-${c.slug}`} className="rounded-full border border-line bg-white px-4 py-3 text-sm text-ink-soft transition-colors hover:border-gold hover:text-gold-deep">
                 {c.name}
               </Link>
             ))}

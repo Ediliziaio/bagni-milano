@@ -94,7 +94,7 @@ export const BeforeAfter = ({
         </div>
 
         {pending && (
-          <p className="pointer-events-none absolute inset-x-0 bottom-6 text-center text-[0.65rem] font-medium uppercase tracking-[0.16em] text-cream/45">
+          <p className="pointer-events-none absolute inset-x-0 bottom-6 text-center text-[0.75rem] sm:text-[0.65rem] font-medium uppercase tracking-[0.16em] text-cream/45">
             Foto da produrre — {prima.width}×{prima.height}
           </p>
         )}
@@ -106,10 +106,10 @@ export const BeforeAfter = ({
           </span>
         </div>
 
-        <span className="pointer-events-none absolute left-3 top-3 bg-ink/85 px-2.5 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-cream" aria-hidden>
+        <span className="pointer-events-none absolute left-3 top-3 bg-ink/85 px-2.5 py-1 text-[0.75rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-cream" aria-hidden>
           Prima
         </span>
-        <span className="pointer-events-none absolute right-3 top-3 bg-gold px-2.5 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-ink" aria-hidden>
+        <span className="pointer-events-none absolute right-3 top-3 bg-gold px-2.5 py-1 text-[0.75rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-ink" aria-hidden>
           Dopo
         </span>
 

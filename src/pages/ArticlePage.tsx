@@ -58,19 +58,21 @@ export default function ArticlePage() {
         ]}
       />
 
-      <div className="container-x grid gap-12 pt-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-16">
-        <article>
+      {/* grid-cols-1 e min-w-0: senza, la larghezza minima delle tabelle
+          risale la griglia e fa scorrere lateralmente tutta la pagina. */}
+      <div className="container-x grid grid-cols-1 gap-12 pt-8 lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-16">
+        <article className="min-w-0">
           <header className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-3">
               {cat && (
                 <Link
                   to={`/blog/categoria/${cat.slug}`}
-                  className="rounded-[2px] border border-gold-deep/40 bg-sand px-3 py-1.5 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep transition-colors hover:bg-gold-deep hover:text-cream"
+                  className="chip rounded-[2px] border border-gold-deep/40 bg-sand px-3.5 py-2.5 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-gold-deep transition-colors hover:bg-gold-deep hover:text-cream"
                 >
                   {cat.name}
                 </Link>
               )}
-              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-ink-muted">
+              <span className="text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-ink-muted">
                 {a.readingTime} di lettura
               </span>
             </div>
@@ -135,7 +137,7 @@ export default function ArticlePage() {
               <p className="mt-3 text-sm leading-relaxed text-cream/70">
                 Mandaci due foto e la metratura: ti diciamo cosa comporta l'intervento.
               </p>
-              <Link to="/preventivo" className="btn-gold mt-5 w-full !px-4 !text-[0.65rem]" data-cta="article-side">
+              <Link to="/preventivo" className="btn-gold mt-5 w-full !px-4 !text-[0.75rem] sm:text-[0.65rem]" data-cta="article-side">
                 Richiedi un sopralluogo
               </Link>
             </div>
@@ -158,12 +160,12 @@ export default function ArticlePage() {
                   <Reveal as="li" key={r!.slug} delay={i * 80}>
                     <Link to={`/blog/${r!.slug}`} className="group block h-full">
                       <Img id={imageForArticle(r!.slug, r!.category)} ratio="16 / 9" />
-                      <p className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
+                      <p className="mt-4 text-[0.75rem] sm:text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
                         {blogCategories.find((c) => c.slug === r!.category)?.name} · {r!.readingTime}
                       </p>
                       <h3 className="mt-2 text-lg transition-colors group-hover:text-gold-deep">{r!.title}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-ink-muted">{r!.excerpt}</p>
-                      <span className="mt-3 inline-flex items-center gap-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
+                      <span className="mt-3 inline-flex items-center gap-1.5 text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
                         Leggi <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" aria-hidden />
                       </span>
                     </Link>

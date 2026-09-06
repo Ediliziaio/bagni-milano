@@ -98,7 +98,7 @@ export default function MetodoPage() {
                   <Img id={["fase-progetto", "fase-materiali", "cantiere-impianti", "fase-consegna"][i]} ratio="3 / 2" />
                   <p className="mt-5 border-t-2 border-gold pt-5 font-display text-4xl text-gold/40">{String(m.n).padStart(2, "0")}</p>
                   <h3 className="mt-3 text-xl">{m.name}</h3>
-                  <p className="mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{m.range} · {m.duration}</p>
+                  <p className="mt-1 text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{m.range} · {m.duration}</p>
                   <p className="mt-4 text-sm leading-relaxed text-cream/65">{m.text}</p>
                 </div>
               </Reveal>
@@ -124,7 +124,7 @@ export default function MetodoPage() {
               return (
                 <div key={s.n}>
                   {isFirstOfMacro && (
-                    <p className="mb-4 mt-10 border-b border-line pb-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-gold-deep first:mt-0">
+                    <p className="mb-4 mt-10 border-b border-line pb-2 text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-gold-deep first:mt-0">
                       {macro!.name}
                     </p>
                   )}
@@ -135,17 +135,17 @@ export default function MetodoPage() {
                     <div>
                       <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
                         <h3 className="text-lg">{s.name}</h3>
-                        <span className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-ink-muted">{s.duration}</span>
+                        <span className="text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-ink-muted">{s.duration}</span>
                       </div>
                       <p className="mt-2.5 leading-relaxed text-ink-soft">{s.text}</p>
 
                       <dl className="mt-5 grid gap-4 border-t border-line pt-4 sm:grid-cols-2">
                         <div>
-                          <dt className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-ink-muted">Cosa ne esce</dt>
+                          <dt className="text-[0.75rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-ink-muted">Cosa ne esce</dt>
                           <dd className="mt-1.5 text-sm text-ink-soft">{s.output}</dd>
                         </div>
                         <div>
-                          <dt className="text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">Cosa serve da te</dt>
+                          <dt className="text-[0.75rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">Cosa serve da te</dt>
                           <dd className="mt-1.5 text-sm text-ink-soft">{s.clientAction}</dd>
                         </div>
                       </dl>
@@ -170,7 +170,7 @@ export default function MetodoPage() {
                 <div className="shrink-0 sm:w-44">
                   <p className="font-display text-lg text-gold">{w.day}</p>
                   {w.noisy && (
-                    <p className="mt-2 inline-block border border-gold/40 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-gold">
+                    <p className="mt-2 inline-block border border-gold/40 px-2 py-0.5 text-[0.75rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-gold">
                       Fase rumorosa
                     </p>
                   )}
@@ -191,7 +191,7 @@ export default function MetodoPage() {
             ].map((x, i) => (
               <Reveal as="figure" key={x.id} delay={i * 90}>
                 <Img id={x.id} ratio="3 / 2" />
-                <figcaption className="mt-3 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{x.t}</figcaption>
+                <figcaption className="mt-3 text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{x.t}</figcaption>
               </Reveal>
             ))}
           </div>

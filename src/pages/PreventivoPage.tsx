@@ -126,9 +126,9 @@ export default function PreventivoPage() {
                 <textarea id="messaggio" name="messaggio" rows={5} className={field} placeholder="Anno dell'immobile, condominio o casa indipendente, problemi noti (perdite, muffa), cosa vorresti ottenere." />
               </div>
 
-              <div className="flex items-start gap-3">
-                <input id="privacy" name="privacy" type="checkbox" required className="mt-1 h-4 w-4 accent-[hsl(var(--gold))]" />
-                <label htmlFor="privacy" className="text-sm leading-relaxed text-ink-soft">
+              <div className="consent">
+                <input id="privacy" name="privacy" type="checkbox" required className="accent-[hsl(var(--gold-deep))]" />
+                <label htmlFor="privacy" className="cursor-pointer py-1.5 text-sm leading-relaxed text-ink-soft">
                   Ho letto l'<a href="/privacy-policy" className="text-gold-deep underline underline-offset-2">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato. *
                 </label>
               </div>

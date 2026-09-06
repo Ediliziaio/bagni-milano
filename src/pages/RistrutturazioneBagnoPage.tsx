@@ -122,7 +122,7 @@ export default function RistrutturazioneBagnoPage() {
               <Reveal as="figure" key={x.id} delay={i * 80}>
                 <Img id={x.id} ratio="3 / 2" />
                 <figcaption className="mt-4">
-                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{x.t}</p>
+                  <p className="text-[0.75rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{x.t}</p>
                   <p className="mt-2 text-sm leading-relaxed text-cream/65">{x.d}</p>
                 </figcaption>
               </Reveal>

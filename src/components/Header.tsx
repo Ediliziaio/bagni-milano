@@ -14,7 +14,7 @@ const nav = [
 ];
 
 const Wordmark = () => (
-  <Link to="/" aria-label={`${site.brand} — home`} className="shrink-0">
+  <Link to="/" aria-label={`${site.brand} — home`} className="flex shrink-0 items-center min-h-[44px]">
     <img
       src="/img/logo-light.png"
       alt={`${site.brand} — ristrutturazioni chiavi in mano`}
