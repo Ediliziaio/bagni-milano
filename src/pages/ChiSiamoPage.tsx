@@ -26,8 +26,8 @@ export default function ChiSiamoPage() {
   return (
     <Layout>
       <Seo
-        title="Chi è Bagni Milano | Impresa Specializzata in Ristrutturazione Bagni"
-        description="Bagni Milano è un'impresa specializzata nella ristrutturazione bagno chiavi in mano a Milano, Monza, Lodi e in Lombardia. Chi siamo, come lavoriamo e dove operiamo."
+        title="Chi è Bagni Milano | Impresa Specializzata in Bagni"
+        description="Impresa specializzata nella ristrutturazione bagno chiavi in mano a Milano, Monza, Lodi e in Lombardia. Chi siamo e come lavoriamo."
         path={PATH}
         schema={schema}
         answer="Bagni Milano è un'impresa specializzata nella ristrutturazione completa del bagno chiavi in mano. Opera a Milano e nella Città metropolitana, a Monza e in Brianza, a Lodi e nel Lodigiano, e in Lombardia. Gestisce progetto, impianti, posa e finiture con un unico referente."

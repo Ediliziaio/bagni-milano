@@ -40,6 +40,8 @@ npm run build:fast   # senza prerender, per iterare
 npm run sitemap      # rigenera public/sitemap.xml
 npm run llms         # rigenera public/llms.txt
 npm run prerender    # solo SSG
+npm run check        # gate di qualità sull'output (fallisce su regressioni SEO)
+npm run assets       # rigenera og-image, logo e favicon
 npx tsc --noEmit     # typecheck
 ```
 
@@ -65,7 +67,9 @@ src/
 scripts/
 ├── generate-sitemap.ts   sitemap.xml dai dati
 ├── generate-llms.ts      llms.txt dai dati
-└── prerender.ts          SSG con Puppeteer
+├── generate-assets.ts    og-image, logo e favicon via Puppeteer
+├── prerender.ts          SSG con Puppeteer
+└── check.ts              gate di qualità: h1, title, canonical, schema, sitemap
 
 docs/                ← 14 documenti di strategia
 ```

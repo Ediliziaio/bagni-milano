@@ -47,7 +47,7 @@ export default function CostiPage() {
     <Layout>
       <Seo
         title="Quanto Costa Ristrutturare un Bagno a Milano | Prezzi 2026"
-        description="Quanto costa ristrutturare un bagno: range indicativi per 3, 5, 6 e 8 mq, costi per tipo di intervento, ripartizione del budget e le sei variabili che spostano il preventivo."
+        description="Quanto costa ristrutturare un bagno: range indicativi per 3, 5, 6 e 8 mq, ripartizione del budget e le variabili che spostano il preventivo."
         path={PATH}
         schema={schema}
         answer="Ristrutturare un bagno completo di 5-6 mq costa indicativamente fra 8.000 e 18.000 € in Lombardia, impianti inclusi. La variabile che pesa di più è lo stato dell'impianto idraulico, non la metratura."

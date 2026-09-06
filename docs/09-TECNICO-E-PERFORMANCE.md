@@ -26,7 +26,9 @@ vetrina. Ogni dipendenza non necessaria è peso sul bundle e superficie di manut
 | Rendering JavaScript | ✅ | **SSG: 59 pagine HTML statiche** |
 | Responsive | ✅ | Mobile-first, breakpoint da 360px |
 | Font | ✅ | 3 famiglie, 9 pesi totali (vs. 15 del prototipo), `display=swap`, preconnect |
-| Immagini | ⬜ | **Nessuna immagine ancora**: vedi sotto |
+| Immagini | ⬜ | Nessuna fotografia: vedi sotto. `og-image` e logo sono generati tipograficamente |
+| Contrasto colore | ✅ | Token verificati contro WCAG AA: `brass-dark` 4.72:1 su travertine, pulsante primario 5.6:1 |
+| Gate di qualità automatico | ✅ | `npm run check`: 11 regole su h1, title, canonical, schema, sitemap e asset |
 | Caching | ✅ | `immutable` un anno su asset con hash; 1h su sitemap e llms |
 | Header di sicurezza | ✅ | `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options` |
 | CDN | ⚙️ | Edge network Vercel |
@@ -90,6 +92,8 @@ npm run build:fast   # senza prerender, per iterare velocemente
 npm run sitemap      # rigenera solo sitemap.xml
 npm run llms         # rigenera solo llms.txt
 npm run prerender    # solo SSG (richiede dist/ esistente)
+npm run check        # gate di qualità sull'output di dist/
+npm run assets       # rigenera og-image, logo e favicon
 npx tsc --noEmit     # typecheck
 ```
 
@@ -109,5 +113,6 @@ npx tsc --noEmit     # typecheck
 |---|---|---|
 | Font serviti da Google Fonts anziché self-hosted | ~100-200 ms di connessione a terza parte sull'LCP | P2 — self-hosting dei 9 file `woff2` |
 | Rewrite catch-all restituisce `200` su URL inesistenti | Soft 404 potenziale | P3 — middleware Vercel che risponda `404` per path non prerenderizzati |
-| Nessun test automatico | Regressioni non intercettate | P3 — smoke test su title, H1 e JSON-LD delle pagine generate |
+| ~~Nessun test automatico~~ | ~~Regressioni non intercettate~~ | ✅ risolto: `npm run check` |
+| Asset grafici tipografici, non fotografici | Anteprima social poco distintiva | P2 — sostituire con logo ufficiale e foto di cantiere |
 | Nessuna gestione consensi cookie | Bloccante solo quando si aggiungono analytics | P1 **prima** di installare GA4 o pixel |

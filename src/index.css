@@ -7,12 +7,15 @@
     /* Palette Bagni Milano — marmo, ottone, grafite */
     --ink: 30 12% 10%;          /* #1D1A17 grafite calda */
     --ink-soft: 30 8% 24%;
-    --ink-muted: 30 6% 45%;
+    --ink-muted: 30 7% 42%;     /* 4.94:1 su alabaster — AA testo normale */
     --alabaster: 38 33% 97%;    /* #FAF8F4 */
     --travertine: 36 26% 92%;   /* #EFEAE2 */
-    --brass: 36 34% 51%;        /* #B08D57 ottone satinato */
-    --brass-dark: 36 38% 38%;
-    --brass-light: 36 40% 68%;
+    /* Ottone. Valori scelti per superare WCAG AA sia su alabaster sia su travertine:
+       brass 3.08:1 come colore grafico, brass-dark 4.72:1 come colore di testo. */
+    --brass: 36 36% 47%;        /* #A3804D — icone, bordi, riempimenti */
+    --brass-dark: 36 40% 36%;   /* #816337 — testo, link, sfondo pulsanti */
+    --brass-deep: 36 42% 27%;   /* hover dei pulsanti */
+    --brass-light: 36 40% 68%;  /* solo su fondo scuro */
     --line: 36 18% 86%;
     --background: 38 33% 97%;
     --foreground: 30 12% 10%;
@@ -42,7 +45,7 @@
 
   .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[0.95rem] font-semibold transition-colors duration-200 min-h-[48px]; }
   .btn-primary { @apply btn bg-ink text-alabaster hover:bg-ink-soft; }
-  .btn-brass { @apply btn bg-brass text-white hover:bg-brass-dark; }
+  .btn-brass { @apply btn bg-brass-dark text-white hover:bg-brass-deep; }
   .btn-ghost { @apply btn border border-ink/25 text-ink hover:bg-ink hover:text-alabaster; }
 
   .card { @apply rounded-2xl border border-line bg-white p-6 sm:p-7; }

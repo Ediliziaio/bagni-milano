@@ -51,8 +51,8 @@ export default function RistrutturazioneBagnoPage() {
   return (
     <Layout>
       <Seo
-        title="Ristrutturazione Bagno Chiavi in Mano: Cosa Comprende | Bagni Milano"
-        description="Cosa comprende davvero una ristrutturazione bagno completa: demolizione, impianti, massetto, impermeabilizzazione, posa, sanitari. Tempi, costi, processo e garanzie."
+        title="Ristrutturazione Bagno Chiavi in Mano | Bagni Milano"
+        description="Cosa comprende una ristrutturazione bagno completa: demolizione, impianti, massetto, impermeabilizzazione, posa e sanitari. Tempi, costi e processo."
         path={PATH}
         schema={schema}
         answer="Una ristrutturazione bagno completa comprende demolizione e smaltimento, impianto idraulico ed elettrico, massetto e impermeabilizzazione, posa di pavimento e rivestimento, sanitari e rubinetteria, tinteggiatura e consegna. Richiede in media 10-15 giorni lavorativi."

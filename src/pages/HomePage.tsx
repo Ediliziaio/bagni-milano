@@ -45,7 +45,7 @@ export default function HomePage() {
     <Layout>
       <Seo
         title="Ristrutturazione Bagno a Milano Chiavi in Mano | Bagni Milano"
-        description="Ristrutturazione bagno chiavi in mano a Milano, Monza, Lodi e in Lombardia. Un unico referente, preventivo chiuso prima della demolizione, date scritte in contratto."
+        description="Ristrutturazione bagno chiavi in mano a Milano, Monza, Lodi e in Lombardia. Un unico referente, preventivo chiuso e date scritte in contratto."
         path="/"
         schema={schema}
         answer="Bagni Milano ristruttura bagni chiavi in mano a Milano, Monza, Lodi e in Lombardia con un unico referente, preventivo chiuso e date in contratto. Una ristrutturazione completa richiede in media 10-15 giorni lavorativi."
@@ -54,7 +54,9 @@ export default function HomePage() {
       {/* HERO */}
       <section className="border-b border-line bg-travertine/40">
         <div className="container-x grid gap-10 py-16 sm:py-24 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
-          <div className="animate-fade-up">
+          {/* Nessuna animazione d'ingresso sull'hero: l'elemento LCP non deve
+              partire da opacity 0, altrimenti la metrica slitta di ~0,6 s. */}
+          <div>
             <p className="eyebrow">Milano · Monza · Lodi · Lombardia</p>
             <h1 className="mt-3">Ristrutturazione bagno a Milano, chiavi in mano</h1>
             <p className="lede mt-5 max-w-xl">

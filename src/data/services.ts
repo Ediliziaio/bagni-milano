@@ -83,7 +83,7 @@ export const services: Service[] = [
     secondaryKeywords: ["sostituzione vasca con doccia", "da vasca a doccia", "quanto costa trasformare vasca in doccia"],
     intent: "transactional",
     title: "Trasformazione vasca in doccia a Milano",
-    metaTitle: "Trasformazione Vasca in Doccia a Milano | Tempi e Costi | Bagni Milano",
+    metaTitle: "Trasformazione Vasca in Doccia a Milano | Bagni Milano",
     metaDescription: "Sostituire la vasca con una doccia a Milano: cosa comporta davvero, tempi reali, quando basta un intervento mirato e quando conviene rifare tutto il bagno.",
     answer:
       "Trasformare una vasca in doccia richiede in media 2-4 giorni lavorativi e comprende demolizione della vasca, adeguamento dello scarico, impermeabilizzazione, rivestimento della nuova nicchia e installazione di piatto e box doccia. Il rivestimento va quasi sempre rifatto almeno nella zona interessata.",
@@ -124,7 +124,7 @@ export const services: Service[] = [
     intent: "commercial",
     title: "Ristrutturazione bagno piccolo a Milano",
     metaTitle: "Ristrutturazione Bagno Piccolo a Milano | 3-5 mq | Bagni Milano",
-    metaDescription: "Bagni da 3 a 5 mq a Milano: come guadagnare spazio reale con sanitari sospesi, doccia filo pavimento e porte scorrevoli. Errori da evitare e tempi di intervento.",
+    metaDescription: "Bagni da 3 a 5 mq a Milano: come guadagnare spazio con sanitari sospesi, doccia filo pavimento e porte scorrevoli. Errori da evitare.",
     answer:
       "In un bagno da 3-5 mq lo spazio si guadagna con tre scelte: sanitari sospesi e a profondità ridotta, doccia filo pavimento al posto della vasca, e porta scorrevole o a battente esterno. La disposizione dei punti acqua conta più della metratura.",
     intro:
@@ -248,8 +248,8 @@ export const services: Service[] = [
     secondaryKeywords: ["bagno accessibile", "bagno a norma disabili", "doccia per anziani", "bagno senza barriere architettoniche"],
     intent: "commercial",
     title: "Bagno accessibile e senza barriere a Milano",
-    metaTitle: "Bagno per Disabili e Anziani a Milano | Accessibile | Bagni Milano",
-    metaDescription: "Bagno accessibile a Milano: spazi di manovra, doccia a filo pavimento, maniglioni e altezze corrette. Requisiti tecnici e detrazioni per l'abbattimento barriere.",
+    metaTitle: "Bagno per Disabili e Anziani a Milano | Bagni Milano",
+    metaDescription: "Bagno accessibile a Milano: spazi di manovra, doccia a filo pavimento, maniglioni e altezze corrette. Requisiti tecnici e agevolazioni.",
     answer:
       "Un bagno accessibile richiede uno spazio di rotazione libero, doccia a filo pavimento con seduta, maniglioni di appoggio, wc ad altezza maggiorata (45-50 cm) e porta con luce netta di almeno 80 cm, apribile verso l'esterno o scorrevole.",
     intro:
@@ -328,7 +328,7 @@ export const services: Service[] = [
     secondaryKeywords: ["sostituzione piatto doccia", "doccia filo pavimento", "box doccia su misura", "doccia che perde"],
     intent: "transactional",
     title: "Rifacimento doccia a Milano",
-    metaTitle: "Rifacimento Doccia a Milano | Piatto e Box su Misura | Bagni Milano",
+    metaTitle: "Rifacimento Doccia a Milano | Bagni Milano",
     metaDescription: "Rifare la doccia a Milano: sostituzione del piatto, doccia filo pavimento, impermeabilizzazione e box su misura. Tempi, lavorazioni e cause delle perdite.",
     answer:
       "Rifare una doccia richiede 2-3 giorni lavorativi e comprende rimozione del piatto esistente, verifica dello scarico, impermeabilizzazione della zona bagnata, posa del nuovo piatto o del rivestimento a filo pavimento e installazione del box su misura.",

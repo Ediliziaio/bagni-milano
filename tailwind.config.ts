@@ -14,7 +14,7 @@ export default {
         ink: { DEFAULT: "hsl(var(--ink))", soft: "hsl(var(--ink-soft))", muted: "hsl(var(--ink-muted))" },
         alabaster: "hsl(var(--alabaster))",
         travertine: "hsl(var(--travertine))",
-        brass: { DEFAULT: "hsl(var(--brass))", dark: "hsl(var(--brass-dark))", light: "hsl(var(--brass-light))" },
+        brass: { DEFAULT: "hsl(var(--brass))", dark: "hsl(var(--brass-dark))", deep: "hsl(var(--brass-deep))", light: "hsl(var(--brass-light))" },
         line: "hsl(var(--line))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

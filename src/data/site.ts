@@ -50,7 +50,7 @@ export const site = {
 
   priceRange: "€€–€€€",
   foundingDate: TODO("anno di fondazione"),
-  ogImage: "/og-image.jpg",
+  ogImage: "/og-image.png",
   locale: "it_IT",
 } as const;
 

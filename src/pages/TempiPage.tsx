@@ -28,7 +28,7 @@ export default function TempiPage() {
     <Layout>
       <Seo
         title="Quanto Tempo Serve per Rifare un Bagno | Giorno per Giorno"
-        description="Quanto dura una ristrutturazione bagno: 10-15 giorni lavorativi di cantiere, più 2-4 settimane di preparazione. Cronoprogramma fase per fase e cosa fa slittare i tempi."
+        description="Quanto dura una ristrutturazione bagno: 10-15 giorni di cantiere più 2-4 settimane di preparazione. Cronoprogramma fase per fase."
         path={PATH}
         schema={schema}
         answer={timelineAnswer}

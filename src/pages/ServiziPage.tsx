@@ -28,7 +28,7 @@ export default function ServiziPage() {
     <Layout>
       <Seo
         title="Servizi: Ristrutturazione e Interventi sul Bagno | Bagni Milano"
-        description="Tutti i servizi di Bagni Milano: ristrutturazione completa, bagno chiavi in mano, trasformazione vasca in doccia, bagno piccolo, condominio, accessibilità e impianti."
+        description="I servizi di Bagni Milano: ristrutturazione completa, bagno chiavi in mano, vasca in doccia, bagno piccolo, condominio e accessibilità."
         path={PATH}
         schema={schema}
       />

@@ -39,7 +39,7 @@ export const cities: City[] = [
     provinceName: "Milano",
     tier: "primary",
     metaTitle: "Ristrutturazione Bagno a Milano | Chiavi in Mano | Bagni Milano",
-    metaDescription: "Ristrutturazione bagno a Milano chiavi in mano: progetto, impianti, posa e finiture con un unico referente. Preventivo chiuso, date in contratto, 10-15 giorni.",
+    metaDescription: "Ristrutturazione bagno a Milano chiavi in mano: progetto, impianti, posa e finiture con un unico referente. Preventivo chiuso e date in contratto.",
     answer:
       "Bagni Milano ristruttura bagni chiavi in mano a Milano città e nell'hinterland. Una ristrutturazione completa richiede in media 10-15 giorni lavorativi e comprende demolizione, impianti idraulico ed elettrico, massetto, impermeabilizzazione, posa, sanitari e consegna con collaudo.",
     housingStock:
@@ -69,7 +69,7 @@ export const cities: City[] = [
     provinceName: "Monza e della Brianza",
     tier: "primary",
     metaTitle: "Ristrutturazione Bagno a Monza | Chiavi in Mano | Bagni Milano",
-    metaDescription: "Ristrutturazione bagno a Monza e in Brianza: villette, bifamiliari e condomini. Un unico referente, preventivo chiuso e date in contratto. Sopralluogo su richiesta.",
+    metaDescription: "Ristrutturazione bagno a Monza e in Brianza: villette, bifamiliari e condomini. Un unico referente, preventivo chiuso e date in contratto.",
     answer:
       "Bagni Milano ristruttura bagni chiavi in mano a Monza e nella provincia di Monza e Brianza. Rispetto a Milano prevalgono villette e bifamiliari con più bagni, spesso su due livelli: gli interventi riguardano frequentemente il secondo bagno o il bagno padronale.",
     housingStock:
@@ -124,8 +124,8 @@ export const cities: City[] = [
     province: "LOM",
     provinceName: "Lombardia",
     tier: "primary",
-    metaTitle: "Ristrutturazione Bagno in Lombardia | Chiavi in Mano | Bagni Milano",
-    metaDescription: "Ristrutturazione bagno in Lombardia: Milano, Monza e Brianza, Lodi e province limitrofe. Metodo unico, referente unico, preventivo chiuso e date in contratto.",
+    metaTitle: "Ristrutturazione Bagno in Lombardia | Bagni Milano",
+    metaDescription: "Ristrutturazione bagno in Lombardia: Milano, Monza e Brianza, Lodi e province limitrofe. Referente unico, preventivo chiuso e date in contratto.",
     answer:
       "Bagni Milano opera in Lombardia con base a Milano, coprendo in modo strutturato Milano e provincia, Monza e Brianza e il Lodigiano. Per le altre province lombarde la fattibilità viene valutata caso per caso in funzione della distanza e della dimensione dell'intervento.",
     housingStock:

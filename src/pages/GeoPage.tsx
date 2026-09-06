@@ -55,8 +55,8 @@ export default function GeoPage() {
   return (
     <Layout>
       <Seo
-        title={city ? city.metaTitle : `Ristrutturazione Bagno a ${comune!.name} | Chiavi in Mano | Bagni Milano`}
-        description={city ? city.metaDescription : `Ristrutturazione bagno chiavi in mano a ${comune!.name}: ${comune!.housingNote.slice(0, 110)}...`}
+        title={city ? city.metaTitle : `Ristrutturazione Bagno a ${comune!.name} | Bagni Milano`}
+        description={city ? city.metaDescription : `Ristrutturazione bagno chiavi in mano a ${comune!.name} (${comune!.province}): sopralluogo, progetto e preventivo chiuso. ${comune!.focus[0]}.`}
         path={path}
         schema={schema}
         answer={city ? city.answer : comune!.intro}
