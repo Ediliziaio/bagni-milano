@@ -41,7 +41,7 @@ export default function ProgettoDetailPage() {
         <h1 className="mt-3 max-w-3xl">{p.title}</h1>
 
         {!p.published && (
-          <div className="mt-6 rounded-xl border border-brass/40 bg-brass/5 p-4 text-sm text-ink-soft">
+          <div className="mt-6 rounded-xl border border-gold/40 bg-gold/5 p-4 text-sm text-ink-soft">
             <strong className="text-ink">Scheda non pubblicata.</strong> Mancano dati reali di cantiere.
             La pagina è esclusa da sitemap e indicizzazione finché non è completa.
           </div>
@@ -70,7 +70,7 @@ export default function ProgettoDetailPage() {
         </div>
 
         <p className="mt-10">
-          <Link to={`/ristrutturazione-bagno-${p.citySlug}`} className="text-brass-dark underline underline-offset-4 hover:text-ink">
+          <Link to={`/ristrutturazione-bagno-${p.citySlug}`} className="text-gold-deep underline underline-offset-4 hover:text-ink">
             Ristrutturazione bagno in zona →
           </Link>
         </p>

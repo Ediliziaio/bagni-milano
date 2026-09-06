@@ -54,9 +54,9 @@ export default function TempiPage() {
             <table className="w-full min-w-[560px] border-collapse text-sm">
               <thead>
                 <tr>
-                  <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">Fase</th>
-                  <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">Durata</th>
-                  <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">Note</th>
+                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Fase</th>
+                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Durata</th>
+                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Note</th>
                 </tr>
               </thead>
               <tbody>
@@ -73,16 +73,16 @@ export default function TempiPage() {
         </div>
       </section>
 
-      <section className="section border-y border-line bg-travertine/40">
+      <section className="section border-y border-line bg-sand/40">
         <div className="container-x">
           <SectionHead eyebrow="Il cantiere" title="Giorno per giorno" lede="Le fasi rumorose sono due e occupano i primi 3-4 giorni. Il resto del cantiere è sostanzialmente silenzioso." />
           <ol className="mt-10 space-y-4">
             {workDays.map((w) => (
               <li key={w.day} className="card sm:flex sm:gap-6">
                 <div className="shrink-0 sm:w-40">
-                  <p className="font-accent text-lg text-brass-dark">{w.day}</p>
+                  <p className="font-accent text-lg text-gold-deep">{w.day}</p>
                   {w.noisy && (
-                    <p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-brass/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-brass-dark">
+                    <p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-gold/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold-deep">
                       <Volume2 size={12} aria-hidden /> rumorosa
                     </p>
                   )}
@@ -108,7 +108,7 @@ export default function TempiPage() {
               </div>
             ))}
           </div>
-          <div className="mt-10 card max-w-3xl bg-travertine/50">
+          <div className="mt-10 card max-w-3xl bg-sand/50">
             <h2 className="text-2xl">Vivere in casa durante i lavori</h2>
             <p className="mt-3 leading-relaxed text-ink-soft">
               Nella maggior parte dei casi è possibile. Il cantiere viene confinato al bagno con protezioni
@@ -116,7 +116,7 @@ export default function TempiPage() {
               dell'abitazione, va messa in conto l'indisponibilità per l'intera durata del cantiere: è una
               cosa da decidere prima, non da scoprire il primo giorno.
             </p>
-            <Link to="/servizi/ristrutturazione-bagno-condominio" className="mt-4 inline-block text-sm text-brass-dark underline underline-offset-4 hover:text-ink">
+            <Link to="/servizi/ristrutturazione-bagno-condominio" className="mt-4 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">
               Regole e orari nei condomini
             </Link>
           </div>

@@ -19,7 +19,7 @@ const ENDPOINT = import.meta.env.VITE_LEAD_ENDPOINT as string | undefined;
 
 type Status = "idle" | "sending" | "ok" | "error" | "unconfigured";
 
-const field = "mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-3 text-ink placeholder:text-ink-muted/70 focus:border-brass focus:outline-none focus:ring-2 focus:ring-brass/30";
+const field = "mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-3 text-ink placeholder:text-ink-muted/70 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30";
 
 export default function PreventivoPage() {
   const [status, setStatus] = useState<Status>("idle");
@@ -126,29 +126,29 @@ export default function PreventivoPage() {
               </div>
 
               <div className="flex items-start gap-3">
-                <input id="privacy" name="privacy" type="checkbox" required className="mt-1 h-4 w-4 accent-[hsl(var(--brass))]" />
+                <input id="privacy" name="privacy" type="checkbox" required className="mt-1 h-4 w-4 accent-[hsl(var(--gold))]" />
                 <label htmlFor="privacy" className="text-sm leading-relaxed text-ink-soft">
-                  Ho letto l'<a href="/privacy-policy" className="text-brass-dark underline underline-offset-2">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato. *
+                  Ho letto l'<a href="/privacy-policy" className="text-gold-deep underline underline-offset-2">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato. *
                 </label>
               </div>
 
-              <button type="submit" className="btn-brass w-full sm:w-auto" disabled={status === "sending"} data-cta="form-submit">
+              <button type="submit" className="btn-gold w-full sm:w-auto" disabled={status === "sending"} data-cta="form-submit">
                 {status === "sending" ? "Invio in corso..." : "Invia la richiesta"}
               </button>
 
               <div aria-live="polite" role="status">
                 {status === "ok" && (
-                  <p className="rounded-xl border border-brass/40 bg-brass/5 p-4 text-sm text-ink">
+                  <p className="rounded-xl border border-gold/40 bg-gold/5 p-4 text-sm text-ink">
                     Richiesta inviata. Ti ricontattiamo entro 24-48 ore lavorative.
                   </p>
                 )}
                 {status === "error" && (
-                  <p className="rounded-xl border border-line bg-travertine/60 p-4 text-sm text-ink">
+                  <p className="rounded-xl border border-line bg-sand/60 p-4 text-sm text-ink">
                     Invio non riuscito. Chiamaci direttamente o riprova fra qualche minuto.
                   </p>
                 )}
                 {status === "unconfigured" && (
-                  <p className="rounded-xl border border-brass/40 bg-brass/5 p-4 text-sm text-ink">
+                  <p className="rounded-xl border border-gold/40 bg-gold/5 p-4 text-sm text-ink">
                     <strong>Form non ancora collegato.</strong> L'endpoint di destinazione dei lead
                     (<code>VITE_LEAD_ENDPOINT</code>) non è configurato: la richiesta non è stata inviata.
                     Contattaci direttamente con i riferimenti qui accanto.
@@ -162,14 +162,14 @@ export default function PreventivoPage() {
             <div className="card">
               <SectionHead eyebrow="Contatti" title="Parla con noi" />
               <ul className="mt-6 space-y-4 text-sm">
-                <li className="flex gap-3"><Phone size={18} className="mt-0.5 shrink-0 text-brass" aria-hidden /><span className="text-ink-soft">{site.telephone}</span></li>
-                <li className="flex gap-3"><Mail size={18} className="mt-0.5 shrink-0 text-brass" aria-hidden /><span className="text-ink-soft">{site.email}</span></li>
-                <li className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-brass" aria-hidden /><span className="text-ink-soft">{site.address.street}, {site.address.locality}</span></li>
-                <li className="flex gap-3"><Clock size={18} className="mt-0.5 shrink-0 text-brass" aria-hidden /><span className="text-ink-soft">Lun-Ven 9:00-18:00</span></li>
+                <li className="flex gap-3"><Phone size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.telephone}</span></li>
+                <li className="flex gap-3"><Mail size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.email}</span></li>
+                <li className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.address.street}, {site.address.locality}</span></li>
+                <li className="flex gap-3"><Clock size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">Lun-Ven 9:00-18:00</span></li>
               </ul>
             </div>
 
-            <div className="card bg-travertine/50">
+            <div className="card bg-sand/50">
               <p className="eyebrow">Cosa succede dopo</p>
               <ol className="mt-4 space-y-3 text-sm text-ink-soft">
                 <li><strong className="text-ink">1.</strong> Ti ricontattiamo entro 24-48 ore lavorative.</li>

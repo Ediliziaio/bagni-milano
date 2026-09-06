@@ -587,6 +587,374 @@ export const articles: Article[] = [
     ],
     related: ["come-progettare-un-bagno", "errori-da-evitare-ristrutturazione-bagno"],
   },
+
+  {
+    slug: "costo-bagno-6-mq",
+    category: "costi",
+    title: "Quanto costa un bagno di 6 mq",
+    metaTitle: "Quanto Costa un Bagno di 6 mq | Range e Voci | Bagni Milano",
+    metaDescription: "Quanto costa rifare un bagno di 6 mq: range indicativi, superficie reale da rivestire, e perché due bagni identici possono differire di 6.000 euro.",
+    excerpt: "Sei metri quadri di pavimento sono spesso quindici metri quadri di parete. È lì che va il budget dei rivestimenti.",
+    answer: "Un bagno di 6 mq costa indicativamente fra 8.000 e 18.000 € in Lombardia per una ristrutturazione completa con rifacimento degli impianti. Con impianti recenti da mantenere e finiture essenziali si scende sotto i 10.000 €; con grandi lastre e sanitari di fascia alta si superano i 20.000 €.",
+    datePublished: "2026-09-06",
+    readingTime: "6 min",
+    primaryKeyword: "costo bagno 6 mq",
+    internalLinks: [
+      { label: "Calcolatore: stima il costo del tuo bagno", href: "/calcolatore-costo-bagno" },
+      { label: "Guida completa ai costi", href: "/quanto-costa-ristrutturare-bagno" },
+    ],
+    body: P(`
+<h2>Sei metri quadri di pavimento, quindici di parete</h2>
+<p>È l'errore di valutazione più comune. Un bagno di 6 mq con pianta 2,4 × 2,5 m e altezza di rivestimento a 2,2 m ha circa 21 metri lineari di perimetro per 2,2 m di altezza, meno porta e finestra: intorno ai 18-20 mq di parete da rivestire.</p>
+<p>La superficie di parete è quindi tre volte quella di pavimento. Quando si valuta il costo dei rivestimenti, è quel numero che conta.</p>
+
+<h2>Cosa cambia fra 8.000 e 18.000 euro</h2>
+<table>
+<thead><tr><th>Scenario</th><th>Range indicativo</th></tr></thead>
+<tbody>
+<tr><td>Impianti recenti, sanitari nella stessa posizione, finiture essenziali</td><td>8.000 – 11.000 €</td></tr>
+<tr><td>Impianti da rifare, sanitari nella stessa posizione, finiture medie</td><td>11.000 – 15.000 €</td></tr>
+<tr><td>Impianti da rifare, sanitari spostati, finiture alte</td><td>15.000 – 22.000 €</td></tr>
+</tbody>
+</table>
+
+<h2>Le tre voci che si sottovalutano sempre</h2>
+<ul>
+<li><strong>Lo sfrido.</strong> Su 20 mq di rivestimento servono 22-23 mq di materiale. Su una fascia media sono qualche centinaio di euro.</li>
+<li><strong>Il ripristino della porta.</strong> Alzare il pavimento di 1-2 cm significa accorciare la porta o sostituirla. Raramente compare nei preventivi generici.</li>
+<li><strong>La tinteggiatura del soffitto.</strong> Dopo tracce e polvere va sempre rifatta.</li>
+</ul>
+
+<h2>Dove ha senso risparmiare in 6 mq</h2>
+<p>Sul rivestimento delle pareti che non si vedono entrando: quella dietro la porta e quella sopra i sanitari possono usare un materiale coordinato più economico, senza che la differenza si percepisca.</p>
+<p>Dove non ha senso: impermeabilizzazione, massetto e impianto. Sono le lavorazioni invisibili che decidono se il bagno reggerà, e valgono meno del 20% del totale.</p>
+`),
+    faqs: [
+      { q: "Un bagno di 6 mq costa il doppio di uno di 3 mq?", a: "No. Molte lavorazioni — allestimento del cantiere, impianti, smaltimento, presenza della squadra — si pagano una volta sola. Un bagno di 6 mq costa circa il 25-35% in più di uno di 3-4 mq, non il doppio." },
+      { q: "Quanto materiale serve per 6 mq?", a: "Circa 6-7 mq di pavimento e 18-20 mq di rivestimento, più il 10-15% di sfrido. Il conto va fatto sulle pareti, non sul pavimento." },
+    ],
+    related: ["quanto-costa-rifare-un-bagno", "costo-piastrelle-bagno"],
+  },
+
+  {
+    slug: "leggere-preventivo-ristrutturazione-bagno",
+    category: "costi",
+    title: "Come si legge un preventivo di ristrutturazione bagno",
+    metaTitle: "Come Leggere un Preventivo di Ristrutturazione Bagno | Bagni Milano",
+    metaDescription: "Come confrontare due preventivi per il bagno: le voci che devono comparire, le formule che nascondono costi e le domande da fare prima di firmare.",
+    excerpt: "Due preventivi si confrontano solo se elencano le stesse lavorazioni. Quasi mai lo fanno.",
+    answer: "Un preventivo di ristrutturazione bagno è confrontabile solo se elenca separatamente demolizione, smaltimento con formulario, impianto idraulico, impianto elettrico, massetto e impermeabilizzazione, posa con i mq indicati, sanitari con i modelli, finiture, pulizia finale e le date di inizio e consegna.",
+    datePublished: "2026-09-06",
+    readingTime: "7 min",
+    primaryKeyword: "leggere preventivo ristrutturazione bagno",
+    internalLinks: [
+      { label: "Guida completa ai costi", href: "/quanto-costa-ristrutturare-bagno" },
+      { label: "Ristrutturazione bagno chiavi in mano", href: "/ristrutturazione-bagno" },
+    ],
+    body: P(`
+<h2>Il preventivo più corto non è il più economico</h2>
+<p>Un preventivo che dice "rifacimento bagno completo, chiavi in mano: 9.500 €" non è più conveniente di uno da dodici voci a 12.000 €. È semplicemente meno definito, e ogni voce non scritta è una voce che verrà discussa a cantiere aperto, quando il bagno è demolito e il cliente non ha alternative.</p>
+
+<h2>Le formule da chiarire prima di firmare</h2>
+<table>
+<thead><tr><th>Se leggi</th><th>Chiedi</th></tr></thead>
+<tbody>
+<tr><td>"Opere murarie"</td><td>Quali, esattamente? Demolizione, tracce, massetto e ripristini sono cose diverse</td></tr>
+<tr><td>"Fornitura sanitari"</td><td>Quali modelli, di quale marca, a quale prezzo di listino</td></tr>
+<tr><td>"Rivestimenti esclusi"</td><td>Quanti mq servono e chi li acquista</td></tr>
+<tr><td>"Salvo imprevisti"</td><td>Quali imprevisti, e con quale procedura di approvazione</td></tr>
+<tr><td>"Tempi indicativi"</td><td>Data di inizio e data di consegna, per iscritto</td></tr>
+<tr><td>"Smaltimento a carico del committente"</td><td>Quanto costa e chi lo organizza</td></tr>
+</tbody>
+</table>
+
+<h2>Le tre domande che rivelano di più</h2>
+<ol>
+<li><strong>"Cosa succede se durante la demolizione trovate un problema all'impianto?"</strong> La risposta giusta descrive una procedura: comunicazione, preventivo della variante, approvazione scritta, poi esecuzione. Una risposta vaga significa che il problema diventerà un costo non negoziato.</li>
+<li><strong>"Chi è il mio referente e con che frequenza mi aggiorna?"</strong> Se la risposta è un nome e una cadenza, c'è un'organizzazione. Se è "ci sentiamo", non c'è.</li>
+<li><strong>"L'impermeabilizzazione è compresa e fin dove arriva?"</strong> È la voce che si taglia più spesso per abbassare il prezzo, ed è quella che costa di più non avere.</li>
+</ol>
+
+<h2>Il confronto va fatto a parità di perimetro</h2>
+<p>Prima di confrontare i totali, si compila una tabella con le lavorazioni su una colonna e i preventivi sulle altre. Le caselle vuote sono la differenza reale di prezzo.</p>
+<p>Nella maggior parte dei casi, dopo questo esercizio, il preventivo che sembrava più caro del 25% risulta più caro dell'8% e comprende tre lavorazioni in più.</p>
+`),
+    faqs: [
+      { q: "È normale che i preventivi differiscano molto?", a: "Sì, ed è quasi sempre perché non comprendono le stesse lavorazioni. Differenze superiori al 30% a parità di perimetro reale sono rare: di solito una delle due offerte esclude qualcosa." },
+      { q: "Devo pagare per avere un preventivo?", a: "Un preventivo dopo sopralluogo è di norma gratuito. Può essere a pagamento la progettazione vera e propria, quando comprende render, tavole quotate e capitolato: in quel caso l'importo va dichiarato prima." },
+    ],
+    related: ["quanto-costa-rifare-un-bagno", "errori-da-evitare-ristrutturazione-bagno"],
+  },
+
+  {
+    slug: "costo-manodopera-ristrutturazione-bagno",
+    category: "costi",
+    title: "Quanto incide la manodopera sul costo di un bagno",
+    metaTitle: "Costo Manodopera Ristrutturazione Bagno | Bagni Milano",
+    metaDescription: "Quanto pesa la manodopera in una ristrutturazione bagno: 35-45% del totale, quante figure intervengono e perché il coordinamento è una voce di costo reale.",
+    excerpt: "Su 12.000 euro di bagno, circa 5.000 sono ore di lavoro di cinque figure diverse.",
+    answer: "La manodopera pesa fra il 35% e il 45% del costo di una ristrutturazione bagno. In un cantiere completo intervengono almeno cinque figure — muratore, idraulico, elettricista, posatore e chi coordina — per un totale indicativo di 25-40 giornate uomo su 10-15 giorni di calendario.",
+    datePublished: "2026-09-06",
+    readingTime: "5 min",
+    primaryKeyword: "costo manodopera ristrutturazione bagno",
+    internalLinks: [
+      { label: "Guida completa ai costi", href: "/quanto-costa-ristrutturare-bagno" },
+      { label: "Il Metodo Bagno Certo", href: "/metodo" },
+    ],
+    body: P(`
+<h2>Chi entra davvero in un cantiere da 6 mq</h2>
+<table>
+<thead><tr><th>Figura</th><th>Fasi</th><th>Giornate indicative</th></tr></thead>
+<tbody>
+<tr><td>Muratore</td><td>Demolizione, tracce, massetto, ripristini</td><td>5-8</td></tr>
+<tr><td>Idraulico</td><td>Adduzione, scarichi, prova di tenuta, montaggio sanitari</td><td>4-6</td></tr>
+<tr><td>Elettricista</td><td>Punti luce, prese, quadro</td><td>2-3</td></tr>
+<tr><td>Posatore</td><td>Impermeabilizzazione, posa, stuccatura, siliconature</td><td>5-8</td></tr>
+<tr><td>Imbianchino</td><td>Tinteggiatura finale</td><td>1-2</td></tr>
+<tr><td>Referente / direzione</td><td>Coordinamento, controlli, consegna</td><td>3-5</td></tr>
+</tbody>
+</table>
+
+<h2>Il coordinamento è una voce, non un favore</h2>
+<p>Le giornate del referente sembrano un costo eliminabile. Sono invece quelle che evitano il caso più comune: il posatore che arriva e trova il massetto non asciutto, e va rimandato di tre giorni con la squadra ferma.</p>
+<p>In un cantiere non coordinato quel tempo non sparisce: si sposta sul cliente, che diventa il centralino fra cinque fornitori.</p>
+
+<h2>Perché il costo orario non si confronta</h2>
+<p>Confrontare due imprese sul costo orario dichiarato dice poco: conta quante ore servono, e quelle dipendono da organizzazione, attrezzatura e da quante volte si torna indietro a rifare.</p>
+<p>Un posatore più veloce del 30% con lo stesso risultato non è più caro: è meno caro.</p>
+`),
+    faqs: [
+      { q: "Posso far eseguire alcune lavorazioni da artigiani miei?", a: "È possibile, ma spezza la responsabilità: se il rivestimento si stacca, il posatore indicherà il massetto e il muratore indicherà la posa. Nella formula chiavi in mano la responsabilità è unica proprio per evitarlo." },
+      { q: "La manodopera è detraibile?", a: "Nella misura in cui l'intervento rientra fra quelli agevolabili, sì: la detrazione riguarda la spesa complessiva sostenuta, non solo i materiali. Aliquote e requisiti vanno verificati sull'anno in corso." },
+    ],
+    related: ["quanto-costa-rifare-un-bagno", "leggere-preventivo-ristrutturazione-bagno"],
+  },
+
+  {
+    slug: "cattivi-odori-in-bagno",
+    category: "problemi",
+    title: "Cattivi odori in bagno: le quattro cause reali",
+    metaTitle: "Cattivi Odori in Bagno: Cause e Soluzioni | Bagni Milano",
+    metaDescription: "Da dove viene il cattivo odore in bagno: sifone asciutto, colonna non ventilata, pendenza insufficiente, guarnizioni degradate. Come si riconosce ciascuna causa.",
+    excerpt: "Il deodorante nasconde il sintomo. Le cause sono quattro e si riconoscono in pochi minuti.",
+    answer: "I cattivi odori in bagno hanno quattro cause: sifone asciutto per mancato uso, colonna di scarico non ventilata correttamente, pendenza dello scarico insufficiente che trattiene i residui, guarnizione del wc o della piletta degradata. Ciascuna si riconosce da quando e come l'odore si manifesta.",
+    datePublished: "2026-09-06",
+    readingTime: "6 min",
+    primaryKeyword: "cattivi odori bagno",
+    internalLinks: [
+      { label: "Rifacimento impianto idraulico del bagno", href: "/servizi/rifacimento-impianto-idraulico-bagno" },
+      { label: "Ristrutturazione bagno chiavi in mano", href: "/ristrutturazione-bagno" },
+    ],
+    body: P(`
+<h2>Come si riconoscono</h2>
+<table>
+<thead><tr><th>Quando compare</th><th>Causa probabile</th><th>Verifica</th></tr></thead>
+<tbody>
+<tr><td>Dopo giorni di assenza, poi sparisce</td><td>Sifone asciutto per evaporazione</td><td>Far scorrere l'acqua un minuto: se l'odore sparisce, è questo</td></tr>
+<tr><td>Quando si scarica un altro apparecchio o il vicino di sopra</td><td>Colonna non ventilata: la depressione risucchia il sifone</td><td>Osservare se l'odore arriva insieme a un gorgoglio</td></tr>
+<tr><td>Costante, peggiora d'estate</td><td>Pendenza insufficiente: residui fermi nel tratto orizzontale</td><td>Lo scarico è anche lento</td></tr>
+<tr><td>Localizzato alla base del wc</td><td>Guarnizione della braga degradata</td><td>Odore più forte accostandosi al pavimento</td></tr>
+</tbody>
+</table>
+
+<h2>Il sifone asciutto è il caso più semplice</h2>
+<p>Il sifone trattiene un tappo d'acqua che separa l'ambiente dalla colonna. In un bagno usato poco — una seconda casa, un bagno di servizio — quell'acqua evapora e il tappo sparisce.</p>
+<p>Si risolve facendo scorrere l'acqua regolarmente. Nei bagni usati raramente, un cucchiaio di olio alimentare nello scarico rallenta l'evaporazione per settimane.</p>
+
+<h2>La colonna non ventilata è il caso più frequente nei condomini</h2>
+<p>Quando qualcuno scarica ai piani superiori, la colonna genera una depressione. Se la ventilazione primaria è insufficiente o ostruita, quella depressione risucchia l'acqua dei sifoni degli appartamenti sottostanti, che restano aperti.</p>
+<p>Il sintomo tipico è il gorgoglio nel lavabo o nella doccia quando qualcun altro scarica. La soluzione riguarda la colonna, che è parte comune: va segnalato all'amministratore.</p>
+
+<h2>La pendenza è quella che si scopre a lavori finiti</h2>
+<p>Un tratto orizzontale con pendenza sotto il minimo non svuota completamente. I residui restano, fermentano e l'odore diventa costante.</p>
+<p>È l'esito tipico di uno spostamento del wc fatto senza verificare le quote. Si corregge solo riaprendo il pavimento e rifacendo il tratto: è il motivo per cui in fase di progetto la posizione dei sanitari si decide sulla base dello scarico, non del gusto.</p>
+`),
+    faqs: [
+      { q: "I prodotti disgorganti risolvono il cattivo odore?", a: "Solo quando la causa è un accumulo di residui nel sifone. Se l'origine è un sifone asciutto, una colonna non ventilata o una pendenza insufficiente, non cambiano nulla." },
+      { q: "L'odore può venire dal vicino?", a: "Sì, indirettamente: se la colonna comune non è ventilata correttamente, gli scarichi degli altri appartamenti svuotano i sifoni del vostro. È un problema della colonna, quindi condominiale." },
+    ],
+    related: ["infiltrazioni-dal-bagno", "muffa-in-bagno-cause-e-soluzioni"],
+  },
+
+  {
+    slug: "scarico-bagno-lento",
+    category: "problemi",
+    title: "Scarico del bagno lento: quando è il sifone e quando è la pendenza",
+    metaTitle: "Scarico Bagno Lento: Cause e Come Risolvere | Bagni Milano",
+    metaDescription: "Perché lo scarico del bagno è lento: ostruzione del sifone, incrostazioni nella tubazione, pendenza insufficiente o colonna satura. Come distinguerle.",
+    excerpt: "Se è lento solo un apparecchio è il sifone. Se sono lenti tutti, il problema è più a valle.",
+    answer: "Se lo scarico è lento in un solo apparecchio, la causa è quasi sempre un'ostruzione locale nel sifone. Se sono lenti più apparecchi contemporaneamente, il problema è nel tratto comune o nella colonna. Se il rallentamento è progressivo negli anni, sono incrostazioni nella tubazione.",
+    datePublished: "2026-09-06",
+    readingTime: "5 min",
+    primaryKeyword: "scarico bagno lento",
+    internalLinks: [
+      { label: "Rifacimento impianto idraulico del bagno", href: "/servizi/rifacimento-impianto-idraulico-bagno" },
+      { label: "Ristrutturazione bagno in condominio", href: "/servizi/ristrutturazione-bagno-condominio" },
+    ],
+    body: P(`
+<h2>Prima diagnosi: uno o più apparecchi</h2>
+<p>È la distinzione che orienta tutto il resto.</p>
+<ul>
+<li><strong>Un solo apparecchio lento</strong> → ostruzione locale, nel sifone o nel tratto immediatamente a valle. Intervento circoscritto.</li>
+<li><strong>Più apparecchi lenti</strong> → il problema è nel collettore comune dell'appartamento o nella colonna condominiale.</li>
+<li><strong>Gorgoglio associato</strong> → ventilazione della colonna insufficiente.</li>
+</ul>
+
+<h2>Il rallentamento progressivo</h2>
+<p>Se lo scarico è peggiorato nell'arco di anni senza un evento preciso, la causa è quasi sempre la riduzione della sezione utile: incrostazioni calcaree, residui di sapone, e nelle tubazioni in ferro zincato l'ossidazione interna.</p>
+<p>In quest'ultimo caso la pulizia meccanica dà sollievo temporaneo, perché la parete interna del tubo è ormai irregolare e trattiene nuovi depositi in poche settimane. La soluzione stabile è la sostituzione del tratto.</p>
+
+<h2>La pendenza insufficiente</h2>
+<p>Un tratto orizzontale troppo piatto non genera velocità di deflusso: l'acqua avanza ma i solidi restano. Si manifesta come scarico lento costante, spesso accompagnato da cattivo odore.</p>
+<p>È l'errore tipico di uno spostamento del wc eseguito senza verificare le quote disponibili. Non si corregge con prodotti: si corregge rifacendo il tratto con la pendenza corretta, a volte rialzando leggermente il piano.</p>
+
+<h2>Cosa evitare</h2>
+<p>I disgorganti chimici aggressivi usati ripetutamente danneggiano le guarnizioni e, sulle tubazioni più datate, accelerano il degrado. Su un impianto già compromesso trasformano uno scarico lento in una perdita.</p>
+`),
+    faqs: [
+      { q: "Lo scarico lento può dipendere dalla colonna condominiale?", a: "Sì, quando più apparecchi rallentano insieme o quando il problema riguarda anche altri appartamenti. In quel caso l'intervento è sulla parte comune e va segnalato all'amministratore." },
+      { q: "Conviene rifare l'impianto o continuare a disostruire?", a: "Se le disostruzioni si ripetono più di una volta l'anno sullo stesso punto, il costo cumulato supera rapidamente quello della sostituzione, e nel frattempo il rischio di perdita aumenta." },
+    ],
+    related: ["cattivi-odori-in-bagno", "infiltrazioni-dal-bagno"],
+  },
+
+  {
+    slug: "poca-pressione-acqua-bagno",
+    category: "problemi",
+    title: "Poca pressione dell'acqua in bagno: come capire se è l'impianto",
+    metaTitle: "Poca Pressione Acqua in Bagno: Cause Reali | Bagni Milano",
+    metaDescription: "Perché esce poca acqua dalla doccia: aeratore intasato, riduttore starato, incrostazioni nelle tubazioni o pressione di rete. Come si isola la causa.",
+    excerpt: "Se la pressione è calata negli anni e non da un giorno all'altro, il problema è dentro i muri.",
+    answer: "La bassa pressione in bagno ha quattro cause: aeratore o soffione intasato dal calcare, riduttore di pressione starato, incrostazioni o ossidazione nelle tubazioni, pressione di rete insufficiente ai piani alti. Un calo progressivo negli anni indica quasi sempre le tubazioni.",
+    datePublished: "2026-09-06",
+    readingTime: "5 min",
+    primaryKeyword: "poca pressione acqua bagno",
+    internalLinks: [
+      { label: "Rifacimento impianto idraulico del bagno", href: "/servizi/rifacimento-impianto-idraulico-bagno" },
+      { label: "Ristrutturare il bagno a Milano", href: "/blog/ristrutturare-bagno-a-milano" },
+    ],
+    body: P(`
+<h2>Isolare la causa in quattro passaggi</h2>
+<ol>
+<li><strong>Un solo rubinetto o tutti?</strong> Se è uno solo, è quasi certamente l'aeratore: si svita e si pulisce in cinque minuti.</li>
+<li><strong>Solo calda o anche fredda?</strong> Se manca solo sulla calda, il problema è nella caldaia o nel boiler, non nell'impianto del bagno.</li>
+<li><strong>Anche in cucina?</strong> Se sì, il problema è a monte: riduttore di pressione, contatore o rete.</li>
+<li><strong>È peggiorato negli anni o all'improvviso?</strong> Progressivo significa incrostazioni. Improvviso significa un evento: un lavoro sulla rete, un filtro ostruito, un riduttore che ha ceduto.</li>
+</ol>
+
+<h2>Il caso milanese: le tubazioni in ferro zincato</h2>
+<p>Negli edifici anteriori alla metà degli anni Settanta l'adduzione è spesso in ferro zincato. L'ossidazione interna riduce progressivamente la sezione utile: un tubo da mezzo pollice può arrivare a comportarsi come uno molto più piccolo.</p>
+<p>Il segnale che conferma la diagnosi è l'acqua leggermente colorata dopo qualche giorno di assenza. Quando compare, la sostituzione non è più rinviabile: alla riduzione di portata segue, prima o poi, la perdita.</p>
+
+<h2>Cosa non risolve</h2>
+<p>Installare una pompa di rilancio su un impianto incrostato aumenta la pressione a monte di una sezione ridotta: dà un miglioramento percepibile e accelera il cedimento dei punti più deboli.</p>
+<p>È un intervento che ha senso solo quando la pressione di rete è oggettivamente insufficiente e le tubazioni interne sono in buono stato.</p>
+`),
+    faqs: [
+      { q: "Come capisco se i tubi sono in ferro zincato?", a: "Dall'età dell'edificio e da tre segnali: acqua colorata dopo giorni di non utilizzo, pressione calata progressivamente, perdite ripetute. Una verifica diretta si fa aprendo un punto ispezionabile, di norma durante il sopralluogo." },
+      { q: "Rifare l'impianto del bagno risolve se il problema è la colonna condominiale?", a: "Solo in parte. Se la riduzione è sulla montante comune, il miglioramento è limitato: in quel caso l'intervento va valutato a livello condominiale." },
+    ],
+    related: ["scarico-bagno-lento", "ristrutturare-bagno-a-milano"],
+  },
+
+  {
+    slug: "impermeabilizzazione-bagno",
+    category: "materiali",
+    title: "Impermeabilizzazione del bagno: la lavorazione che non si vede",
+    metaTitle: "Impermeabilizzazione Bagno: Come si Fa e Perché | Bagni Milano",
+    metaDescription: "Come si impermeabilizza un bagno: guaina liquida, nastri di rinforzo sugli angoli, altezze corrette nella zona doccia. Perché è la voce da non tagliare mai.",
+    excerpt: "Costa poche centinaia di euro, non si vede, e decide se fra due anni ci sarà un contenzioso col vicino di sotto.",
+    answer: "L'impermeabilizzazione del bagno si esegue con guaina liquida bicomponente stesa sul fondo della doccia e sulle pareti della zona bagnata fino ad almeno 200 cm, con nastro di rinforzo su tutti gli angoli e sui raccordi con la piletta. Va applicata prima della posa del rivestimento.",
+    datePublished: "2026-09-06",
+    readingTime: "6 min",
+    primaryKeyword: "impermeabilizzazione bagno",
+    internalLinks: [
+      { label: "Rifacimento doccia", href: "/servizi/rifacimento-doccia" },
+      { label: "Ristrutturazione bagno chiavi in mano", href: "/ristrutturazione-bagno" },
+    ],
+    body: P(`
+<h2>Perché le piastrelle non bastano</h2>
+<p>Gres e ceramica sono impermeabili. Le fughe no: sono porose e, con il tempo, l'acqua le attraversa. Sotto il rivestimento serve quindi una barriera continua che raccolga quell'umidità e la convogli verso lo scarico.</p>
+<p>Senza barriera, l'acqua raggiunge il massetto, lo satura e prosegue verso il solaio. Il tempo perché il danno diventi visibile al piano di sotto va da qualche mese a qualche anno.</p>
+
+<h2>Come si esegue</h2>
+<ol>
+<li><strong>Preparazione del fondo.</strong> Superficie pulita, planare e priva di parti friabili. Un primer regola l'assorbimento.</li>
+<li><strong>Nastri di rinforzo.</strong> Su tutti gli angoli parete-parete e parete-pavimento, e attorno alla piletta e ai passaggi delle tubazioni. Gli angoli sono i punti dove la guaina si fessura per movimento.</li>
+<li><strong>Prima mano di guaina.</strong> Bicomponente cementizia o liquida monocomponente, stesa a rullo o spatola.</li>
+<li><strong>Seconda mano incrociata.</strong> Nella direzione opposta alla prima, per coprire le microporosità.</li>
+<li><strong>Tempi di asciugatura.</strong> Non comprimibili. Posare prima significa intrappolare umidità sotto il rivestimento.</li>
+</ol>
+
+<h2>Fin dove deve arrivare</h2>
+<table>
+<thead><tr><th>Zona</th><th>Estensione</th></tr></thead>
+<tbody>
+<tr><td>Interno doccia — pavimento</td><td>Tutta la superficie, con risvolto sulle pareti</td></tr>
+<tr><td>Interno doccia — pareti</td><td>Almeno 200 cm di altezza</td></tr>
+<tr><td>Perimetro vasca</td><td>Pavimento e pareti fino al bordo, più risvolto</td></tr>
+<tr><td>Resto del bagno</td><td>Pavimento e fascia bassa delle pareti, 20-30 cm</td></tr>
+</tbody>
+</table>
+
+<h2>Come si verifica che sia stata fatta</h2>
+<p>È la lavorazione più facile da saltare, perché finisce sotto il rivestimento e nessuno la vede. Il modo per verificarla è uno solo: <strong>chiedere una fotografia della guaina stesa</strong>, prima della posa.</p>
+<p>Un'impresa che lavora correttamente la fotografa già, perché è anche la sua tutela in caso di contestazione. Un'impresa che non riesce a fornirla, quella lavorazione probabilmente non l'ha eseguita.</p>
+`),
+    faqs: [
+      { q: "L'impermeabilizzazione è sempre compresa nel preventivo?", a: "Non sempre. È una delle voci che vengono omesse per abbassare il totale. Va cercata esplicitamente nel preventivo: se non c'è scritta, va chiesta." },
+      { q: "Quanto costa impermeabilizzare un bagno?", a: "Incide per poche centinaia di euro su una ristrutturazione completa. È fra le voci meno costose del cantiere e quella con le conseguenze più care se manca." },
+      { q: "Si può impermeabilizzare senza rimuovere il rivestimento?", a: "Esistono trattamenti superficiali per le fughe, ma non sostituiscono una barriera continua sotto il rivestimento. Se il problema è già un'infiltrazione in atto, l'intervento risolutivo richiede di aprire la zona doccia." },
+    ],
+    related: ["infiltrazioni-dal-bagno", "gres-o-ceramica-per-il-bagno"],
+  },
+
+  {
+    slug: "sanitari-sospesi",
+    category: "materiali",
+    title: "Sanitari sospesi: cosa comportano davvero",
+    metaTitle: "Sanitari Sospesi: Vantaggi, Costi e Requisiti | Bagni Milano",
+    metaDescription: "Sanitari sospesi: quanto spazio fanno guadagnare, cosa richiede la cassetta a incasso, quali pareti li reggono e quando conviene restare a terra.",
+    excerpt: "Liberano il pavimento e semplificano la pulizia. In cambio chiedono 15 cm di parete e un telaio.",
+    answer: "I sanitari sospesi richiedono un telaio metallico fissato a pavimento e parete, con cassetta a incasso che occupa circa 15-20 cm di profondità. Liberano il pavimento, semplificano la pulizia e permettono di regolare l'altezza del wc. Non richiedono una parete portante: il carico lo regge il telaio.",
+    datePublished: "2026-09-06",
+    readingTime: "5 min",
+    primaryKeyword: "sanitari sospesi",
+    internalLinks: [
+      { label: "Ristrutturazione bagno piccolo", href: "/servizi/bagno-piccolo" },
+      { label: "Come progettare un bagno", href: "/blog/come-progettare-un-bagno" },
+    ],
+    body: P(`
+<h2>Cosa cambia rispetto ai sanitari a terra</h2>
+<table>
+<thead><tr><th></th><th>Sospesi</th><th>A terra</th></tr></thead>
+<tbody>
+<tr><td>Pulizia del pavimento</td><td>Continua, nessun ostacolo</td><td>Bisogna aggirare la base</td></tr>
+<tr><td>Percezione dello spazio</td><td>Maggiore: il pavimento si vede per intero</td><td>Minore</td></tr>
+<tr><td>Profondità occupata</td><td>+15-20 cm di controparete</td><td>Nessuna</td></tr>
+<tr><td>Altezza regolabile</td><td>Sì, in fase di installazione</td><td>No</td></tr>
+<tr><td>Accesso alla cassetta</td><td>Da pannello di ispezione</td><td>Diretto</td></tr>
+<tr><td>Costo</td><td>Superiore, per telaio e controparete</td><td>Inferiore</td></tr>
+</tbody>
+</table>
+
+<h2>Il telaio: cosa serve davvero</h2>
+<p>Il dubbio più comune riguarda la tenuta: un wc sospeso regge il peso di una persona adulta senza problemi, perché il carico non grava sulla parete ma su un telaio metallico ancorato al pavimento e controventato alla muratura.</p>
+<p>Questo significa che i sanitari sospesi si possono installare anche su una parete in cartongesso, purché il telaio sia dimensionato e fissato correttamente. La parete diventa un rivestimento, non un elemento portante.</p>
+
+<h2>Il conto della profondità</h2>
+<p>La controparete che nasconde il telaio occupa 15-20 cm. In un bagno di 6 mq è un compromesso quasi sempre vantaggioso, perché quella profondità si recupera in profondità di manovra sul pavimento.</p>
+<p>In un bagno stretto sotto i 160 cm di larghezza va invece verificata in pianta: 18 cm su 150 sono il 12% della larghezza utile.</p>
+
+<h2>Il pannello di ispezione non è opzionale</h2>
+<p>La cassetta a incasso deve restare accessibile. Il pannello coincide di norma con la placca di comando. Murare completamente la cassetta significa dover demolire per qualsiasi manutenzione futura.</p>
+`),
+    faqs: [
+      { q: "Un wc sospeso regge il peso di una persona?", a: "Sì. Il carico è sostenuto dal telaio metallico ancorato a pavimento, non dalla parete. I telai di serie sono dimensionati con ampio margine rispetto al peso di un adulto." },
+      { q: "Si possono installare in un bagno piccolo?", a: "Sì, e spesso conviene: la profondità persa nella controparete si recupera in spazio di manovra percepito e reale sul pavimento. Va verificato in pianta nei bagni sotto i 160 cm di larghezza." },
+    ],
+    related: ["come-progettare-un-bagno", "dimensioni-minime-bagno"],
+  },
 ];
 
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);

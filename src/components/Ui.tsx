@@ -17,8 +17,9 @@ export const Eyebrow = ({ children }: { children: ReactNode }) => <p className="
 export const SectionHead = ({ eyebrow, title, lede, center }: { eyebrow?: string; title: string; lede?: string; center?: boolean }) => (
   <header className={cn("max-w-3xl", center && "mx-auto text-center")}>
     {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-    <h2 className="mt-2">{title}</h2>
-    {lede && <p className="lede mt-4">{lede}</p>}
+    <h2 className="mt-3">{title}</h2>
+    {center && <div className="rule-gold mt-6" />}
+    {lede && <p className="lede mt-5">{lede}</p>}
   </header>
 );
 
@@ -27,7 +28,7 @@ export const Breadcrumbs = ({ items }: { items: { name: string; href?: string }[
     <ol className="flex flex-wrap items-center gap-1.5 text-xs text-ink-muted">
       {items.map((it, i) => (
         <li key={it.name} className="flex items-center gap-1.5">
-          {it.href ? <Link to={it.href} className="hover:text-brass-dark">{it.name}</Link> : <span className="text-ink-soft">{it.name}</span>}
+          {it.href ? <Link to={it.href} className="hover:text-gold-deep">{it.name}</Link> : <span className="text-ink-soft">{it.name}</span>}
           {i < items.length - 1 && <span aria-hidden>/</span>}
         </li>
       ))}
@@ -43,9 +44,9 @@ export const FaqList = ({ items, title = "Domande frequenti" }: { items: { q: st
         {items.map((f, i) => (
           <Accordion.Item key={i} value={`i${i}`}>
             <Accordion.Header>
-              <Accordion.Trigger className="group flex w-full items-start justify-between gap-4 py-5 text-left font-display text-lg text-ink hover:text-brass-dark">
+              <Accordion.Trigger className="group flex w-full items-start justify-between gap-4 py-5 text-left font-display text-lg text-ink transition-colors hover:text-gold-deep">
                 {f.q}
-                <ChevronDown size={20} className="mt-1 shrink-0 text-brass transition-transform group-data-[state=open]:rotate-180" aria-hidden />
+                <ChevronDown size={20} className="mt-1 shrink-0 text-gold-deep transition-transform group-data-[state=open]:rotate-180" aria-hidden />
               </Accordion.Trigger>
             </Accordion.Header>
             <Accordion.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
@@ -63,15 +64,14 @@ export const CtaSection = ({
   text = "Sopralluogo, progetto e preventivo dettagliato. Nessun impegno.",
   cta = "Richiedi un preventivo",
 }: { title?: string; text?: string; cta?: string }) => (
-  <section className="section">
-    <div className="container-x">
-      <div className="rounded-2xl bg-ink px-6 py-12 text-center text-alabaster sm:px-12 sm:py-16">
-        <h2 className="text-alabaster">{title}</h2>
-        <p className="mx-auto mt-4 max-w-xl text-alabaster/75 leading-relaxed">{text}</p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-          <Link to="/preventivo" className="btn-brass" data-cta="section-quote">{cta}</Link>
-          <Link to="/metodo" className="btn border border-alabaster/30 text-alabaster hover:bg-alabaster hover:text-ink">Come lavoriamo</Link>
-        </div>
+  <section className="on-dark section">
+    <div className="container-x text-center">
+      <div className="rule-gold mb-8" />
+      <h2 className="mx-auto max-w-2xl">{title}</h2>
+      <p className="mx-auto mt-5 max-w-xl leading-relaxed text-cream/70">{text}</p>
+      <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
+        <Link to="/preventivo" className="btn-gold" data-cta="section-quote">{cta}</Link>
+        <Link to="/metodo" className="btn-outline-light">Come lavoriamo</Link>
       </div>
     </div>
   </section>
@@ -81,7 +81,7 @@ export const CheckList = ({ items }: { items: string[] }) => (
   <ul className="space-y-3">
     {items.map((i) => (
       <li key={i} className="flex gap-3 text-ink-soft">
-        <Check size={18} className="mt-1 shrink-0 text-brass" aria-hidden />
+        <Check size={18} className="mt-1 shrink-0 text-gold" aria-hidden />
         <span>{i}</span>
       </li>
     ))}
@@ -90,12 +90,12 @@ export const CheckList = ({ items }: { items: string[] }) => (
 
 /** Link contestuali verso money page: nucleo della strategia di internal linking. */
 export const RelatedLinks = ({ title = "Approfondisci", links }: { title?: string; links: { label: string; href: string }[] }) => (
-  <aside className="card my-10 bg-travertine/50" aria-labelledby="related-title">
+  <aside className="card my-10 !bg-sand" aria-labelledby="related-title">
     <p id="related-title" className="eyebrow">{title}</p>
     <ul className="mt-3 space-y-2">
       {links.map((l) => (
         <li key={l.href}>
-          <Link to={l.href} className="text-brass-dark underline underline-offset-4 hover:text-ink">{l.label}</Link>
+          <Link to={l.href} className="text-gold-deep underline underline-offset-4 hover:text-ink">{l.label}</Link>
         </li>
       ))}
     </ul>

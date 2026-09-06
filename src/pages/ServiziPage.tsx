@@ -45,7 +45,7 @@ export default function ServiziPage() {
 
       <section className="section">
         <div className="container-x">
-          <Link to="/ristrutturazione-bagno" className="card block border-brass/50 bg-travertine/40 transition-colors hover:border-brass">
+          <Link to="/ristrutturazione-bagno" className="card block border-gold/50 bg-sand/40 transition-colors hover:border-gold">
             <p className="eyebrow">Servizio principale</p>
             <h2 className="mt-2 text-2xl">Ristrutturazione bagno chiavi in mano</h2>
             <p className="mt-3 max-w-2xl leading-relaxed text-ink-soft">
@@ -58,7 +58,7 @@ export default function ServiziPage() {
           <SectionHead eyebrow="Interventi specifici" title="Quando serve un intervento mirato" lede="Ogni pagina spiega cosa comporta l'intervento, quanto dura e quando invece conviene rifare tutto." />
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
-              <Link key={s.slug} to={`/servizi/${s.slug}`} className="card transition-colors hover:border-brass">
+              <Link key={s.slug} to={`/servizi/${s.slug}`} className="card transition-colors hover:border-gold">
                 <h3 className="text-lg">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">{s.answer}</p>
               </Link>

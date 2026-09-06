@@ -5,6 +5,8 @@ import { Breadcrumbs, CtaSection, SectionHead } from "@/components/Ui";
 import { abs } from "@/data/site";
 import { graph, baseNodes, webPage, breadcrumb } from "@/lib/schema";
 import { publishedProjects, projects } from "@/data/projects";
+import { BeforeAfter, Img } from "@/components/Media";
+import { beforeAfterGroups } from "@/data/images";
 
 const PATH = "/progetti";
 
@@ -34,46 +36,58 @@ export default function ProgettiPage() {
         </p>
       </section>
 
+      {/* TRASFORMAZIONI — comparatore prima/dopo su fondo scuro */}
+      <section className="on-dark section">
+        <div className="container-x">
+          <SectionHead
+            eyebrow="Prima · Dopo"
+            title="Trasformazioni"
+            lede="Ogni coppia è scattata dalla stessa posizione, con la stessa focale e la stessa luce. È l'unico modo perché il confronto significhi qualcosa."
+            center
+          />
+          <div className="mt-14 grid gap-10 sm:grid-cols-2">
+            <BeforeAfter group="milano-centro" title="Milano centro — bagno padronale" caption="Da rivestimento anni Ottanta a finitura contemporanea." />
+            <BeforeAfter group="porta-nuova" title="Porta Nuova — bagno compatto" caption="4 mq riorganizzati: doccia walk-in al posto della vasca." />
+            <BeforeAfter group="brera" title="Brera — bagno stretto" caption="Riorganizzazione dei sanitari in un ambiente stretto." />
+            <BeforeAfter group="navigli" title="Navigli — rifacimento completo" caption="Bagno anni Settanta, impianto rifatto integralmente." />
+          </div>
+          <p className="mt-10 text-center text-sm text-cream/50">
+            {beforeAfterGroups.length} coppie prima/dopo previste. I comparatori si attivano
+            quando le fotografie di cantiere sono disponibili.
+          </p>
+        </div>
+      </section>
+
+      {/* SCHEDE PROGETTO */}
       <section className="section">
         <div className="container-x">
           {publishedProjects.length === 0 ? (
             <>
-              <div className="card max-w-3xl bg-travertine/50">
-                <h2 className="text-2xl">Sezione in preparazione</h2>
-                <p className="mt-4 leading-relaxed text-ink-soft">
-                  Abbiamo scelto di non pubblicare schede progetto incomplete. Un case study è utile —
-                  per chi legge e per i motori di ricerca — solo se riporta dati reali: metratura effettiva,
-                  lavorazioni realmente eseguite, durata effettiva del cantiere e fotografie del lavoro.
-                </p>
-                <p className="mt-3 leading-relaxed text-ink-soft">
-                  {projects.length} schede sono già impostate e attendono i dati di cantiere per essere pubblicate.
-                </p>
-              </div>
-
               <SectionHead
                 eyebrow="In lavorazione"
-                title="Progetti pronti per la pubblicazione"
-                lede="Queste sono le schede già strutturate. Diventano pagine pubbliche non appena i dati sono completi."
+                title="Schede pronte per la pubblicazione"
+                lede="Abbiamo scelto di non pubblicare case study incompleti. Una scheda è utile — per chi legge e per i motori di ricerca — solo con dati reali: metratura effettiva, lavorazioni eseguite, durata del cantiere e fotografie."
               />
-              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+              <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {projects.map((p) => (
-                  <li key={p.slug} className="card">
-                    <p className="text-xs uppercase tracking-wider text-brass-dark">{p.locality}</p>
-                    <h3 className="mt-2 text-lg">{p.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{p.before}</p>
-                    <p className="mt-3 text-xs uppercase tracking-wider text-ink-muted">Non ancora pubblicata</p>
+                  <li key={p.slug}>
+                    <Img id={`progetto-${p.citySlug === "milano" ? p.slug.replace("ristrutturazione-bagno-milano-", "") : p.slug}`} ratio="4 / 3" />
+                    <p className="mt-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
+                    <h3 className="mt-1.5 text-lg">{p.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{p.before}</p>
                   </li>
                 ))}
               </ul>
             </>
           ) : (
-            <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {publishedProjects.map((p) => (
                 <li key={p.slug}>
-                  <Link to={`/progetti/${p.slug}`} className="card block transition-colors hover:border-brass">
-                    <p className="text-xs uppercase tracking-wider text-brass-dark">{p.locality}</p>
-                    <h2 className="mt-2 text-lg">{p.title}</h2>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{p.result}</p>
+                  <Link to={`/progetti/${p.slug}`} className="group block">
+                    <Img id={`progetto-${p.slug}`} ratio="4 / 3" />
+                    <p className="mt-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
+                    <h2 className="mt-1.5 text-lg transition-colors group-hover:text-gold-deep">{p.title}</h2>
+                    <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{p.result}</p>
                   </Link>
                 </li>
               ))}

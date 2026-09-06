@@ -81,7 +81,7 @@ export default function ArticlePage() {
               {related.map((r) => (
                 <li key={r!.slug}>
                   <Link to={`/blog/${r!.slug}`} className="group block py-5">
-                    <h3 className="text-lg transition-colors group-hover:text-brass-dark">{r!.title}</h3>
+                    <h3 className="text-lg transition-colors group-hover:text-gold-deep">{r!.title}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{r!.excerpt}</p>
                   </Link>
                 </li>

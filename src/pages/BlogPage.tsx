@@ -50,7 +50,7 @@ export default function BlogPage() {
             {blogCategories.map((c) => {
               const count = articlesByCategory(c.slug).length;
               return (
-                <Link key={c.slug} to={`/blog/categoria/${c.slug}`} className="card transition-colors hover:border-brass">
+                <Link key={c.slug} to={`/blog/categoria/${c.slug}`} className="card transition-colors hover:border-gold">
                   <h3 className="text-lg">{c.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.description}</p>
                   <p className="mt-3 text-xs uppercase tracking-wider text-ink-muted">
@@ -71,10 +71,10 @@ export default function BlogPage() {
             {articles.map((a) => (
               <li key={a.slug}>
                 <Link to={`/blog/${a.slug}`} className="group block py-6">
-                  <p className="text-xs uppercase tracking-wider text-brass-dark">
+                  <p className="text-xs uppercase tracking-wider text-gold-deep">
                     {blogCategories.find((c) => c.slug === a.category)?.name} · {a.readingTime}
                   </p>
-                  <h3 className="mt-2 text-xl transition-colors group-hover:text-brass-dark">{a.title}</h3>
+                  <h3 className="mt-2 text-xl transition-colors group-hover:text-gold-deep">{a.title}</h3>
                   <p className="mt-2 max-w-3xl leading-relaxed text-ink-soft">{a.excerpt}</p>
                 </Link>
               </li>

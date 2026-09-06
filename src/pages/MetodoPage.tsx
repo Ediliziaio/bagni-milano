@@ -4,6 +4,7 @@ import { AnswerBlock, Breadcrumbs, CtaSection, SectionHead } from "@/components/
 import { abs } from "@/data/site";
 import { graph, baseNodes, webPage, howTo, breadcrumb } from "@/lib/schema";
 import { method } from "@/data/method";
+import { Img } from "@/components/Media";
 
 const PATH = "/metodo";
 
@@ -49,13 +50,13 @@ export default function MetodoPage() {
         </div>
       </section>
 
-      <section className="section border-y border-line bg-travertine/40">
+      <section className="section border-y border-line bg-sand/40">
         <div className="container-x">
           <SectionHead eyebrow="Le 12 fasi" title="Dal primo contatto alla consegna" lede="Ogni fase ha un esito verificabile. Non si passa alla successiva finché la precedente non è chiusa." />
-          <ol className="mt-12 space-y-6 border-l-2 border-brass/30 pl-6 sm:pl-10">
+          <ol className="mt-12 space-y-6 border-l-2 border-gold/30 pl-6 sm:pl-10">
             {method.steps.map((s) => (
               <li key={s.n} className="relative">
-                <span className="absolute -left-[2.05rem] top-1 flex h-7 w-7 items-center justify-center rounded-full bg-brass text-xs font-semibold text-white sm:-left-[3.05rem]" aria-hidden>
+                <span className="absolute -left-[2.05rem] top-1 flex h-7 w-7 items-center justify-center rounded-full bg-gold text-xs font-semibold text-white sm:-left-[3.05rem]" aria-hidden>
                   {s.n}
                 </span>
                 <h3 className="text-lg">{s.name}</h3>
@@ -64,6 +65,31 @@ export default function MetodoPage() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container-x">
+          <SectionHead
+            eyebrow="Il cantiere"
+            title="Le lavorazioni che non si vedono"
+            lede="Impianti e impermeabilizzazione finiscono sotto il rivestimento. Sono anche le due fasi che decidono se il bagno terrà nel tempo: per questo le fotografiamo."
+          />
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {[
+              { id: "cantiere-demolizione", t: "Fase 8 — Demolizione", d: "Protezioni sui percorsi e smaltimento con formulario." },
+              { id: "cantiere-impianti", t: "Fase 9 — Impianti", d: "Nuove linee in traccia, prova di tenuta prima di richiudere." },
+              { id: "cantiere-impermeabilizzazione", t: "Fase 10 — Impermeabilizzazione", d: "Guaina liquida e nastro di rinforzo sugli angoli." },
+            ].map((x) => (
+              <figure key={x.id}>
+                <Img id={x.id} ratio="3 / 2" />
+                <figcaption className="mt-3">
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{x.t}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{x.d}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 

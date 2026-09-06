@@ -85,7 +85,7 @@ export default function RistrutturazioneBagnoPage() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {included.map((i, idx) => (
               <div key={i.h} className="card">
-                <span className="font-accent text-2xl text-brass">{String(idx + 1).padStart(2, "0")}</span>
+                <span className="font-accent text-2xl text-gold">{String(idx + 1).padStart(2, "0")}</span>
                 <h3 className="mt-1 text-lg">{i.h}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{i.t}</p>
               </div>
@@ -95,14 +95,14 @@ export default function RistrutturazioneBagnoPage() {
       </section>
 
       {/* PROCESSO */}
-      <section className="section border-y border-line bg-travertine/40">
+      <section className="section border-y border-line bg-sand/40">
         <div className="container-x">
           <SectionHead eyebrow="Processo" title={`Le 12 fasi del ${method.name}`} lede={method.claim} />
           <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {method.steps.map((s) => (
               <li key={s.n} className="card">
                 <div className="flex items-baseline gap-3">
-                  <span className="font-accent text-xl text-brass">{String(s.n).padStart(2, "0")}</span>
+                  <span className="font-accent text-xl text-gold">{String(s.n).padStart(2, "0")}</span>
                   <h3 className="text-base">{s.name}</h3>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.text}</p>
@@ -111,7 +111,7 @@ export default function RistrutturazioneBagnoPage() {
             ))}
           </ol>
           <div className="mt-8">
-            <Link to="/metodo" className="text-sm text-brass-dark underline underline-offset-4 hover:text-ink">Approfondisci il metodo</Link>
+            <Link to="/metodo" className="text-sm text-gold-deep underline underline-offset-4 hover:text-ink">Approfondisci il metodo</Link>
           </div>
         </div>
       </section>
@@ -127,7 +127,7 @@ export default function RistrutturazioneBagnoPage() {
               sopralluogo, progetto, preventivo e consegna dei materiali. Le fasi rumorose — demolizione
               e tracce — occupano di norma i primi 3-4 giorni.
             </p>
-            <Link to="/quanto-tempo-ristrutturare-bagno" className="mt-5 inline-block text-sm text-brass-dark underline underline-offset-4 hover:text-ink">Cronoprogramma giorno per giorno</Link>
+            <Link to="/quanto-tempo-ristrutturare-bagno" className="mt-5 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">Cronoprogramma giorno per giorno</Link>
           </div>
           <div className="card">
             <p className="eyebrow">Costi</p>
@@ -136,7 +136,7 @@ export default function RistrutturazioneBagnoPage() {
               Per un bagno di 5-6 mq i range di mercato indicativi vanno da circa 8.000 a 18.000 €
               in Lombardia. La variabile che pesa di più è lo stato dell'impianto idraulico, non la metratura.
             </p>
-            <Link to="/quanto-costa-ristrutturare-bagno" className="mt-5 inline-block text-sm text-brass-dark underline underline-offset-4 hover:text-ink">Guida completa ai costi</Link>
+            <Link to="/quanto-costa-ristrutturare-bagno" className="mt-5 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">Guida completa ai costi</Link>
           </div>
         </div>
       </section>
@@ -156,7 +156,7 @@ export default function RistrutturazioneBagnoPage() {
       {/* GARANZIE */}
       <section className="section">
         <div className="container-x">
-          <div className="card bg-travertine/50">
+          <div className="card bg-sand/50">
             <p className="eyebrow">Garanzie</p>
             <h2 className="mt-2 text-2xl">Cosa copriamo dopo la consegna</h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-ink-soft">
@@ -175,7 +175,7 @@ export default function RistrutturazioneBagnoPage() {
           <SectionHead eyebrow="Interventi specifici" title="Non sempre serve rifare tutto" lede="Alcuni interventi mirati risolvono il problema con tempi e costi molto inferiori." />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
-              <Link key={s.slug} to={`/servizi/${s.slug}`} className="card transition-colors hover:border-brass">
+              <Link key={s.slug} to={`/servizi/${s.slug}`} className="card transition-colors hover:border-gold">
                 <h3 className="text-lg">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.answer.split(". ")[0]}.</p>
               </Link>

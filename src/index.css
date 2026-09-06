@@ -4,67 +4,122 @@
 
 @layer base {
   :root {
-    /* Palette Bagni Milano — marmo, ottone, grafite */
-    --ink: 30 12% 10%;          /* #1D1A17 grafite calda */
-    --ink-soft: 30 8% 24%;
-    --ink-muted: 30 7% 42%;     /* 4.94:1 su alabaster — AA testo normale */
-    --alabaster: 38 33% 97%;    /* #FAF8F4 */
-    --travertine: 36 26% 92%;   /* #EFEAE2 */
-    /* Ottone. Valori scelti per superare WCAG AA sia su alabaster sia su travertine:
-       brass 3.08:1 come colore grafico, brass-dark 4.72:1 come colore di testo. */
-    --brass: 36 36% 47%;        /* #A3804D — icone, bordi, riempimenti */
-    --brass-dark: 36 40% 36%;   /* #816337 — testo, link, sfondo pulsanti */
-    --brass-deep: 36 42% 27%;   /* hover dei pulsanti */
-    --brass-light: 36 40% 68%;  /* solo su fondo scuro */
-    --line: 36 18% 86%;
-    --background: 38 33% 97%;
-    --foreground: 30 12% 10%;
+    /* ── Identità Bagni Milano: nero e oro ──────────────────────────────
+       Valori derivati dalla palette oklch del prototipo I Bagni Milano
+       (--ink oklch(12% .005 60), --gold oklch(72% .11 75), --cream oklch(96.5% .012 85)).
+
+       Nota di accessibilità: l'oro pieno vive sul nero, dove dà 8,07:1.
+       Sul crema darebbe 2,28:1 — sotto qualunque soglia — quindi sui fondi
+       chiari si usa `gold-deep` (5,09:1). Stessa famiglia cromatica, leggibile. */
+
+    --ink: 20 27% 2%;          /* #070504 nero caldo, fondo delle sezioni scure */
+    --ink-2: 30 24% 7%;        /* #15110D superficie sollevata su nero */
+    --ink-3: 30 8% 13%;        /* card su nero */
+    --line-dark: 30 6% 22%;    /* divisori su nero */
+
+    --cream: 40 43% 94.5%;     /* #F7F3EB fondo delle sezioni chiare */
+    --cream-hi: 40 50% 97.6%;  /* #FCFAF6 superficie più chiara */
+    --sand: 42 29% 91%;        /* #EFEBE2 fascia alternata */
+    --line: 37 19% 83.5%;      /* #DDD7CD divisori su chiaro */
+
+    --gold: 36 56% 56%;        /* #CD9A50 oro — testo e accenti SU NERO, riempimenti */
+    --gold-deep: 37 70% 32%;   /* #8A5F18 oro — testo e link SU CHIARO */
+    --gold-soft: 38 45% 74%;   /* #DCC49E oro tenue su nero, testi secondari */
+
+    --ink-soft: 24 12% 20%;    /* testo corrente su chiaro */
+    --ink-muted: 24 9% 33%;    /* #5C534D testo secondario su chiaro, 6,78:1 */
+
+    --background: var(--cream);
+    --foreground: var(--ink);
+    --radius: 2px;
   }
 
   * { @apply border-line; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-cream text-ink font-sans antialiased;
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
   }
+
   h1, h2, h3, h4 { @apply font-display font-semibold tracking-tight text-balance; }
-  h1 { @apply text-[clamp(2rem,5vw,3.5rem)] leading-[1.08]; }
-  h2 { @apply text-[clamp(1.6rem,3.4vw,2.5rem)] leading-[1.15]; }
+  h1 { @apply text-[clamp(2.1rem,5.4vw,3.75rem)] leading-[1.05]; }
+  h2 { @apply text-[clamp(1.65rem,3.6vw,2.6rem)] leading-[1.12]; }
   h3 { @apply text-[clamp(1.15rem,2vw,1.5rem)] leading-snug; }
-  /* Riserva spazio immagini: difesa CLS */
   img { @apply max-w-full h-auto; }
-  ::selection { background: hsl(var(--brass) / 0.25); }
-  :focus-visible { outline: 2px solid hsl(var(--brass-dark)); outline-offset: 2px; }
+  ::selection { background: hsl(var(--gold) / 0.35); }
+  :focus-visible { outline: 2px solid hsl(var(--gold)); outline-offset: 3px; }
 }
 
 @layer components {
   .container-x { @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8; }
-  .eyebrow { @apply font-accent text-brass-dark uppercase tracking-[0.18em] text-sm font-semibold; }
+  .section { @apply py-16 sm:py-24; }
+
+  /* ── Sezioni scure: è qui che l'identità nero-oro si esprime ── */
+  .on-dark { @apply bg-ink text-cream; }
+  .on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4 { @apply text-cream; }
+
+  /* ── Etichette in maiuscoletto spaziato, come nel prototipo ── */
+  .eyebrow {
+    @apply font-sans text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-gold-deep;
+  }
+  .on-dark .eyebrow { @apply text-gold; }
+
   .lede { @apply text-lg sm:text-xl leading-relaxed text-ink-soft; }
+  .on-dark .lede { @apply text-cream/75; }
 
-  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[0.95rem] font-semibold transition-colors duration-200 min-h-[48px]; }
-  .btn-primary { @apply btn bg-ink text-alabaster hover:bg-ink-soft; }
-  .btn-brass { @apply btn bg-brass-dark text-white hover:bg-brass-deep; }
-  .btn-ghost { @apply btn border border-ink/25 text-ink hover:bg-ink hover:text-alabaster; }
+  /* ── Pulsanti: rettangolari, maiuscoletto spaziato ── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-[2px]
+           px-7 py-4 min-h-[52px]
+           text-[0.72rem] font-semibold uppercase tracking-[0.18em]
+           transition-colors duration-200;
+  }
+  .btn-gold   { @apply btn bg-gold text-ink hover:bg-gold-soft; }
+  .btn-ink    { @apply btn bg-ink text-cream hover:bg-ink-2; }
+  .btn-outline{ @apply btn border border-ink/30 text-ink hover:bg-ink hover:text-cream; }
+  .btn-outline-light { @apply btn border border-cream/35 text-cream hover:bg-cream hover:text-ink; }
 
-  .card { @apply rounded-2xl border border-line bg-white p-6 sm:p-7; }
-  .section { @apply py-14 sm:py-20; }
+  /* ── Superfici: filo di bordo, nessun raggio morbido, nessuna ombra ── */
+  .card { @apply rounded-[2px] border border-line bg-cream-hi p-6 sm:p-7; }
+  .on-dark .card,
+  .card-dark { @apply rounded-[2px] border border-line-dark bg-ink-3 p-6 sm:p-7 text-cream/80; }
+  .on-dark .card h3, .card-dark h3 { @apply text-cream; }
 
-  /* Blocco "risposta diretta" GEO: risposta estraibile in <=60 parole */
-  .answer-block { @apply rounded-2xl border-l-4 border-brass bg-travertine/70 p-5 sm:p-6 text-ink-soft; }
+  /* ── Blocco risposta diretta (GEO): filetto oro a sinistra ── */
+  .answer-block {
+    @apply rounded-[2px] border-l-2 border-gold-deep bg-sand px-6 py-5 sm:px-7 sm:py-6 text-ink-soft;
+  }
   .answer-block > p:first-child { @apply text-ink font-medium; }
+  .on-dark .answer-block {
+    @apply border-gold bg-ink-2 text-cream/80;
+  }
+  .on-dark .answer-block > p:first-child { @apply text-cream; }
+
+  /* ── Filetto ornamentale sotto i titoli hero, come nel prototipo ── */
+  .rule-gold { @apply mx-auto h-px w-24 bg-gold/60; }
 
   .prose-bm { @apply max-w-prose text-ink-soft leading-relaxed; }
-  .prose-bm h2 { @apply mt-12 mb-4 text-ink; }
-  .prose-bm h3 { @apply mt-8 mb-3 text-ink; }
+  .prose-bm h2 { @apply mt-14 mb-4 text-ink; }
+  .prose-bm h3 { @apply mt-9 mb-3 text-ink; }
   .prose-bm p { @apply mb-4; }
-  .prose-bm ul { @apply mb-5 space-y-2 pl-5 list-disc marker:text-brass; }
-  .prose-bm ol { @apply mb-5 space-y-2 pl-5 list-decimal marker:text-brass; }
-  .prose-bm a { @apply text-brass-dark underline underline-offset-4 hover:text-ink; }
-  .prose-bm table { @apply w-full my-6 text-sm border-collapse; }
-  .prose-bm th { @apply bg-travertine text-ink text-left font-semibold p-3 border border-line; }
+  .prose-bm ul { @apply mb-5 space-y-2 pl-5 list-disc marker:text-gold-deep; }
+  .prose-bm ol { @apply mb-5 space-y-2 pl-5 list-decimal marker:text-gold-deep; }
+  .prose-bm a { @apply text-gold-deep underline underline-offset-4 hover:text-ink; }
+  .prose-bm table { @apply w-full my-7 text-sm border-collapse; }
+  .prose-bm th { @apply bg-sand text-ink text-left font-semibold p-3 border border-line; }
   .prose-bm td { @apply p-3 border border-line align-top; }
+
+  /* ── Segnaposto immagine: rende esplicito cosa manca e in che formato ── */
+  .img-slot {
+    @apply relative flex flex-col items-center justify-center gap-1.5
+           rounded-[2px] border border-dashed border-line bg-sand
+           p-6 text-center text-ink-muted;
+  }
+  .on-dark .img-slot { @apply border-line-dark bg-ink-2 text-cream/45; }
+  .img-slot b { @apply block text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-deep; }
+  .on-dark .img-slot b { @apply text-gold; }
+  .img-slot span { @apply text-xs leading-relaxed; }
 }
 
 @layer utilities {
@@ -73,5 +128,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }

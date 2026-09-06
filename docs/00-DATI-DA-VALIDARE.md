@@ -18,6 +18,7 @@ esattamente ciò che il brief vieta, e comporta rischio reputazionale e di penal
 | 7 | Coordinate GPS della sede | Schema `geo`, coerenza con GBP | ⬜ |
 | 8 | Endpoint destinazione lead (`VITE_LEAD_ENDPOINT`) | Form preventivo — **oggi il form non invia nulla** | ⬜ |
 | 9 | Testo informativa privacy e cookie policy | Pagine legali (oggi `noindex` e vuote) | ⬜ |
+| 10 | **Rimuovere `X-Robots-Tag: noindex` da `vercel.json`** | Finché è attivo il sito NON viene indicizzato. È corretto in staging, è fatale al go-live | ⬜ |
 
 ## Importanti (bloccano singole sezioni)
 

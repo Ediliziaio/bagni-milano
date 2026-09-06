@@ -15,9 +15,9 @@ const CostTable = ({ rows, head }: { rows: CostRow[]; head: string }) => (
     <table className="w-full min-w-[560px] border-collapse text-sm">
       <thead>
         <tr>
-          <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">{head}</th>
-          <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">Range indicativo</th>
-          <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">Note</th>
+          <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">{head}</th>
+          <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Range indicativo</th>
+          <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Note</th>
         </tr>
       </thead>
       <tbody>
@@ -71,7 +71,7 @@ export default function CostiPage() {
           <p>La variabile che pesa di più non è la metratura ma lo stato dell'impianto idraulico esistente.</p>
         </AnswerBlock>
 
-        <div className="rounded-xl border border-brass/40 bg-brass/5 p-4 text-sm leading-relaxed text-ink-soft">
+        <div className="rounded-xl border border-gold/40 bg-gold/5 p-4 text-sm leading-relaxed text-ink-soft">
           <strong className="text-ink">Come leggere questi numeri.</strong> {costsDisclaimer}
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function CostiPage() {
         </div>
       </section>
 
-      <section className="section border-y border-line bg-travertine/40">
+      <section className="section border-y border-line bg-sand/40">
         <div className="container-x">
           <SectionHead eyebrow="Per tipo di intervento" title="Non sempre serve una ristrutturazione completa" lede="Interventi mirati costano meno e durano meno, quando le condizioni tecniche lo permettono." />
           <div className="mt-8"><CostTable rows={costByScope} head="Intervento" /></div>
@@ -97,9 +97,9 @@ export default function CostiPage() {
             <table className="w-full min-w-[520px] border-collapse text-sm">
               <thead>
                 <tr>
-                  <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">Voce</th>
-                  <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">Peso</th>
-                  <th scope="col" className="border border-line bg-travertine p-3 text-left font-semibold">Note</th>
+                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Voce</th>
+                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Peso</th>
+                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Note</th>
                 </tr>
               </thead>
               <tbody>
@@ -127,7 +127,7 @@ export default function CostiPage() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {costDrivers.map((d, i) => (
               <div key={d.title} className="card">
-                <span className="font-accent text-2xl text-brass">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-accent text-2xl text-gold">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-1 text-lg">{d.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{d.text}</p>
               </div>
@@ -149,14 +149,15 @@ export default function CostiPage() {
 
       <section className="section border-t border-line">
         <div className="container-x">
-          <div className="card max-w-3xl bg-travertine/50">
+          <div className="card max-w-3xl bg-sand/50">
             <h2 className="text-2xl">Approfondimenti sui costi</h2>
+            <p className="mt-3"><Link className="text-gold-deep underline underline-offset-4 hover:text-ink" to="/calcolatore-costo-bagno"><strong>Calcolatore: stima il costo del tuo bagno in trenta secondi</strong></Link></p>
             <ul className="mt-4 space-y-2">
-              <li><Link className="text-brass-dark underline underline-offset-4 hover:text-ink" to="/blog/quanto-costa-rifare-un-bagno">Quanto costa rifare un bagno: la struttura del prezzo</Link></li>
-              <li><Link className="text-brass-dark underline underline-offset-4 hover:text-ink" to="/blog/costo-piastrelle-bagno">Costo delle piastrelle: materiale, posa e sfrido</Link></li>
-              <li><Link className="text-brass-dark underline underline-offset-4 hover:text-ink" to="/blog/quanto-costa-trasformare-vasca-in-doccia">Quanto costa trasformare la vasca in doccia</Link></li>
-              <li><Link className="text-brass-dark underline underline-offset-4 hover:text-ink" to="/blog/detrazioni-ristrutturazione-bagno">Detrazioni fiscali: come funzionano</Link></li>
-              <li><Link className="text-brass-dark underline underline-offset-4 hover:text-ink" to="/quanto-tempo-ristrutturare-bagno">Quanto tempo serve per rifare un bagno</Link></li>
+              <li><Link className="text-gold-deep underline underline-offset-4 hover:text-ink" to="/blog/quanto-costa-rifare-un-bagno">Quanto costa rifare un bagno: la struttura del prezzo</Link></li>
+              <li><Link className="text-gold-deep underline underline-offset-4 hover:text-ink" to="/blog/costo-piastrelle-bagno">Costo delle piastrelle: materiale, posa e sfrido</Link></li>
+              <li><Link className="text-gold-deep underline underline-offset-4 hover:text-ink" to="/blog/quanto-costa-trasformare-vasca-in-doccia">Quanto costa trasformare la vasca in doccia</Link></li>
+              <li><Link className="text-gold-deep underline underline-offset-4 hover:text-ink" to="/blog/detrazioni-ristrutturazione-bagno">Detrazioni fiscali: come funzionano</Link></li>
+              <li><Link className="text-gold-deep underline underline-offset-4 hover:text-ink" to="/quanto-tempo-ristrutturare-bagno">Quanto tempo serve per rifare un bagno</Link></li>
             </ul>
           </div>
         </div>

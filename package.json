@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "tsx scripts/generate-sitemap.ts && tsx scripts/generate-llms.ts",
+    "prebuild": "tsx scripts/generate-sitemap.ts && tsx scripts/generate-llms.ts && tsx scripts/generate-image-brief.ts",
     "build": "vite build",
     "postbuild": "tsx scripts/prerender.ts",
     "build:fast": "tsx scripts/generate-sitemap.ts && tsx scripts/generate-llms.ts && vite build",
@@ -15,7 +15,8 @@
     "llms": "tsx scripts/generate-llms.ts",
     "prerender": "tsx scripts/prerender.ts",
     "assets": "tsx scripts/generate-assets.ts",
-    "check": "tsx scripts/check.ts"
+    "check": "tsx scripts/check.ts",
+    "images": "tsx scripts/generate-image-brief.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.11",

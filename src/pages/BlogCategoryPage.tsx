@@ -35,7 +35,7 @@ export default function BlogCategoryPage() {
         <h1 className="mt-3 max-w-3xl">{cat.title}</h1>
         <p className="lede mt-5 max-w-2xl">{cat.description}</p>
         <p className="mt-6">
-          <Link to={cat.supports} className="text-brass-dark underline underline-offset-4 hover:text-ink">
+          <Link to={cat.supports} className="text-gold-deep underline underline-offset-4 hover:text-ink">
             Vai alla pagina di riferimento →
           </Link>
         </p>
@@ -44,20 +44,20 @@ export default function BlogCategoryPage() {
       <section className="section">
         <div className="container-x">
           {list.length === 0 ? (
-            <div className="card bg-travertine/50 max-w-2xl">
+            <div className="card bg-sand/50 max-w-2xl">
               <p className="leading-relaxed text-ink-soft">
                 Questa categoria è in preparazione. Pubblichiamo una guida solo quando è completa:
                 nessun contenuto di riempimento.
               </p>
-              <Link to="/blog" className="mt-4 inline-block text-sm text-brass-dark underline underline-offset-4 hover:text-ink">Torna al blog</Link>
+              <Link to="/blog" className="mt-4 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">Torna al blog</Link>
             </div>
           ) : (
             <ul className="divide-y divide-line border-y border-line">
               {list.map((a) => (
                 <li key={a.slug}>
                   <Link to={`/blog/${a.slug}`} className="group block py-6">
-                    <p className="text-xs uppercase tracking-wider text-brass-dark">{a.readingTime}</p>
-                    <h2 className="mt-2 text-xl transition-colors group-hover:text-brass-dark">{a.title}</h2>
+                    <p className="text-xs uppercase tracking-wider text-gold-deep">{a.readingTime}</p>
+                    <h2 className="mt-2 text-xl transition-colors group-hover:text-gold-deep">{a.title}</h2>
                     <p className="mt-2 max-w-3xl leading-relaxed text-ink-soft">{a.excerpt}</p>
                   </Link>
                 </li>
@@ -69,7 +69,7 @@ export default function BlogCategoryPage() {
             <p className="eyebrow">Altre categorie</p>
             <div className="mt-4 flex flex-wrap gap-2.5">
               {blogCategories.filter((c) => c.slug !== cat.slug).map((c) => (
-                <Link key={c.slug} to={`/blog/categoria/${c.slug}`} className="rounded-full border border-line bg-white px-4 py-2 text-sm text-ink-soft transition-colors hover:border-brass hover:text-brass-dark">
+                <Link key={c.slug} to={`/blog/categoria/${c.slug}`} className="rounded-full border border-line bg-white px-4 py-2 text-sm text-ink-soft transition-colors hover:border-gold hover:text-gold-deep">
                   {c.name}
                 </Link>
               ))}

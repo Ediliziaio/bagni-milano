@@ -12,15 +12,15 @@ export default function NotFoundPage() {
         <h1 className="mt-3">Questa pagina non esiste</h1>
         <p className="lede mx-auto mt-5 max-w-lg">Forse cercavi una di queste.</p>
         <div className="mx-auto mt-10 flex max-w-2xl flex-wrap justify-center gap-3">
-          <Link to="/ristrutturazione-bagno" className="btn-ghost">Ristrutturazione bagno</Link>
-          <Link to="/quanto-costa-ristrutturare-bagno" className="btn-ghost">Quanto costa</Link>
-          <Link to="/metodo" className="btn-ghost">Il metodo</Link>
-          <Link to="/blog" className="btn-ghost">Blog</Link>
+          <Link to="/ristrutturazione-bagno" className="btn-outline">Ristrutturazione bagno</Link>
+          <Link to="/quanto-costa-ristrutturare-bagno" className="btn-outline">Quanto costa</Link>
+          <Link to="/metodo" className="btn-outline">Il metodo</Link>
+          <Link to="/blog" className="btn-outline">Blog</Link>
           {cities.map((c) => (
-            <Link key={c.slug} to={`/ristrutturazione-bagno-${c.slug}`} className="btn-ghost">{c.name}</Link>
+            <Link key={c.slug} to={`/ristrutturazione-bagno-${c.slug}`} className="btn-outline">{c.name}</Link>
           ))}
         </div>
-        <Link to="/" className="btn-brass mt-10">Torna alla home</Link>
+        <Link to="/" className="btn-gold mt-10">Torna alla home</Link>
       </section>
     </Layout>
   );

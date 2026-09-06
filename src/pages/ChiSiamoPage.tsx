@@ -6,6 +6,7 @@ import { abs, site } from "@/data/site";
 import { graph, baseNodes, webPage, breadcrumb } from "@/lib/schema";
 import { method } from "@/data/method";
 import { areaServed } from "@/data/site";
+import { Img } from "@/components/Media";
 
 const PATH = "/chi-siamo";
 
@@ -52,7 +53,15 @@ export default function ChiSiamoPage() {
 
       <section className="section">
         <div className="container-x grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
-          <SectionHead eyebrow="Il posizionamento" title="Perché una sola specializzazione" />
+          <div>
+            <SectionHead eyebrow="Il posizionamento" title="Perché una sola specializzazione" />
+            <div className="mt-10 max-w-sm">
+              <Img id="referente" ratio="4 / 5" />
+              <p className="mt-3 text-sm text-ink-muted">
+                Il referente unico che segue il progetto dal sopralluogo alla consegna.
+              </p>
+            </div>
+          </div>
           <div className="prose-bm">
             <p>
               Un'impresa edile generalista fa bagni, cucine, controsoffitti, facciate e cappotti. Ogni
@@ -72,7 +81,7 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
-      <section className="section border-y border-line bg-travertine/40">
+      <section className="on-dark section">
         <div className="container-x">
           <SectionHead eyebrow="Differenze" title="Cosa ci distingue da altre imprese" lede="Quattro impegni concreti, verificabili durante il cantiere." />
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
@@ -113,7 +122,7 @@ export default function ChiSiamoPage() {
             <ul className="mt-6 space-y-2.5">
               {areaServed.map((a) => (
                 <li key={a.name} className="flex gap-3 text-ink-soft">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass" aria-hidden />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
                   {a.name}
                 </li>
               ))}
@@ -122,7 +131,7 @@ export default function ChiSiamoPage() {
               Milano e Città metropolitana, Monza e Brianza e il Lodigiano sono coperti in modo
               continuativo. Per le altre province lombarde la copertura viene confermata al primo contatto.
             </p>
-            <Link to="/ristrutturazione-bagno-lombardia" className="mt-5 inline-block text-sm text-brass-dark underline underline-offset-4 hover:text-ink">
+            <Link to="/ristrutturazione-bagno-lombardia" className="mt-5 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">
               Ristrutturazione bagno in Lombardia
             </Link>
           </div>
@@ -131,7 +140,7 @@ export default function ChiSiamoPage() {
 
       <section className="section border-t border-line">
         <div className="container-x">
-          <div className="card max-w-3xl bg-travertine/50">
+          <div className="card max-w-3xl bg-sand/50">
             <p className="eyebrow">Filosofia</p>
             <h2 className="mt-2 text-2xl">Preferiamo dire di no</h2>
             <p className="mt-4 leading-relaxed text-ink-soft">
@@ -140,7 +149,7 @@ export default function ChiSiamoPage() {
               sono compatibili, lo diciamo al primo contatto. È meno gradevole di un preventivo ottimistico,
               ed è l'unico modo per non trovarsi a metà cantiere a rinegoziare.
             </p>
-            <Link to="/metodo" className="mt-5 inline-block text-sm text-brass-dark underline underline-offset-4 hover:text-ink">
+            <Link to="/metodo" className="mt-5 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">
               Il {method.name}
             </Link>
           </div>

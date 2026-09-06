@@ -83,7 +83,7 @@ export default function GeoPage() {
       </section>
 
       {/* PROBLEMATICHE LOCALI */}
-      <section className="section border-y border-line bg-travertine/40">
+      <section className="section border-y border-line bg-sand/40">
         <div className="container-x">
           <SectionHead
             eyebrow="Criticità ricorrenti"
@@ -123,7 +123,7 @@ export default function GeoPage() {
             <div>
               <SectionHead eyebrow="Cantiere" title="Come organizziamo i lavori" />
               <p className="mt-6 leading-relaxed text-ink-soft">{city.logistics}</p>
-              <Link to="/metodo" className="mt-5 inline-block text-sm text-brass-dark underline underline-offset-4 hover:text-ink">Il {method.name}</Link>
+              <Link to="/metodo" className="mt-5 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">Il {method.name}</Link>
             </div>
           </div>
         </section>
@@ -134,12 +134,12 @@ export default function GeoPage() {
         <div className="container-x">
           <SectionHead eyebrow="Servizi" title={`Cosa possiamo fare ${prep}`} />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <Link to="/ristrutturazione-bagno" className="card border-brass/40 bg-travertine/40 transition-colors hover:border-brass">
+            <Link to="/ristrutturazione-bagno" className="card border-gold/40 bg-sand/40 transition-colors hover:border-gold">
               <h3 className="text-lg">Ristrutturazione completa</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">Progetto, impianti, posa e finiture con un unico referente.</p>
             </Link>
             {services.slice(0, 5).map((s) => (
-              <Link key={s.slug} to={`/servizi/${s.slug}`} className="card transition-colors hover:border-brass">
+              <Link key={s.slug} to={`/servizi/${s.slug}`} className="card transition-colors hover:border-gold">
                 <h3 className="text-lg">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.answer.split(". ")[0]}.</p>
               </Link>

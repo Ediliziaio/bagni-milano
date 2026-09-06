@@ -33,16 +33,16 @@ export default function ContattiPage() {
           <div className="card">
             <SectionHead title="Recapiti" />
             <ul className="mt-6 space-y-4">
-              <li className="flex gap-3"><Phone size={18} className="mt-0.5 shrink-0 text-brass" aria-hidden /><span className="text-ink-soft">{site.telephone}</span></li>
-              <li className="flex gap-3"><Mail size={18} className="mt-0.5 shrink-0 text-brass" aria-hidden /><span className="text-ink-soft">{site.email}</span></li>
-              <li className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-brass" aria-hidden /><span className="text-ink-soft">{site.address.street} — {site.address.postalCode} {site.address.locality} ({site.address.region})</span></li>
+              <li className="flex gap-3"><Phone size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.telephone}</span></li>
+              <li className="flex gap-3"><Mail size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.email}</span></li>
+              <li className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.address.street} — {site.address.postalCode} {site.address.locality} ({site.address.region})</span></li>
             </ul>
             <p className="mt-6 text-xs leading-relaxed text-ink-muted">
               I recapiti riportati sono segnaposto in attesa dei dati definitivi. La coerenza fra nome,
               indirizzo e telefono su sito, Google Business Profile e directory è un requisito di Local SEO:
               vanno pubblicati una sola volta, nella forma definitiva.
             </p>
-            <Link to="/preventivo" className="btn-brass mt-8">Richiedi un preventivo</Link>
+            <Link to="/preventivo" className="btn-gold mt-8">Richiedi un preventivo</Link>
           </div>
 
           <div className="card">
@@ -50,7 +50,7 @@ export default function ContattiPage() {
             <ul className="mt-6 space-y-2.5">
               {areaServed.map((a) => (
                 <li key={a.name} className="flex gap-3 text-ink-soft">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brass" aria-hidden />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
                   {a.name}
                 </li>
               ))}

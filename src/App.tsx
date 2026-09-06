@@ -9,6 +9,7 @@ const RistrutturazioneBagnoPage = lazy(() => import("./pages/RistrutturazioneBag
 const MetodoPage = lazy(() => import("./pages/MetodoPage"));
 const ChiSiamoPage = lazy(() => import("./pages/ChiSiamoPage"));
 const CostiPage = lazy(() => import("./pages/CostiPage"));
+const CalcolatorePage = lazy(() => import("./pages/CalcolatorePage"));
 const TempiPage = lazy(() => import("./pages/TempiPage"));
 const GeoPage = lazy(() => import("./pages/GeoPage"));
 const ServiziPage = lazy(() => import("./pages/ServiziPage"));
@@ -26,7 +27,7 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 const Fallback = () => (
   <div className="flex min-h-[60vh] items-center justify-center" role="status" aria-label="Caricamento">
-    <div className="h-9 w-9 animate-spin rounded-full border-4 border-line border-t-brass" />
+    <div className="h-9 w-9 animate-spin rounded-full border-4 border-line border-t-gold" />
   </div>
 );
 
@@ -45,6 +46,7 @@ const App = () => (
         <Route path="/come-lavoriamo" element={<Navigate to="/metodo" replace />} />
         <Route path="/chi-siamo" element={<ChiSiamoPage />} />
         <Route path="/quanto-costa-ristrutturare-bagno" element={<CostiPage />} />
+        <Route path="/calcolatore-costo-bagno" element={<CalcolatorePage />} />
         <Route path="/quanto-tempo-ristrutturare-bagno" element={<TempiPage />} />
 
         {geoSlugs.map((slug) => (
