@@ -39,8 +39,8 @@ export const images: ImageSpec[] = [
   { id: "partner-gruppo-bea", where: "Home e Chi siamo — fascia partner", brief: "Logo Gruppo BEA.", width: 600, height: 200, alt: "Gruppo BEA, partner di Bagni Milano", priority: 1, available: true, source: "propria" },
 
   /* ── HERO ────────────────────────────────────────────────────────── */
-  { id: "hero-home", where: "Homepage — sfondo dell'hero, desktop", brief: "Bagno finito in orizzontale, con zona centrale poco dettagliata perché ospita il testo. Sostituire con uno scatto di un cantiere concluso.", width: 2000, height: 1562, alt: "Bagno ristrutturato, vista d'insieme", priority: 1, available: true, source: "riferimento" },
-  { id: "hero-home-mobile", where: "Homepage — sfondo dell'hero, smartphone", brief: "Stessa scena in inquadratura verticale.", width: 969, height: 1200, alt: "Bagno ristrutturato, inquadratura verticale", priority: 1, available: true, source: "riferimento" },
+  { id: "hero-home", where: "Homepage — sfondo dell'hero, desktop", brief: "Bagno finito in orizzontale, con zona centrale poco dettagliata perché ospita il testo. Sostituire con uno scatto di un cantiere concluso.", width: 1600, height: 1600, alt: "Bagno ristrutturato, vista d'insieme", priority: 1, available: true, source: "riferimento" },
+  { id: "hero-home-mobile", where: "Homepage — sfondo dell'hero, smartphone", brief: "Stessa scena in inquadratura verticale.", width: 1200, height: 1600, alt: "Bagno ristrutturato, inquadratura verticale", priority: 1, available: true, source: "riferimento" },
   { id: "home-banda", where: "Homepage — fascia immagine a tutta larghezza", brief: "Scatto orizzontale ampio, adatto al taglio a fascia.", width: 1600, height: 1000, alt: "Bagno ristrutturato da Bagni Milano", priority: 2, available: true, source: "riferimento" },
 
   /* ── COPPIE PRIMA / DOPO ─────────────────────────────────────────── */
