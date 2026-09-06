@@ -98,6 +98,14 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* PARTNER */}
+      <section className="border-b border-line bg-sand/60">
+        <div className="container-x flex flex-col items-center gap-4 py-7 sm:flex-row sm:justify-center sm:gap-8">
+          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-ink-muted">Partner</p>
+          <img src="/img/partner-gruppo-bea.png" alt="Gruppo BEA, partner di Bagni Milano" width={600} height={200} loading="lazy" className="h-10 w-auto" />
+        </div>
+      </section>
+
       {/* IN BREVE — risposta diretta per l'estrazione AI */}
       <section className="section">
         <div className="container-x grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-16">
@@ -267,10 +275,10 @@ export default function HomePage() {
           />
           <div className="mt-14 grid gap-10 sm:grid-cols-2">
             {[
-              { g: "milano-centro", t: "Milano centro — bagno padronale", c: "Da rivestimento anni Ottanta a finitura contemporanea." },
-              { g: "porta-nuova", t: "Porta Nuova — bagno compatto", c: "4 mq riorganizzati: doccia walk-in e mobile sospeso al posto della vasca." },
-              { g: "brera", t: "Brera — bagno stretto", c: "Riorganizzazione dei sanitari in un ambiente stretto e alto." },
-              { g: "navigli", t: "Navigli — rifacimento completo", c: "Bagno anni Settanta, impianto idraulico rifatto integralmente." },
+              { g: "milano-centro", t: "Bagno stretto con vasca", c: "Vasca sostituita da una doccia walk-in, mobile sospeso e specchio retroilluminato." },
+              { g: "walkin", t: "Da vasca a doccia a filo pavimento", c: "Eliminato lo scavalcamento: più sicurezza e più spazio di manovra." },
+              { g: "padronale", t: "Bagno padronale con doppio lavabo", c: "Rivestimento beige e mobile in laminato sostituiti integralmente." },
+              { g: "navigli", t: "Bagno anni Settanta", c: "Pavimento a motivi e mobile in legno scuro: rifacimento completo." },
             ].map((x, i) => (
               <Reveal key={x.g} delay={(i % 2) * 90}>
                 <BeforeAfter group={x.g} title={x.t} caption={x.c} />
@@ -293,10 +301,10 @@ export default function HomePage() {
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { id: "progetto-porta-nuova", t: "Porta Nuova", d: "Bagno compatto, 4 mq" },
-              { id: "progetto-brera", t: "Brera", d: "Bagno stretto in edificio storico" },
-              { id: "progetto-navigli", t: "Navigli", d: "Rifacimento completo anni '70" },
-              { id: "progetto-milano-centro", t: "Milano centro", d: "Bagno padronale" },
+              { id: "ba-porta-nuova-dopo", t: "Bagno compatto", d: "Sanitari sospesi e doccia in nicchia" },
+              { id: "ba-brera-dopo", t: "Bagno stretto", d: "Finiture contemporanee in ambiente alto" },
+              { id: "ba-famiglia-dopo", t: "Bagno di famiglia", d: "Rifacimento completo con vasca sostituita" },
+              { id: "ba-ospiti-dopo", t: "Bagno di servizio", d: "Rinnovo con doccia e mobile sospeso" },
             ].map((x, i) => (
               <Reveal as="figure" key={x.id} delay={i * 80}>
                 <Img id={x.id} ratio="4 / 3" />

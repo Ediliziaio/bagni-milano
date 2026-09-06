@@ -15,12 +15,15 @@ const nav = [
 ];
 
 const Wordmark = () => (
-  <Link
-    to="/"
-    aria-label={`${site.brand} — home`}
-    className="font-display text-[0.95rem] sm:text-base font-semibold uppercase tracking-[0.22em] leading-[1.15] text-cream"
-  >
-    Bagni<br className="hidden sm:inline" /> <span className="text-gold">Milano</span>
+  <Link to="/" aria-label={`${site.brand} — home`} className="shrink-0">
+    <img
+      src="/img/logo-light.png"
+      alt={`${site.brand} — ristrutturazioni chiavi in mano`}
+      width={1933}
+      height={526}
+      className="h-8 w-auto sm:h-9"
+      fetchPriority="high"
+    />
   </Link>
 );
 

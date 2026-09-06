@@ -8,7 +8,7 @@ export const Footer = () => (
   <footer className="on-dark mt-24 border-t border-line-dark">
     <div className="container-x py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div>
-        <p className="font-display text-lg font-semibold uppercase tracking-[0.22em]">Bagni <span className="text-gold">Milano</span></p>
+        <img src="/img/logo-light.png" alt="Bagni Milano" width={1933} height={526} loading="lazy" className="h-10 w-auto" />
         <p className="mt-3 text-sm text-cream/70 leading-relaxed">
           Ristrutturazione bagno chiavi in mano a Milano, Monza, Lodi e in Lombardia.
           Un unico referente, preventivo chiuso, date in contratto.
@@ -16,6 +16,10 @@ export const Footer = () => (
         <p className="mt-4 text-xs text-cream/50">
           {site.legalName} · P.IVA {site.vatId}
         </p>
+        <div className="mt-6 border-t border-line-dark pt-5">
+          <p className="text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-cream/40">Partner</p>
+          <img src="/img/partner-gruppo-bea.png" alt="Gruppo BEA, partner di Bagni Milano" width={600} height={200} loading="lazy" className="mt-3 h-9 w-auto opacity-80" />
+        </div>
       </div>
 
       <nav aria-label="Servizi">

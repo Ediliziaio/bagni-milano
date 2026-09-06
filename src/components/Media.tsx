@@ -1,4 +1,4 @@
-import { getImage, getPair } from "@/data/images";
+import { getImage, getPair, pairAspect } from "@/data/images";
 import { cn } from "@/lib/utils";
 import { useId, useState } from "react";
 
@@ -38,7 +38,6 @@ export const Img = ({
 
   return (
     <picture>
-      <source srcSet={`/img/${spec.id}.avif`} type="image/avif" />
       <img
         src={`/img/${spec.id}.jpg`}
         alt={spec.alt}
@@ -74,18 +73,19 @@ export const BeforeAfter = ({
   const labelId = useId();
   if (!prima || !dopo) return null;
   const pending = !prima.available || !dopo.available;
+  const ratio = pairAspect(group);
 
   return (
     <figure className={cn("group", className)}>
-      <div className="relative overflow-hidden rounded-[2px] border border-line-dark bg-ink-2" style={{ aspectRatio: "4 / 3" }}>
+      <div className="relative overflow-hidden rounded-[2px] border border-line-dark bg-ink-2" style={{ aspectRatio: ratio }}>
         {/* Stato DOPO: livello di fondo */}
         <div className="absolute inset-0">
-          <Img id={dopo.id} bare={pending} className={pending ? "!bg-gold/15" : "!h-full !border-0 !rounded-none"} ratio="4 / 3" />
+          <Img id={dopo.id} bare={pending} className={pending ? "!bg-gold/15" : "!h-full !border-0 !rounded-none"} ratio={ratio} />
         </div>
 
         {/* Stato PRIMA: ritagliato dal cursore */}
         <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-          <Img id={prima.id} bare={pending} className={pending ? "!bg-ink-2" : "!h-full !border-0 !rounded-none"} ratio="4 / 3" />
+          <Img id={prima.id} bare={pending} className={pending ? "!bg-ink-2" : "!h-full !border-0 !rounded-none"} ratio={ratio} />
         </div>
 
         {pending && (

@@ -2,7 +2,7 @@
 
 > Generato automaticamente da `src/data/images.ts`. Non modificare a mano: `npm run images`.
 
-**Stato: 0 di 31 disponibili.**
+**Stato: 26 di 33 disponibili.**
 Finché una foto manca, il sito mostra un segnaposto che dichiara formato e soggetto — non un
 box vuoto e non uno stock che non è di Bagni Milano.
 
@@ -25,53 +25,29 @@ Il testo alternativo è già scritto per ogni immagine nel registro: non va rein
 
 | File | Dove compare | Dimensioni minime | Cosa inquadrare |
 |---|---|---|---|
-| `hero-home` | Homepage — hero a tutta pagina | 2400×1350 px | Bagno finito, ripreso in orizzontale, con illuminazione bassa e materiali scuri (marmo nero, gres effetto pietra, ottone). Deve reggere una sovrapposizione scura e testo bianco al centro: lasciare la zona centrale poco dettagliata. Niente persone, niente riflessi del fotografo negli specchi. |
-| `hero-home-mobile` | Homepage — hero su smartphone | 1200×1600 px | Stessa scena di hero-home ma inquadratura verticale. Serve perché il taglio orizzontale su mobile perde tutto il contesto. |
-| `ba-milano-centro-prima` | Homepage e progetti — comparatore prima/dopo | 1600×1200 px | Bagno padronale prima dei lavori, in centro a Milano. Rivestimento datato, sanitari originali. INQUADRATURA DA TREPPIEDE: annotare altezza e posizione, servono identiche per lo scatto 'dopo'. |
-| `ba-milano-centro-dopo` | Homepage e progetti — comparatore prima/dopo | 1600×1200 px | Stessa identica inquadratura di ba-milano-centro-prima, a lavori conclusi e ambiente pulito. |
-| `ba-porta-nuova-prima` | Homepage e progetti — comparatore prima/dopo | 1600×1200 px | Bagno compatto di circa 4 mq a Porta Nuova prima dei lavori, con vasca ingombrante. Treppiede, posizione annotata. |
-| `ba-porta-nuova-dopo` | Homepage e progetti — comparatore prima/dopo | 1600×1200 px | Stessa inquadratura, dopo: doccia walk-in e mobile sospeso al posto della vasca. |
-| `progetto-porta-nuova` | Homepage e pagina progetti — griglia portfolio | 1600×1200 px | Vista d'insieme del bagno finito a Porta Nuova. Luce naturale se possibile, ambiente sgombro. |
-| `referente` | Chi siamo — E-E-A-T | 1200×1500 px | Ritratto del referente unico, in cantiere o in showroom, luce naturale, sguardo in camera. Una persona reale con nome e cognome vale più di dieci frasi sull'affidabilità. |
+| `cantiere-demolizione` | Metodo e processo — fase 8 | 1600×1067 px | Cantiere durante la demolizione: protezioni sui pavimenti, teli, sacchi per le macerie. Deve mostrare ORDINE, non caos. |
+| `cantiere-impianti` | Metodo e processo — fase 9 | 1600×1067 px | Tracce a muro con le nuove linee idrauliche ed elettriche in vista, prima della chiusura. |
+| `cantiere-impermeabilizzazione` | Metodo, processo e articolo sulle infiltrazioni | 1600×1067 px | Guaina liquida stesa sul piatto doccia e sulle pareti, con nastro di rinforzo sugli angoli. È la lavorazione che nessuno vede: mostrarla è un argomento di vendita. |
+| `referente` | Chi siamo — E-E-A-T | 1200×1500 px | Ritratto del referente unico, in cantiere o in showroom, luce naturale, sguardo in camera. |
 
 ## Priorità 2 — entro 30 giorni
 
 | File | Dove compare | Dimensioni minime | Cosa inquadrare |
 |---|---|---|---|
-| `ba-brera-prima` | Progetti — comparatore prima/dopo | 1600×1200 px | Bagno stretto a Brera prima dei lavori. Treppiede, posizione annotata. |
-| `ba-brera-dopo` | Progetti — comparatore prima/dopo | 1600×1200 px | Stessa inquadratura, a lavori conclusi. |
-| `ba-navigli-prima` | Progetti — comparatore prima/dopo | 1600×1200 px | Bagno anni Settanta ai Navigli prima dei lavori. Treppiede, posizione annotata. |
-| `ba-navigli-dopo` | Progetti — comparatore prima/dopo | 1600×1200 px | Stessa inquadratura, a lavori conclusi. |
-| `progetto-brera` | Homepage e pagina progetti — griglia portfolio | 1600×1200 px | Vista d'insieme del bagno finito a Brera. |
-| `progetto-navigli` | Homepage e pagina progetti — griglia portfolio | 1600×1200 px | Vista d'insieme del bagno finito ai Navigli. |
-| `progetto-milano-centro` | Homepage e pagina progetti — griglia portfolio | 1600×1200 px | Vista d'insieme del bagno padronale finito in centro. |
-| `cantiere-demolizione` | Pagina Metodo — fase 8 | 1600×1067 px | Cantiere in corso durante la demolizione: protezioni sui pavimenti, teli, sacchi per le macerie. Deve mostrare ORDINE, non caos: è la prova visiva del metodo. |
-| `cantiere-impianti` | Pagina Metodo — fase 9 | 1600×1067 px | Tracce a muro con le nuove linee idrauliche ed elettriche in vista, prima della chiusura. Dettaglio tecnico leggibile. |
-| `cantiere-impermeabilizzazione` | Pagina Metodo — fase 10 e articolo sulle infiltrazioni | 1600×1067 px | Guaina liquida stesa sul piatto doccia e sulle pareti, con nastro di rinforzo sugli angoli. È la lavorazione che nessuno vede: mostrarla è un argomento di vendita. |
-| `og-social` | Anteprima social di tutte le pagine (Open Graph) | 1200×630 px | Una delle foto 'dopo' migliori, ritagliata 1200×630 con spazio a sinistra per il testo. Sostituisce l'anteprima tipografica generata automaticamente. |
-| `art-costi` | Articoli del cluster Costi — immagine di testata | 1600×900 px | Preventivo cartaceo su un tavolo con metro, calcolatrice e un campione di gres. Luce naturale laterale, ripresa dall'alto a 45°. Nessun logo di terzi leggibile e nessun importo reale visibile. |
-| `art-progettazione` | Articoli del cluster Progettazione — immagine di testata | 1600×900 px | Pianta quotata di un bagno stampata, con matita e scalimetro appoggiati. Deve leggersi che è un disegno tecnico reale, non una grafica. |
-| `art-problemi` | Articoli del cluster Problemi — immagine di testata | 1600×900 px | Dettaglio ravvicinato di un angolo di bagno con muffa o di una siliconatura degradata. Deve essere un caso reale, riconoscibile: è la foto che fa dire al lettore «è il mio bagno». |
-| `art-lombardia` | Articoli del cluster Lombardia — immagine di testata | 1600×900 px | Facciata di un condominio milanese anni Cinquanta-Settanta, ripresa dal cortile interno. È il patrimonio edilizio di cui parlano questi articoli. |
-| `art-vasca-doccia` | Articoli sulla trasformazione vasca in doccia | 1600×900 px | Zona vasca demolita, con lo scarico in vista prima del rifacimento. Mostra il vero contenuto tecnico dell'intervento. |
-| `home-banda` | Homepage — fascia immagine a tutta larghezza | 2400×800 px | Scatto orizzontale molto ampio di un bagno finito, adatto a essere tagliato a fascia bassa (proporzione 3:1). Materiali scuri e ottone. |
+| `materiali` | Home e metodo — selezione materiali | 1600×1600 px | Composizione dall'alto dei campioni: lastre di gres, campioni di fuga, finiture di rubinetteria. |
+| `og-social` | Anteprima social (Open Graph) | 1200×630 px | Una delle foto migliori, ritagliata 1200×630 con spazio per il testo. |
 
 ## Priorità 3 — quando possibile
 
 | File | Dove compare | Dimensioni minime | Cosa inquadrare |
 |---|---|---|---|
-| `cantiere-posa` | Pagina Metodo — fase 10 | 1600×1067 px | Posa del rivestimento in corso, con livella o crociere in vista. |
-| `materiali` | Pagina Metodo — fase 6, e articoli sui materiali | 1600×1600 px | Composizione dall'alto dei campioni: lastre di gres, campioni di fuga, finiture di rubinetteria, moodboard. Sfondo neutro. |
-| `art-normative` | Articoli del cluster Normative — immagine di testata | 1600×900 px | Documenti di cantiere su una scrivania: modulo di comunicazione, planimetria, penna. Oscurare o omettere dati personali e riferimenti reali. |
-| `art-idee` | Articoli del cluster Idee e design — immagine di testata | 1600×900 px | Dettaglio di finitura ben riuscito: incontro fra rivestimento e specchio, o nicchia doccia illuminata. |
-| `art-sanitari` | Articoli su sanitari e installazione | 1600×900 px | Telaio metallico per sanitari sospesi montato, prima della chiusura della controparete. |
-| `showroom` | Homepage e contatti | 1600×1067 px | Showroom o area di consulenza dove si scelgono i materiali, con i campioni esposti. |
+| `showroom` | Home e contatti | 1600×1067 px | Showroom o area di consulenza con i campioni esposti. |
 
 ---
 
 ## Regola per le coppie prima / dopo
 
-Sono 4 coppie: `milano-centro`, `porta-nuova`, `brera`, `navigli`.
+Sono 8 coppie: `milano-centro`, `porta-nuova`, `brera`, `navigli`, `padronale`, `famiglia`, `ospiti`, `walkin`.
 
 **La stessa inquadratura è vincolante.** Un confronto prima/dopo scattato da due punti diversi
 non dimostra nulla e si nota subito: è la differenza fra una prova e una fotografia.

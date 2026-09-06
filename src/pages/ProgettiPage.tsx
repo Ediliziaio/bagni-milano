@@ -6,6 +6,7 @@ import { abs } from "@/data/site";
 import { graph, baseNodes, webPage, breadcrumb } from "@/lib/schema";
 import { publishedProjects, projects } from "@/data/projects";
 import { BeforeAfter, Img } from "@/components/Media";
+import { Reveal } from "@/components/Reveal";
 import { beforeAfterGroups } from "@/data/images";
 
 const PATH = "/progetti";
@@ -46,14 +47,25 @@ export default function ProgettiPage() {
             center
           />
           <div className="mt-14 grid gap-10 sm:grid-cols-2">
-            <BeforeAfter group="milano-centro" title="Milano centro — bagno padronale" caption="Da rivestimento anni Ottanta a finitura contemporanea." />
-            <BeforeAfter group="porta-nuova" title="Porta Nuova — bagno compatto" caption="4 mq riorganizzati: doccia walk-in al posto della vasca." />
-            <BeforeAfter group="brera" title="Brera — bagno stretto" caption="Riorganizzazione dei sanitari in un ambiente stretto." />
-            <BeforeAfter group="navigli" title="Navigli — rifacimento completo" caption="Bagno anni Settanta, impianto rifatto integralmente." />
+            {[
+              { g: "milano-centro", t: "Bagno stretto con vasca", c: "Vasca sostituita da doccia walk-in, mobile sospeso e specchio retroilluminato." },
+              { g: "walkin", t: "Da vasca a doccia a filo pavimento", c: "Eliminato lo scavalcamento: più sicurezza e più spazio di manovra." },
+              { g: "padronale", t: "Bagno padronale con doppio lavabo", c: "Rivestimento e mobile sostituiti integralmente." },
+              { g: "navigli", t: "Bagno anni Settanta", c: "Pavimento a motivi e mobile in legno scuro: rifacimento completo." },
+              { g: "porta-nuova", t: "Bagno compatto", c: "Sanitari sospesi e doccia in nicchia al posto della vasca." },
+              { g: "brera", t: "Bagno stretto e alto", c: "Riorganizzazione dei sanitari e finiture contemporanee." },
+              { g: "famiglia", t: "Bagno di famiglia", c: "Vasca sostituita, nuovo impianto e rivestimento." },
+              { g: "ospiti", t: "Bagno di servizio", c: "Rinnovo completo in pochi metri quadri." },
+            ].map((x, i) => (
+              <Reveal key={x.g} delay={(i % 2) * 90}>
+                <BeforeAfter group={x.g} title={x.t} caption={x.c} />
+              </Reveal>
+            ))}
           </div>
-          <p className="mt-10 text-center text-sm text-cream/50">
-            {beforeAfterGroups.length} coppie prima/dopo previste. I comparatori si attivano
-            quando le fotografie di cantiere sono disponibili.
+          <p className="mt-12 text-center text-sm leading-relaxed text-cream/45">
+            {beforeAfterGroups.length} trasformazioni. Le schede progetto complete — con metratura,
+            lavorazioni, materiali e durata reale del cantiere — vengono pubblicate quando i dati
+            sono verificati.
           </p>
         </div>
       </section>
@@ -71,7 +83,7 @@ export default function ProgettiPage() {
               <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {projects.map((p) => (
                   <li key={p.slug}>
-                    <Img id={`progetto-${p.citySlug === "milano" ? p.slug.replace("ristrutturazione-bagno-milano-", "") : p.slug}`} ratio="4 / 3" />
+                    <Img id="art-progettazione" ratio="4 / 3" />
                     <p className="mt-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
                     <h3 className="mt-1.5 text-lg">{p.title}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{p.before}</p>
@@ -84,7 +96,7 @@ export default function ProgettiPage() {
               {publishedProjects.map((p) => (
                 <li key={p.slug}>
                   <Link to={`/progetti/${p.slug}`} className="group block">
-                    <Img id={`progetto-${p.slug}`} ratio="4 / 3" />
+                    <Img id="art-progettazione" ratio="4 / 3" />
                     <p className="mt-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
                     <h2 className="mt-1.5 text-lg transition-colors group-hover:text-gold-deep">{p.title}</h2>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{p.result}</p>

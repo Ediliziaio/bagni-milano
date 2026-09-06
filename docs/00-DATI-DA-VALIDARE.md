@@ -35,6 +35,25 @@ esattamente ciò che il brief vieta, e comporta rischio reputazionale e di penal
 | 18 | Dati reali dei 4 progetti + foto prima/dopo | `src/data/projects.ts` — oggi `published: false` | ⬜ |
 | 19 | Recensioni verificabili (Google/Trustpilot) | Nessun `aggregateRating` finché non esistono | ⬜ |
 | 20 | Aliquote e massimali detrazioni in vigore | Articolo detrazioni, servizio bagno accessibile | ⬜ |
+| 21 | **Sostituire le immagini di riferimento con fotografie proprie** | 8 coppie prima/dopo e 7 immagini editoriali | ⬜ |
+| 22 | **Verificare la licenza d'uso delle immagini generiche** | Immagini editoriali e sfondi | ⬜ |
+
+## Nota sulle immagini attualmente pubblicate
+
+Le fotografie oggi a sistema sono **materiale di riferimento fornito dall'azienda**, non
+documentazione di cantieri realizzati da Bagni Milano:
+
+- le 8 coppie prima/dopo sono **immagini generate con AI**;
+- le immagini editoriali e di sfondo provengono da fonti terze e la licenza d'uso **non è
+  stata verificata**.
+
+Il campo `source: "riferimento"` in `src/data/images.ts` traccia quali file vanno sostituiti.
+Quando arrivano gli scatti reali, si sovrascrive il file in `public/img/` mantenendo lo stesso
+nome e si porta `source` a `"propria"`: nessuna modifica al codice.
+
+Perché conta: un case study prima/dopo è, per il visitatore, la prova del lavoro svolto. Foto
+di cantieri reali reggono una verifica, migliorano la conversione e sono contenuto originale
+indicizzabile — cosa che un'immagine generata o presa altrove non è.
 
 ## Decisione di naming da prendere
 

@@ -2,342 +2,137 @@
  * REGISTRO IMMAGINI — unica fonte di verità.
  *
  * Ogni slot visivo del sito è dichiarato qui. Finché `available` è false il sito
- * mostra un segnaposto che indica formato, proporzione e cosa inquadrare, invece
- * di un box vuoto o di una foto stock che non è di Bagni Milano.
+ * mostra un segnaposto che indica formato e soggetto, invece di un box vuoto.
  *
  * Il brief per il fotografo è GENERATO da questo file:
  *   npm run images   →  docs/14-IMMAGINI-DA-PRODURRE.md
  *
- * Per attivare un'immagine:
- *   1. salvare il file in public/img/<id>.avif (+ <id>.jpg di fallback)
- *   2. mettere `available: true` qui
- *   3. npm run build
+ * ⚠️  PROVENIENZA. Le immagini attualmente attive sono materiale di riferimento
+ * fornito dall'azienda: coppie prima/dopo generate con AI e fotografie generiche
+ * di ambienti bagno. NON sono fotografie di cantieri realizzati da Bagni Milano,
+ * e per i file generici va verificata la licenza d'uso.
+ * Vanno sostituite con scatti reali appena disponibili: il campo `source` traccia
+ * quali immagini sono ancora da rimpiazzare.
  */
+
+export type ImageSource = "propria" | "riferimento";
 
 export interface ImageSpec {
   id: string;
-  /** Dove compare nel sito. */
   where: string;
-  /** Cosa deve mostrare. Scritto per chi scatta, non per chi sviluppa. */
   brief: string;
-  /** Dimensioni minime del file sorgente. */
   width: number;
   height: number;
-  /** Testo alternativo: descrittivo e specifico, mai "bagno moderno". */
   alt: string;
   priority: 1 | 2 | 3;
   available: boolean;
-  /** Coppie prima/dopo: stesso `group`, stessa inquadratura obbligatoria. */
+  /** `riferimento` = da sostituire con materiale fotografico proprio. */
+  source?: ImageSource;
   group?: string;
   phase?: "prima" | "dopo";
 }
 
 export const images: ImageSpec[] = [
-  /* ── 1. HERO ─────────────────────────────────────────────────────── */
-  {
-    id: "hero-home",
-    where: "Homepage — hero a tutta pagina",
-    brief:
-      "Bagno finito, ripreso in orizzontale, con illuminazione bassa e materiali scuri (marmo nero, gres effetto pietra, ottone). Deve reggere una sovrapposizione scura e testo bianco al centro: lasciare la zona centrale poco dettagliata. Niente persone, niente riflessi del fotografo negli specchi.",
-    width: 2400, height: 1350,
-    alt: "Bagno padronale ristrutturato da Bagni Milano, rivestimento in marmo scuro e rubinetteria in ottone",
-    priority: 1, available: false,
-  },
-  {
-    id: "hero-home-mobile",
-    where: "Homepage — hero su smartphone",
-    brief:
-      "Stessa scena di hero-home ma inquadratura verticale. Serve perché il taglio orizzontale su mobile perde tutto il contesto.",
-    width: 1200, height: 1600,
-    alt: "Bagno padronale ristrutturato da Bagni Milano, dettaglio verticale della zona doccia",
-    priority: 1, available: false,
-  },
+  /* ── IDENTITÀ ────────────────────────────────────────────────────── */
+  { id: "logo-light", where: "Header e footer su fondo scuro", brief: "Logo ufficiale, lettering bianco e oro.", width: 1933, height: 526, alt: "Bagni Milano — ristrutturazioni chiavi in mano", priority: 1, available: true, source: "propria" },
+  { id: "logo-dark", where: "Superfici chiare e materiali stampati", brief: "Logo ufficiale, lettering nero e oro.", width: 1933, height: 520, alt: "Bagni Milano — ristrutturazioni chiavi in mano", priority: 1, available: true, source: "propria" },
+  { id: "partner-gruppo-bea", where: "Home e Chi siamo — fascia partner", brief: "Logo Gruppo BEA.", width: 600, height: 200, alt: "Gruppo BEA, partner di Bagni Milano", priority: 1, available: true, source: "propria" },
 
-  /* ── 2. PRIMA / DOPO ─────────────────────────────────────────────── */
-  {
-    id: "ba-milano-centro-prima", group: "milano-centro", phase: "prima",
-    where: "Homepage e progetti — comparatore prima/dopo",
-    brief:
-      "Bagno padronale prima dei lavori, in centro a Milano. Rivestimento datato, sanitari originali. INQUADRATURA DA TREPPIEDE: annotare altezza e posizione, servono identiche per lo scatto 'dopo'.",
-    width: 1600, height: 1200,
-    alt: "Bagno padronale in centro a Milano prima della ristrutturazione, rivestimento anni Ottanta",
-    priority: 1, available: false,
-  },
-  {
-    id: "ba-milano-centro-dopo", group: "milano-centro", phase: "dopo",
-    where: "Homepage e progetti — comparatore prima/dopo",
-    brief: "Stessa identica inquadratura di ba-milano-centro-prima, a lavori conclusi e ambiente pulito.",
-    width: 1600, height: 1200,
-    alt: "Lo stesso bagno padronale in centro a Milano dopo la ristrutturazione",
-    priority: 1, available: false,
-  },
-  {
-    id: "ba-porta-nuova-prima", group: "porta-nuova", phase: "prima",
-    where: "Homepage e progetti — comparatore prima/dopo",
-    brief: "Bagno compatto di circa 4 mq a Porta Nuova prima dei lavori, con vasca ingombrante. Treppiede, posizione annotata.",
-    width: 1600, height: 1200,
-    alt: "Bagno di 4 mq a Porta Nuova prima della ristrutturazione, con vasca",
-    priority: 1, available: false,
-  },
-  {
-    id: "ba-porta-nuova-dopo", group: "porta-nuova", phase: "dopo",
-    where: "Homepage e progetti — comparatore prima/dopo",
-    brief: "Stessa inquadratura, dopo: doccia walk-in e mobile sospeso al posto della vasca.",
-    width: 1600, height: 1200,
-    alt: "Lo stesso bagno a Porta Nuova dopo la ristrutturazione, con doccia walk-in e mobile sospeso",
-    priority: 1, available: false,
-  },
-  {
-    id: "ba-brera-prima", group: "brera", phase: "prima",
-    where: "Progetti — comparatore prima/dopo",
-    brief: "Bagno stretto a Brera prima dei lavori. Treppiede, posizione annotata.",
-    width: 1600, height: 1200,
-    alt: "Bagno stretto a Brera prima della ristrutturazione",
-    priority: 2, available: false,
-  },
-  {
-    id: "ba-brera-dopo", group: "brera", phase: "dopo",
-    where: "Progetti — comparatore prima/dopo",
-    brief: "Stessa inquadratura, a lavori conclusi.",
-    width: 1600, height: 1200,
-    alt: "Lo stesso bagno a Brera dopo la ristrutturazione",
-    priority: 2, available: false,
-  },
-  {
-    id: "ba-navigli-prima", group: "navigli", phase: "prima",
-    where: "Progetti — comparatore prima/dopo",
-    brief: "Bagno anni Settanta ai Navigli prima dei lavori. Treppiede, posizione annotata.",
-    width: 1600, height: 1200,
-    alt: "Bagno anni Settanta ai Navigli prima della ristrutturazione",
-    priority: 2, available: false,
-  },
-  {
-    id: "ba-navigli-dopo", group: "navigli", phase: "dopo",
-    where: "Progetti — comparatore prima/dopo",
-    brief: "Stessa inquadratura, a lavori conclusi.",
-    width: 1600, height: 1200,
-    alt: "Lo stesso bagno ai Navigli dopo la ristrutturazione",
-    priority: 2, available: false,
-  },
+  /* ── HERO ────────────────────────────────────────────────────────── */
+  { id: "hero-home", where: "Homepage — sfondo dell'hero, desktop", brief: "Bagno finito in orizzontale, con zona centrale poco dettagliata perché ospita il testo. Sostituire con uno scatto di un cantiere concluso.", width: 2000, height: 1562, alt: "Bagno ristrutturato, vista d'insieme", priority: 1, available: true, source: "riferimento" },
+  { id: "hero-home-mobile", where: "Homepage — sfondo dell'hero, smartphone", brief: "Stessa scena in inquadratura verticale.", width: 969, height: 1200, alt: "Bagno ristrutturato, inquadratura verticale", priority: 1, available: true, source: "riferimento" },
+  { id: "home-banda", where: "Homepage — fascia immagine a tutta larghezza", brief: "Scatto orizzontale ampio, adatto al taglio a fascia.", width: 1600, height: 1000, alt: "Bagno ristrutturato da Bagni Milano", priority: 2, available: true, source: "riferimento" },
 
-  /* ── 3. PORTFOLIO ────────────────────────────────────────────────── */
-  {
-    id: "progetto-porta-nuova",
-    where: "Homepage e pagina progetti — griglia portfolio",
-    brief: "Vista d'insieme del bagno finito a Porta Nuova. Luce naturale se possibile, ambiente sgombro.",
-    width: 1600, height: 1200,
-    alt: "Bagno ristrutturato a Porta Nuova, Milano: doccia walk-in e mobile sospeso",
-    priority: 1, available: false,
-  },
-  {
-    id: "progetto-brera",
-    where: "Homepage e pagina progetti — griglia portfolio",
-    brief: "Vista d'insieme del bagno finito a Brera.",
-    width: 1600, height: 1200,
-    alt: "Bagno ristrutturato a Brera, Milano: rivestimento scuro e specchio retroilluminato",
-    priority: 2, available: false,
-  },
-  {
-    id: "progetto-navigli",
-    where: "Homepage e pagina progetti — griglia portfolio",
-    brief: "Vista d'insieme del bagno finito ai Navigli.",
-    width: 1600, height: 1200,
-    alt: "Bagno ristrutturato ai Navigli, Milano: finitura minimalista",
-    priority: 2, available: false,
-  },
-  {
-    id: "progetto-milano-centro",
-    where: "Homepage e pagina progetti — griglia portfolio",
-    brief: "Vista d'insieme del bagno padronale finito in centro.",
-    width: 1600, height: 1200,
-    alt: "Bagno padronale ristrutturato in centro a Milano",
-    priority: 2, available: false,
-  },
+  /* ── COPPIE PRIMA / DOPO ─────────────────────────────────────────── */
+  { id: "ba-milano-centro-prima", group: "milano-centro", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno stretto con vasca e rivestimento datato.", width: 1120, height: 1400, alt: "Bagno stretto con vasca e rivestimento datato, prima dell'intervento", priority: 1, available: true, source: "riferimento" },
+  { id: "ba-milano-centro-dopo", group: "milano-centro", phase: "dopo", where: "Comparatore prima/dopo", brief: "Stessa inquadratura con doccia walk-in e mobile sospeso.", width: 1120, height: 1400, alt: "Lo stesso bagno con doccia walk-in e mobile sospeso, dopo l'intervento", priority: 1, available: true, source: "riferimento" },
 
-  /* ── 4. CANTIERE — è ciò che dimostra il metodo ──────────────────── */
-  {
-    id: "cantiere-demolizione",
-    where: "Pagina Metodo — fase 8",
-    brief:
-      "Cantiere in corso durante la demolizione: protezioni sui pavimenti, teli, sacchi per le macerie. Deve mostrare ORDINE, non caos: è la prova visiva del metodo.",
-    width: 1600, height: 1067,
-    alt: "Cantiere Bagni Milano durante la demolizione, con protezioni sui percorsi",
-    priority: 2, available: false,
-  },
-  {
-    id: "cantiere-impianti",
-    where: "Pagina Metodo — fase 9",
-    brief: "Tracce a muro con le nuove linee idrauliche ed elettriche in vista, prima della chiusura. Dettaglio tecnico leggibile.",
-    width: 1600, height: 1067,
-    alt: "Nuovo impianto idraulico ed elettrico in traccia durante una ristrutturazione bagno",
-    priority: 2, available: false,
-  },
-  {
-    id: "cantiere-impermeabilizzazione",
-    where: "Pagina Metodo — fase 10 e articolo sulle infiltrazioni",
-    brief:
-      "Guaina liquida stesa sul piatto doccia e sulle pareti, con nastro di rinforzo sugli angoli. È la lavorazione che nessuno vede: mostrarla è un argomento di vendita.",
-    width: 1600, height: 1067,
-    alt: "Impermeabilizzazione con guaina liquida della zona doccia prima della posa",
-    priority: 2, available: false,
-  },
-  {
-    id: "cantiere-posa",
-    where: "Pagina Metodo — fase 10",
-    brief: "Posa del rivestimento in corso, con livella o crociere in vista.",
-    width: 1600, height: 1067,
-    alt: "Posa del rivestimento in gres durante una ristrutturazione bagno",
-    priority: 3, available: false,
-  },
+  { id: "ba-porta-nuova-prima", group: "porta-nuova", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno compatto con sanitari e finiture originali.", width: 1120, height: 1400, alt: "Bagno compatto con sanitari originali, prima dell'intervento", priority: 1, available: true, source: "riferimento" },
+  { id: "ba-porta-nuova-dopo", group: "porta-nuova", phase: "dopo", where: "Comparatore prima/dopo", brief: "Stessa inquadratura, ambiente rinnovato.", width: 1120, height: 1400, alt: "Lo stesso bagno compatto dopo il rifacimento completo", priority: 1, available: true, source: "riferimento" },
 
-  /* ── 5. FIDUCIA ──────────────────────────────────────────────────── */
-  {
-    id: "referente",
-    where: "Chi siamo — E-E-A-T",
-    brief:
-      "Ritratto del referente unico, in cantiere o in showroom, luce naturale, sguardo in camera. Una persona reale con nome e cognome vale più di dieci frasi sull'affidabilità.",
-    width: 1200, height: 1500,
-    alt: "Il referente unico di Bagni Milano in cantiere",
-    priority: 1, available: false,
-  },
-  {
-    id: "materiali",
-    where: "Pagina Metodo — fase 6, e articoli sui materiali",
-    brief:
-      "Composizione dall'alto dei campioni: lastre di gres, campioni di fuga, finiture di rubinetteria, moodboard. Sfondo neutro.",
-    width: 1600, height: 1600,
-    alt: "Campioni di gres, fughe e finiture di rubinetteria selezionati per un progetto",
-    priority: 3, available: false,
-  },
-  {
-    id: "og-social",
-    where: "Anteprima social di tutte le pagine (Open Graph)",
-    brief:
-      "Una delle foto 'dopo' migliori, ritagliata 1200×630 con spazio a sinistra per il testo. Sostituisce l'anteprima tipografica generata automaticamente.",
-    width: 1200, height: 630,
-    alt: "Bagni Milano — ristrutturazione bagno chiavi in mano",
-    priority: 2, available: false,
-  },
+  { id: "ba-brera-prima", group: "brera", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno stretto e alto con rivestimento originale.", width: 1120, height: 1400, alt: "Bagno stretto con rivestimento originale, prima dell'intervento", priority: 2, available: true, source: "riferimento" },
+  { id: "ba-brera-dopo", group: "brera", phase: "dopo", where: "Comparatore prima/dopo", brief: "Stessa inquadratura, finiture contemporanee.", width: 1120, height: 1400, alt: "Lo stesso bagno con finiture contemporanee, dopo l'intervento", priority: 2, available: true, source: "riferimento" },
 
-  /* ── 6. EDITORIALI — testate degli articoli ──────────────────────── */
-  {
-    id: "art-costi",
-    where: "Articoli del cluster Costi — immagine di testata",
-    brief:
-      "Preventivo cartaceo su un tavolo con metro, calcolatrice e un campione di gres. Luce naturale laterale, ripresa dall'alto a 45°. Nessun logo di terzi leggibile e nessun importo reale visibile.",
-    width: 1600, height: 900,
-    alt: "Preventivo di ristrutturazione bagno con campioni di materiale e metro",
-    priority: 2, available: false,
-  },
-  {
-    id: "art-progettazione",
-    where: "Articoli del cluster Progettazione — immagine di testata",
-    brief:
-      "Pianta quotata di un bagno stampata, con matita e scalimetro appoggiati. Deve leggersi che è un disegno tecnico reale, non una grafica.",
-    width: 1600, height: 900,
-    alt: "Pianta quotata di un bagno con la disposizione dei sanitari",
-    priority: 2, available: false,
-  },
-  {
-    id: "art-problemi",
-    where: "Articoli del cluster Problemi — immagine di testata",
-    brief:
-      "Dettaglio ravvicinato di un angolo di bagno con muffa o di una siliconatura degradata. Deve essere un caso reale, riconoscibile: è la foto che fa dire al lettore «è il mio bagno».",
-    width: 1600, height: 900,
-    alt: "Muffa nell'angolo alto di un bagno e siliconatura degradata",
-    priority: 2, available: false,
-  },
-  {
-    id: "art-normative",
-    where: "Articoli del cluster Normative — immagine di testata",
-    brief:
-      "Documenti di cantiere su una scrivania: modulo di comunicazione, planimetria, penna. Oscurare o omettere dati personali e riferimenti reali.",
-    width: 1600, height: 900,
-    alt: "Documenti per la comunicazione dei lavori all'amministratore di condominio",
-    priority: 3, available: false,
-  },
-  {
-    id: "art-lombardia",
-    where: "Articoli del cluster Lombardia — immagine di testata",
-    brief:
-      "Facciata di un condominio milanese anni Cinquanta-Settanta, ripresa dal cortile interno. È il patrimonio edilizio di cui parlano questi articoli.",
-    width: 1600, height: 900,
-    alt: "Cortile interno di un condominio milanese degli anni Sessanta",
-    priority: 2, available: false,
-  },
-  {
-    id: "art-idee",
-    where: "Articoli del cluster Idee e design — immagine di testata",
-    brief: "Dettaglio di finitura ben riuscito: incontro fra rivestimento e specchio, o nicchia doccia illuminata.",
-    width: 1600, height: 900,
-    alt: "Dettaglio di finitura di un bagno ristrutturato: nicchia doccia illuminata",
-    priority: 3, available: false,
-  },
-  {
-    id: "art-vasca-doccia",
-    where: "Articoli sulla trasformazione vasca in doccia",
-    brief:
-      "Zona vasca demolita, con lo scarico in vista prima del rifacimento. Mostra il vero contenuto tecnico dell'intervento.",
-    width: 1600, height: 900,
-    alt: "Zona vasca demolita con lo scarico in vista prima della trasformazione in doccia",
-    priority: 2, available: false,
-  },
-  {
-    id: "art-sanitari",
-    where: "Articoli su sanitari e installazione",
-    brief: "Telaio metallico per sanitari sospesi montato, prima della chiusura della controparete.",
-    width: 1600, height: 900,
-    alt: "Telaio metallico per sanitari sospesi installato prima della controparete",
-    priority: 3, available: false,
-  },
-  {
-    id: "home-banda",
-    where: "Homepage — fascia immagine a tutta larghezza",
-    brief:
-      "Scatto orizzontale molto ampio di un bagno finito, adatto a essere tagliato a fascia bassa (proporzione 3:1). Materiali scuri e ottone.",
-    width: 2400, height: 800,
-    alt: "Bagno ristrutturato da Bagni Milano, vista d'insieme",
-    priority: 2, available: false,
-  },
-  {
-    id: "showroom",
-    where: "Homepage e contatti",
-    brief: "Showroom o area di consulenza dove si scelgono i materiali, con i campioni esposti.",
-    width: 1600, height: 1067,
-    alt: "Area di consulenza di Bagni Milano con i campioni dei materiali",
-    priority: 3, available: false,
-  },
+  { id: "ba-navigli-prima", group: "navigli", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno anni Settanta con pavimento a motivi e mobile in legno scuro.", width: 1120, height: 1400, alt: "Bagno anni Settanta con pavimento a motivi, prima dell'intervento", priority: 2, available: true, source: "riferimento" },
+  { id: "ba-navigli-dopo", group: "navigli", phase: "dopo", where: "Comparatore prima/dopo", brief: "Stessa inquadratura, rifacimento completo.", width: 1120, height: 1400, alt: "Lo stesso bagno dopo il rifacimento completo", priority: 2, available: true, source: "riferimento" },
+
+  { id: "ba-padronale-prima", group: "padronale", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno padronale con doppio lavabo e rivestimento beige datato.", width: 1400, height: 933, alt: "Bagno padronale con doppio lavabo e rivestimento datato, prima dell'intervento", priority: 2, available: true, source: "riferimento" },
+  { id: "ba-padronale-dopo", group: "padronale", phase: "dopo", where: "Comparatore prima/dopo", brief: "Stessa inquadratura, bagno padronale rinnovato.", width: 1400, height: 933, alt: "Lo stesso bagno padronale dopo la ristrutturazione", priority: 2, available: true, source: "riferimento" },
+
+  { id: "ba-famiglia-prima", group: "famiglia", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno di famiglia con vasca e finiture originali.", width: 1400, height: 954, alt: "Bagno di famiglia con vasca e finiture originali, prima dell'intervento", priority: 2, available: true, source: "riferimento" },
+  { id: "ba-famiglia-dopo", group: "famiglia", phase: "dopo", where: "Comparatore prima/dopo", brief: "Stessa inquadratura, ambiente rinnovato.", width: 1400, height: 954, alt: "Lo stesso bagno di famiglia dopo la ristrutturazione", priority: 2, available: true, source: "riferimento" },
+
+  { id: "ba-ospiti-prima", group: "ospiti", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno di servizio con rivestimento e sanitari datati.", width: 1400, height: 1056, alt: "Bagno di servizio con sanitari datati, prima dell'intervento", priority: 3, available: true, source: "riferimento" },
+  { id: "ba-ospiti-dopo", group: "ospiti", phase: "dopo", where: "Comparatore prima/dopo", brief: "Stessa inquadratura, bagno di servizio rinnovato.", width: 1400, height: 1055, alt: "Lo stesso bagno di servizio dopo il rifacimento", priority: 3, available: true, source: "riferimento" },
+
+  { id: "ba-walkin-prima", group: "walkin", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno con vasca da sostituire con doccia.", width: 1050, height: 1400, alt: "Bagno con vasca prima della trasformazione in doccia", priority: 2, available: true, source: "riferimento" },
+  { id: "ba-walkin-dopo", group: "walkin", phase: "dopo", where: "Comparatore prima/dopo", brief: "Stessa inquadratura con doccia walk-in a filo pavimento.", width: 1050, height: 1400, alt: "Lo stesso bagno con doccia walk-in a filo pavimento", priority: 2, available: true, source: "riferimento" },
+
+  /* ── CANTIERE — da produrre: è la prova visiva del metodo ────────── */
+  { id: "cantiere-demolizione", where: "Metodo e processo — fase 8", brief: "Cantiere durante la demolizione: protezioni sui pavimenti, teli, sacchi per le macerie. Deve mostrare ORDINE, non caos.", width: 1600, height: 1067, alt: "Cantiere Bagni Milano durante la demolizione, con protezioni sui percorsi", priority: 1, available: false },
+  { id: "cantiere-impianti", where: "Metodo e processo — fase 9", brief: "Tracce a muro con le nuove linee idrauliche ed elettriche in vista, prima della chiusura.", width: 1600, height: 1067, alt: "Nuovo impianto idraulico ed elettrico in traccia durante una ristrutturazione bagno", priority: 1, available: false },
+  { id: "cantiere-impermeabilizzazione", where: "Metodo, processo e articolo sulle infiltrazioni", brief: "Guaina liquida stesa sul piatto doccia e sulle pareti, con nastro di rinforzo sugli angoli. È la lavorazione che nessuno vede: mostrarla è un argomento di vendita.", width: 1600, height: 1067, alt: "Impermeabilizzazione con guaina liquida della zona doccia prima della posa", priority: 1, available: false },
+
+  /* ── FIDUCIA — da produrre ──────────────────────────────────────── */
+  { id: "referente", where: "Chi siamo — E-E-A-T", brief: "Ritratto del referente unico, in cantiere o in showroom, luce naturale, sguardo in camera.", width: 1200, height: 1500, alt: "Il referente unico di Bagni Milano in cantiere", priority: 1, available: false },
+  { id: "materiali", where: "Home e metodo — selezione materiali", brief: "Composizione dall'alto dei campioni: lastre di gres, campioni di fuga, finiture di rubinetteria.", width: 1600, height: 1600, alt: "Campioni di gres, fughe e finiture di rubinetteria selezionati per un progetto", priority: 2, available: false },
+  { id: "showroom", where: "Home e contatti", brief: "Showroom o area di consulenza con i campioni esposti.", width: 1600, height: 1067, alt: "Area di consulenza di Bagni Milano con i campioni dei materiali", priority: 3, available: false },
+
+  /* ── EDITORIALI ─────────────────────────────────────────────────── */
+  { id: "art-costi", where: "Articoli del cluster Costi", brief: "Ambiente bagno finito, uso editoriale.", width: 1400, height: 875, alt: "Bagno ristrutturato, immagine di riferimento per gli articoli sui costi", priority: 2, available: true, source: "riferimento" },
+  { id: "art-progettazione", where: "Articoli del cluster Progettazione", brief: "Bagno di piccole dimensioni ben organizzato.", width: 1400, height: 784, alt: "Bagno piccolo con disposizione ottimizzata dei sanitari", priority: 2, available: true, source: "riferimento" },
+  { id: "art-idee", where: "Articoli dei cluster Idee e Materiali", brief: "Dettaglio di finitura contemporanea.", width: 1400, height: 934, alt: "Dettaglio di finitura di un bagno contemporaneo", priority: 3, available: true, source: "riferimento" },
+  { id: "art-lombardia", where: "Articoli del cluster Lombardia", brief: "Ambiente bagno in contesto residenziale.", width: 1001, height: 1200, alt: "Bagno in un appartamento residenziale lombardo", priority: 2, available: true, source: "riferimento" },
+  { id: "og-social", where: "Anteprima social (Open Graph)", brief: "Una delle foto migliori, ritagliata 1200×630 con spazio per il testo.", width: 1200, height: 630, alt: "Bagni Milano — ristrutturazione bagno chiavi in mano", priority: 2, available: false },
 ];
+
+export const getImage = (id: string) => images.find((i) => i.id === id);
 
 /** Testata di default per categoria del blog. */
 export const categoryImage: Record<string, string> = {
   costi: "art-costi",
   progettazione: "art-progettazione",
-  materiali: "materiali",
-  problemi: "art-problemi",
-  normative: "art-normative",
+  materiali: "art-idee",
+  problemi: "ba-padronale-prima",
+  normative: "art-costi",
   lombardia: "art-lombardia",
   "idee-e-design": "art-idee",
 };
 
-/** Override per singolo articolo, dove esiste una foto più pertinente. */
+/** Override per singolo articolo, dove esiste un'immagine più pertinente. */
 export const articleImage: Record<string, string> = {
-  "impermeabilizzazione-bagno": "cantiere-impermeabilizzazione",
-  "quanto-costa-trasformare-vasca-in-doccia": "art-vasca-doccia",
-  "sanitari-sospesi": "art-sanitari",
-  "infiltrazioni-dal-bagno": "cantiere-impermeabilizzazione",
-  "costo-manodopera-ristrutturazione-bagno": "cantiere-impianti",
-  "poca-pressione-acqua-bagno": "cantiere-impianti",
-  "scarico-bagno-lento": "cantiere-impianti",
-  "errori-da-evitare-ristrutturazione-bagno": "cantiere-demolizione",
+  "impermeabilizzazione-bagno": "ba-walkin-dopo",
+  "quanto-costa-trasformare-vasca-in-doccia": "ba-walkin-dopo",
+  "sanitari-sospesi": "art-progettazione",
+  "infiltrazioni-dal-bagno": "ba-ospiti-prima",
+  "muffa-in-bagno-cause-e-soluzioni": "ba-navigli-prima",
+  "cattivi-odori-in-bagno": "ba-famiglia-prima",
+  "scarico-bagno-lento": "ba-ospiti-prima",
+  "poca-pressione-acqua-bagno": "ba-padronale-prima",
+  "errori-da-evitare-ristrutturazione-bagno": "ba-brera-prima",
+  "dimensioni-minime-bagno": "art-progettazione",
+  "gres-o-ceramica-per-il-bagno": "art-idee",
+  "costo-bagno-6-mq": "ba-porta-nuova-dopo",
+  "ristrutturare-bagno-a-milano": "art-lombardia",
 };
 
 export const imageForArticle = (slug: string, category: string) =>
   articleImage[slug] ?? categoryImage[category] ?? "art-progettazione";
 
-export const getImage = (id: string) => images.find((i) => i.id === id);
-export const beforeAfterGroups = [...new Set(images.filter((i) => i.group).map((i) => i.group!))];
+/** Coppie prima/dopo, nell'ordine in cui compaiono nel sito. */
+export const beforeAfterGroups = [
+  "milano-centro", "porta-nuova", "brera", "navigli",
+  "padronale", "famiglia", "ospiti", "walkin",
+] as const;
+
 export const getPair = (group: string) => ({
   prima: images.find((i) => i.group === group && i.phase === "prima"),
   dopo: images.find((i) => i.group === group && i.phase === "dopo"),
 });
+
+/** Proporzione della coppia, letta dal file reale: evita ritagli distruttivi. */
+export const pairAspect = (group: string) => {
+  const { prima } = getPair(group);
+  if (!prima) return "4 / 3";
+  return prima.height > prima.width ? "4 / 5" : "4 / 3";
+};
