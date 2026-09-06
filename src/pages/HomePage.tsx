@@ -69,7 +69,7 @@ export default function HomePage() {
         </div>
 
         <div className="container-x flex min-h-[560px] flex-col items-center justify-center py-24 text-center sm:min-h-[640px] sm:py-32">
-          <p className="eyebrow">Milano · Monza · Lodi · Lombardia</p>
+          <p className="eyebrow">Milano · Monza · Lodi · Bergamo · Varese · Como</p>
           <h1 className="mt-6 max-w-4xl">Ristrutturazione bagno a Milano, chiavi in mano</h1>
           <div className="rule-gold my-8" />
           <p className="font-accent text-[clamp(1.25rem,2.6vw,1.75rem)] italic leading-snug text-cream/85 max-w-2xl">

@@ -28,7 +28,7 @@ const og = `<!doctype html><meta charset="utf-8">${FONTS}<style>
        font-family:Inter,system-ui,sans-serif;display:flex;flex-direction:column;
        justify-content:space-between;padding:72px 80px;overflow:hidden;position:relative}
   .rule{position:absolute;left:0;right:0;top:0;height:6px;background:${BRASS}}
-  .eyebrow{font-size:19px;letter-spacing:.22em;text-transform:uppercase;color:${BRASS_LIGHT};font-weight:500}
+  .eyebrow{font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:${BRASS_LIGHT};font-weight:500}
   h1{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:82px;line-height:1.04;
      letter-spacing:-.02em;max-width:15ch}
   .sub{font-size:27px;color:#C9C3BA;max-width:34ch;line-height:1.45;margin-top:22px}
@@ -37,7 +37,7 @@ const og = `<!doctype html><meta charset="utf-8">${FONTS}<style>
   .brand span{color:${BRASS_LIGHT}}
 </style>
 <div class="rule"></div>
-<div><p class="eyebrow">Milano · Monza · Lodi · Lombardia</p>
+<div><p class="eyebrow">Milano · Monza · Lodi · Bergamo · Varese · Como</p>
   <h1 style="margin-top:26px">Ristrutturazione bagno chiavi in mano</h1>
   <p class="sub">Un unico referente, preventivo chiuso, date scritte in contratto.</p></div>
 <footer><p class="brand">Bagni <span>Milano</span></p><p>7-12 giorni lavorativi</p></footer>`;
