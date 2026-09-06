@@ -39,9 +39,9 @@ export const images: ImageSpec[] = [
   { id: "partner-gruppo-bea", where: "Home e Chi siamo — fascia partner", brief: "Logo Gruppo BEA.", width: 600, height: 200, alt: "Gruppo BEA, partner di Bagni Milano", priority: 1, available: true, source: "propria" },
 
   /* ── HERO ────────────────────────────────────────────────────────── */
-  { id: "hero-home", where: "Homepage — sfondo dell'hero, desktop", brief: "Bagno finito in orizzontale, con zona centrale poco dettagliata perché ospita il testo. Sostituire con uno scatto di un cantiere concluso.", width: 1600, height: 1600, alt: "Bagno ristrutturato, vista d'insieme", priority: 1, available: true, source: "riferimento" },
+  { id: "hero-home", where: "Homepage — sfondo dell'hero, desktop", brief: "Bagno finito in orizzontale, con zona centrale poco dettagliata perché ospita il testo. Sostituire con uno scatto di un cantiere concluso.", width: 1600, height: 1131, alt: "Bagno ristrutturato, vista d'insieme", priority: 1, available: true, source: "riferimento" },
   { id: "hero-home-mobile", where: "Homepage — sfondo dell'hero, smartphone", brief: "Stessa scena in inquadratura verticale.", width: 1200, height: 1600, alt: "Bagno ristrutturato, inquadratura verticale", priority: 1, available: true, source: "riferimento" },
-  { id: "home-banda", where: "Homepage — fascia immagine a tutta larghezza", brief: "Scatto orizzontale ampio, adatto al taglio a fascia.", width: 1600, height: 1000, alt: "Bagno ristrutturato da Bagni Milano", priority: 2, available: true, source: "riferimento" },
+  { id: "home-banda", where: "Homepage — fascia immagine a tutta larghezza", brief: "Scatto orizzontale ampio, adatto al taglio a fascia.", width: 1900, height: 1173, alt: "Bagno ristrutturato da Bagni Milano", priority: 2, available: true, source: "riferimento" },
 
   /* ── COPPIE PRIMA / DOPO ─────────────────────────────────────────── */
   { id: "ba-milano-centro-prima", group: "milano-centro", phase: "prima", where: "Comparatore prima/dopo", brief: "Bagno stretto con vasca e rivestimento datato.", width: 1120, height: 1400, alt: "Bagno stretto con vasca e rivestimento datato, prima dell'intervento", priority: 1, available: true, source: "riferimento" },
