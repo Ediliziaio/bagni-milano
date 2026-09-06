@@ -9,6 +9,8 @@ import { services } from "@/data/services";
 import { cities } from "@/data/cities";
 import { faqs } from "@/data/faqs";
 import { quoteChecklist } from "@/data/costs";
+import { Img } from "@/components/Media";
+import { Reveal } from "@/components/Reveal";
 
 const PATH = "/ristrutturazione-bagno";
 
@@ -69,6 +71,10 @@ export default function RistrutturazioneBagnoPage() {
           cosa si rifà, quanto dura, cosa deve esserci in un preventivo e chi risponde del risultato.
         </p>
 
+        <figure className="mt-10">
+          <Img id="pag-ristrutturazione-bagno" ratio="16 / 9" priority />
+        </figure>
+
         <AnswerBlock question="Che cos'è una ristrutturazione bagno completa?">
           <p>
             È l'intervento che rifà il bagno dalle strutture in su: demolizione e smaltimento, impianto
@@ -90,6 +96,36 @@ export default function RistrutturazioneBagnoPage() {
                 <h3 className="mt-1 text-lg">{i.h}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{i.t}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LE LAVORAZIONI, IN IMMAGINI */}
+      <section className="on-dark section">
+        <div className="container-x">
+          <Reveal>
+            <SectionHead
+              eyebrow="In cantiere"
+              title="Le cinque lavorazioni che determinano il risultato"
+              lede="Tre di queste finiscono sotto il rivestimento e il cliente non le vedrà mai. Sono anche quelle che decidono se il bagno terrà nel tempo."
+            />
+          </Reveal>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { id: "cantiere-demolizione", t: "Demolizione", d: "Protezioni sui percorsi e smaltimento con formulario." },
+              { id: "cantiere-impianti", t: "Impianti", d: "Nuove linee in traccia e prova di tenuta prima di richiudere." },
+              { id: "cantiere-impermeabilizzazione", t: "Impermeabilizzazione", d: "Guaina e nastro di rinforzo sugli angoli: evita le infiltrazioni." },
+              { id: "lav-massetto", t: "Massetto", d: "Livellamento del piano: senza, il grande formato non si posa." },
+              { id: "lav-posa", t: "Posa", d: "Pavimento e rivestimento, stuccatura e siliconature." },
+            ].map((x, i) => (
+              <Reveal as="figure" key={x.id} delay={i * 80}>
+                <Img id={x.id} ratio="3 / 2" />
+                <figcaption className="mt-4">
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{x.t}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-cream/65">{x.d}</p>
+                </figcaption>
+              </Reveal>
             ))}
           </div>
         </div>

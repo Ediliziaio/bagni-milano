@@ -5,6 +5,8 @@ import { Breadcrumbs, CtaSection, SectionHead } from "@/components/Ui";
 import { abs } from "@/data/site";
 import { graph, baseNodes, webPage, breadcrumb } from "@/lib/schema";
 import { services } from "@/data/services";
+import { Img } from "@/components/Media";
+import { Reveal } from "@/components/Reveal";
 
 const PATH = "/servizi";
 
@@ -41,29 +43,38 @@ export default function ServiziPage() {
           Dalla ristrutturazione completa agli interventi mirati. Se il problema si risolve senza
           rifare tutto, lo diciamo.
         </p>
+        <figure className="mt-10">
+          <Img id="pag-servizi" ratio="16 / 9" priority />
+        </figure>
       </section>
 
       <section className="section">
         <div className="container-x">
-          <Link to="/ristrutturazione-bagno" className="card block border-gold/50 bg-sand/40 transition-colors hover:border-gold">
-            <p className="eyebrow">Servizio principale</p>
-            <h2 className="mt-2 text-2xl">Ristrutturazione bagno chiavi in mano</h2>
-            <p className="mt-3 max-w-2xl leading-relaxed text-ink-soft">
-              Demolizione, smaltimento, impianto idraulico ed elettrico, massetto, impermeabilizzazione,
-              posa, sanitari, rubinetteria, tinteggiatura e consegna con collaudo. Un unico contratto,
-              un unico referente.
-            </p>
+          <Link to="/ristrutturazione-bagno" className="group grid gap-8 rounded-[2px] border border-gold-deep/40 bg-sand p-6 transition-colors hover:border-gold-deep sm:p-8 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+            <div>
+              <p className="eyebrow">Servizio principale</p>
+              <h2 className="mt-2 text-2xl transition-colors group-hover:text-gold-deep">Ristrutturazione bagno chiavi in mano</h2>
+              <p className="mt-3 leading-relaxed text-ink-soft">
+                Demolizione, smaltimento, impianto idraulico ed elettrico, massetto, impermeabilizzazione,
+                posa, sanitari, rubinetteria, tinteggiatura e consegna con collaudo. Un unico contratto,
+                un unico referente.
+              </p>
+            </div>
+            <Img id="pag-ristrutturazione-bagno" ratio="16 / 9" />
           </Link>
 
           <SectionHead eyebrow="Interventi specifici" title="Quando serve un intervento mirato" lede="Ogni pagina spiega cosa comporta l'intervento, quanto dura e quando invece conviene rifare tutto." />
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <Link key={s.slug} to={`/servizi/${s.slug}`} className="card transition-colors hover:border-gold">
-                <h3 className="text-lg">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{s.answer}</p>
-              </Link>
+          <ul className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s, i) => (
+              <Reveal as="li" key={s.slug} delay={(i % 3) * 80}>
+                <Link to={`/servizi/${s.slug}`} className="group block">
+                  <Img id={`srv-${s.slug}`} ratio="16 / 9" />
+                  <h3 className="mt-4 text-lg transition-colors group-hover:text-gold-deep">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{s.answer}</p>
+                </Link>
+              </Reveal>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 

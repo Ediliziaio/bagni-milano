@@ -94,8 +94,9 @@ export default function MetodoPage() {
           <ol className="mt-14 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-4 lg:overflow-visible lg:pb-0">
             {macroPhases.map((m, i) => (
               <Reveal as="li" key={m.n} delay={i * 90} className="w-[78vw] shrink-0 snap-start sm:w-[52vw] lg:w-auto">
-                <div className="flex h-full flex-col border-t-2 border-gold pt-6">
-                  <p className="font-display text-4xl text-gold/40">{String(m.n).padStart(2, "0")}</p>
+                <div className="flex h-full flex-col">
+                  <Img id={["fase-progetto", "fase-materiali", "cantiere-impianti", "fase-consegna"][i]} ratio="3 / 2" />
+                  <p className="mt-5 border-t-2 border-gold pt-5 font-display text-4xl text-gold/40">{String(m.n).padStart(2, "0")}</p>
                   <h3 className="mt-3 text-xl">{m.name}</h3>
                   <p className="mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{m.range} · {m.duration}</p>
                   <p className="mt-4 text-sm leading-relaxed text-cream/65">{m.text}</p>

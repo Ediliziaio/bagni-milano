@@ -182,6 +182,64 @@ export const prompts: Record<string, string> = {
   "pag-chi-siamo":
     `${STYLE_BASE}. Squadra di cantiere di tre persone vista di spalle mentre lavora in un bagno in ristrutturazione, volti non riconoscibili. Formato orizzontale.`,
 
+  /* ── TESTATE DEGLI ARTICOLI E SEZIONI ─────────────────────────────── */
+  "art-quanto-costa-rifare-un-bagno":
+    `${STYLE_BASE}. Preventivo di ristrutturazione stampato su un tavolo in legno con calcolatrice, metro a nastro arrotolato e due campioni di gres appoggiati. Ripresa dall'alto a 45 gradi. Nessun testo o cifra leggibile. Formato orizzontale.`,
+  "art-costo-piastrelle-bagno":
+    `${STYLE_BASE}. Campioni di gres porcellanato di formati diversi appoggiati in verticale contro una parete chiara, dal 30x60 alla grande lastra, con un metro a nastro appoggiato accanto. Luce naturale laterale. Formato orizzontale.`,
+  "art-quanto-costa-trasformare-vasca-in-doccia":
+    `${STYLE_BASE}. Vasca da bagno appena rimossa in un cantiere: il muretto perimetrale demolito, lo scarico in PVC in vista sul massetto, vecchie piastrelle asportate sulla parete. Ambiente pulito e ordinato. Formato orizzontale.`,
+  "art-costo-bagno-6-mq":
+    `${STYLE_BASE}. Bagno finito di circa 6 mq visto dall'ingresso, con mobile sospeso, sanitari sospesi e doccia in nicchia. Un metro a nastro esteso appoggiato sul pavimento in primo piano. Formato orizzontale.`,
+  "art-costo-manodopera-ristrutturazione-bagno":
+    `${STYLE_BASE}. Mani di un posatore che stende collante con la spatola dentata su una parete di bagno, con crociere distanziatrici e livella appoggiate accanto. Volto non visibile, dettaglio ravvicinato. Formato orizzontale.`,
+  "art-leggere-preventivo-ristrutturazione-bagno":
+    `${STYLE_BASE}. Preventivo dettagliato a piu' pagine aperto su una scrivania, con penna appoggiata e una riga evidenziata a matita. Righe e tabelle visibili ma nessun testo o importo leggibile. Ripresa dall'alto. Formato orizzontale.`,
+  "art-come-progettare-un-bagno":
+    `${STYLE_BASE}. Pianta quotata di un bagno stampata su carta bianca con matita, scalimetro e gomma appoggiati sopra. Il disegno deve sembrare un elaborato tecnico reale con quote e simboli dei sanitari, ma senza testo leggibile. Formato orizzontale.`,
+  "art-dimensioni-minime-bagno":
+    `${STYLE_BASE}. Metro laser appoggiato sul pavimento di un piccolo bagno vuoto in fase di rilievo, con il raggio che raggiunge la parete opposta. Ambiente spoglio, pareti neutre. Formato orizzontale.`,
+  "art-errori-da-evitare-ristrutturazione-bagno":
+    `${STYLE_BASE}. Dettaglio ravvicinato di una posa mal eseguita: fughe di larghezza irregolare, un angolo con silicone applicato male, una piastrella leggermente fuori piano. Luce radente che evidenzia il difetto. Formato orizzontale.`,
+  "art-gres-o-ceramica-per-il-bagno":
+    `${STYLE_BASE}. Due campioni affiancati su fondo neutro: una lastra di gres porcellanato effetto marmo scuro e una piastrella in ceramica smaltata chiara, riprese di taglio per mostrarne lo spessore diverso. Luce naturale diffusa. Formato orizzontale.`,
+  "art-impermeabilizzazione-bagno":
+    `${STYLE_BASE}. Zona doccia di un bagno in costruzione con guaina liquida impermeabilizzante grigio-azzurra stesa uniformemente su fondo e pareti, nastro di rinforzo bianco visibile sugli angoli e attorno alla piletta. Rullo e secchio appoggiati a terra. Formato orizzontale.`,
+  "art-sanitari-sospesi":
+    `${STYLE_BASE}. Telaio metallico per sanitari sospesi montato e fissato a pavimento e parete, con cassetta di risciacquo integrata e tubazioni collegate, prima della chiusura in cartongesso. Dettaglio tecnico leggibile. Formato orizzontale.`,
+  "art-muffa-in-bagno-cause-e-soluzioni":
+    `${STYLE_BASE}. Dettaglio ravvicinato dell'angolo alto di un bagno con muffa nera puntinata sulla fuga e sull'intonaco. Illuminazione naturale cruda, realistico e non drammatizzato. Formato orizzontale.`,
+  "art-infiltrazioni-dal-bagno":
+    `${STYLE_BASE}. Macchia di umidita' con alone giallastro e intonaco che si sfoglia sul soffitto di una stanza, sotto un bagno. Luce naturale da finestra, ambiente residenziale ordinato. Formato orizzontale.`,
+  "art-cattivi-odori-in-bagno":
+    `${STYLE_BASE}. Sifone a bottiglia smontato sotto il lavabo di un bagno, con la parte inferiore staccata e appoggiata, tubi in vista dentro il mobile aperto. Dettaglio ravvicinato. Formato orizzontale.`,
+  "art-scarico-bagno-lento":
+    `${STYLE_BASE}. Piatto doccia con acqua che ristagna attorno alla piletta invece di defluire, griglia di scarico visibile. Ripresa dall'alto ravvicinata, luce naturale. Formato orizzontale.`,
+  "art-poca-pressione-acqua-bagno":
+    `${STYLE_BASE}. Soffione doccia acceso con getto debole e disomogeneo, alcuni ugelli otturati dal calcare. Dettaglio ravvicinato su fondo di rivestimento scuro. Formato orizzontale.`,
+  "art-serve-la-cila-per-rifare-il-bagno":
+    `${STYLE_BASE}. Planimetria di un appartamento piegata su una scrivania accanto a un modulo amministrativo e una penna. Nessun testo leggibile, nessun dato personale, nessuno stemma istituzionale. Ripresa dall'alto. Formato orizzontale.`,
+  "art-detrazioni-ristrutturazione-bagno":
+    `${STYLE_BASE}. Documenti fiscali e ricevute impilati su una scrivania accanto a una calcolatrice e una penna. Nessun importo o testo leggibile. Ripresa dall'alto a 45 gradi, luce naturale. Formato orizzontale.`,
+  "art-ristrutturare-bagno-a-milano":
+    `${STYLE_BASE}. Cortile interno di un condominio milanese degli anni Sessanta: facciata intonacata chiara, ringhiere in ferro sui ballatoi, finestre allineate, qualche pianta. Luce di giornata nuvolosa, atmosfera urbana italiana. Formato orizzontale.`,
+  "pag-ristrutturazione-bagno":
+    `${STYLE_BASE}. Bagno completo appena consegnato, vista d'insieme dall'ingresso, ambiente sgombro e pulito. Finiture contemporanee, luce naturale. Formato orizzontale.`,
+  "pag-metodo":
+    `${STYLE_BASE}. Tavolo da lavoro con planimetria quotata, campioni di gres, metro e cronoprogramma stampato: la fase di progetto prima dell'apertura del cantiere. Ripresa dall'alto a 45 gradi, nessun testo leggibile. Formato orizzontale.`,
+  "pag-servizi":
+    `${STYLE_BASE}. Composizione orizzontale di un bagno finito con doccia walk-in, mobile sospeso e sanitari sospesi. Inquadratura ampia e ordinata. Formato orizzontale.`,
+  "lav-massetto":
+    `${STYLE_BASE}. Massetto autolivellante appena steso sul pavimento di un bagno in ristrutturazione, superficie umida e uniforme, staggia appoggiata a parete. Prima della posa. Formato orizzontale.`,
+  "lav-posa":
+    `${STYLE_BASE}. Posa in corso del pavimento in gres di grande formato in un bagno: alcune lastre posate, crociere distanziatrici, livella e ventose appoggiate accanto. Nessuna persona. Formato orizzontale.`,
+  "fase-progetto":
+    `${STYLE_BASE}. Sopralluogo tecnico in un bagno da ristrutturare: metro laser su treppiede, blocco per appunti e torcia appoggiati, ambiente ancora con finiture datate. Nessuna persona. Formato orizzontale.`,
+  "fase-materiali":
+    `${STYLE_BASE}. Composizione dall'alto di campioni selezionati per un progetto: due lastre di gres, campioncini di fuga, un miscelatore in ottone spazzolato e una maniglia, disposti in ordine su fondo neutro. Formato orizzontale.`,
+  "fase-consegna":
+    `${STYLE_BASE}. Bagno finito e pulito il giorno della consegna, con una cartellina di documenti e una checklist appoggiate sul mobile lavabo. Ambiente ordinato, luce naturale, nessuna persona. Formato orizzontale.`,
+
   /* ── EDITORIALI ───────────────────────────────────────────────────── */
   "art-costi":
     `${STYLE_BASE}. Scrivania con un preventivo di ristrutturazione stampato (testo NON leggibile, ` +
