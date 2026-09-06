@@ -41,7 +41,7 @@ export const cities: City[] = [
     metaTitle: "Ristrutturazione Bagno a Milano | Chiavi in Mano | Bagni Milano",
     metaDescription: "Ristrutturazione bagno a Milano chiavi in mano: progetto, impianti, posa e finiture con un unico referente. Preventivo chiuso e date in contratto.",
     answer:
-      "Bagni Milano ristruttura bagni chiavi in mano a Milano città e nell'hinterland. Una ristrutturazione completa richiede in media 10-15 giorni lavorativi e comprende demolizione, impianti idraulico ed elettrico, massetto, impermeabilizzazione, posa, sanitari e consegna con collaudo.",
+      "Bagni Milano ristruttura bagni chiavi in mano a Milano città e nell'hinterland. Una ristrutturazione completa richiede in media 7-12 giorni lavorativi e comprende demolizione, impianti idraulico ed elettrico, massetto, impermeabilizzazione, posa, sanitari e consegna con collaudo.",
     housingStock:
       "Il patrimonio residenziale milanese è dominato da due grandi famiglie di edifici, e il bagno si comporta in modo diverso in ciascuna. Da un lato i condomini della ricostruzione, anni '50-'70, dove i bagni sono spesso ciechi, sotto i 5 mq, con tubazioni in ferro zincato e colonne di scarico originali. Dall'altro i palazzi di fine Ottocento e primo Novecento del centro e del semicentro, con solai in legno o in ferro, altezze importanti e vincoli che possono estendersi anche alle facciate interne. A questi si aggiungono le nuove costruzioni di Porta Nuova, CityLife e delle aree di rigenerazione, dove il problema non è mai l'impianto ma la personalizzazione di finiture consegnate in serie.",
     localIssues: [
@@ -57,7 +57,7 @@ export const cities: City[] = [
     faqs: [
       { q: "Quanto costa ristrutturare un bagno a Milano?", a: "I range di mercato per un bagno completo di 5-6 mq a Milano si collocano indicativamente tra 8.000 e 18.000 €, in funzione di metratura, rifacimento impianti e livello delle finiture. Il preventivo definitivo si costruisce solo dopo il sopralluogo." },
       { q: "Lavorate anche in edifici storici del centro?", a: "Sì. In quel caso il sopralluogo verifica tipologia di solaio, spessori disponibili e presenza di vincoli, e il progetto viene adattato di conseguenza." },
-      { q: "Quanto tempo serve per rifare un bagno a Milano?", a: "In media 10-15 giorni lavorativi per una ristrutturazione completa. Interventi mirati, come la trasformazione della vasca in doccia, richiedono 2-4 giorni." },
+      { q: "Quanto tempo serve per rifare un bagno a Milano?", a: "In media 7-12 giorni lavorativi per una ristrutturazione completa. Interventi mirati, come la trasformazione della vasca in doccia, richiedono 2-4 giorni." },
       { q: "Come gestite lo smaltimento delle macerie in centro?", a: "Con trasporto in discarica autorizzata e formulario rifiuti, pianificando carico e scarico negli orari compatibili con ZTL e regolamento condominiale." },
     ],
   },
@@ -114,7 +114,7 @@ export const cities: City[] = [
     faqs: [
       { q: "Operate anche fuori Milano, a Lodi?", a: "Sì, Lodi e la provincia di Lodi rientrano nell'area servita. La copertura del singolo comune viene confermata al primo contatto." },
       { q: "Lavorate su case di corte e cascine recuperate?", a: "Sì. In questi casi il sopralluogo è più importante del solito: percorso dello scarico, tipo di solaio e presenza di umidità di risalita determinano progetto e preventivo." },
-      { q: "I tempi sono più lunghi rispetto a Milano?", a: "No. Cambia l'organizzazione: i lavori vengono pianificati in blocchi continuativi, quindi la durata complessiva del cantiere resta allineata ai 10-15 giorni lavorativi." },
+      { q: "I tempi sono più lunghi rispetto a Milano?", a: "No. Cambia l'organizzazione: i lavori vengono pianificati in blocchi continuativi, quindi la durata complessiva del cantiere resta allineata ai 7-12 giorni lavorativi." },
     ],
   },
   {
@@ -226,7 +226,7 @@ export const cities: City[] = [
     faqs: [
       { q: "In quali province lombarde operate?", a: "In modo continuativo su Milano e Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese e Como. Sulle restanti province lombarde valutiamo caso per caso al primo contatto." },
       { q: "La distanza incide sul preventivo?", a: "Può incidere sulla voce di trasferta per i cantieri più distanti. Quando accade lo indichiamo esplicitamente nel preventivo, non lo nascondiamo in altre voci." },
-      { q: "Il metodo di lavoro cambia da provincia a provincia?", a: "No. Il Metodo Bagno Certo è lo stesso ovunque: referente unico, preventivo chiuso e date scritte in contratto. Cambia l'adattamento tecnico al tipo di edificio." },
+      { q: "Il metodo di lavoro cambia da provincia a provincia?", a: "No. Il metodo è lo stesso ovunque: referente unico, preventivo chiuso e date scritte in contratto. Cambia l'adattamento tecnico al tipo di edificio." },
     ],
   },
 ];

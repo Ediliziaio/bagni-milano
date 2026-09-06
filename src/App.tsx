@@ -7,7 +7,6 @@ import { cities, comuni } from "@/data/cities";
 /* Code splitting per pagina: la home resta nel bundle iniziale (LCP). */
 const RistrutturazioneBagnoPage = lazy(() => import("./pages/RistrutturazioneBagnoPage"));
 const MetodoPage = lazy(() => import("./pages/MetodoPage"));
-const ProcessoPage = lazy(() => import("./pages/ProcessoPage"));
 const ChiSiamoPage = lazy(() => import("./pages/ChiSiamoPage"));
 const CostiPage = lazy(() => import("./pages/CostiPage"));
 const CalcolatorePage = lazy(() => import("./pages/CalcolatorePage"));
@@ -44,8 +43,8 @@ const App = () => (
         <Route path="/" element={<HomePage />} />
         <Route path="/ristrutturazione-bagno" element={<RistrutturazioneBagnoPage />} />
         <Route path="/metodo" element={<MetodoPage />} />
-        <Route path="/processo" element={<ProcessoPage />} />
-        <Route path="/fasi-ristrutturazione-bagno" element={<Navigate to="/processo" replace />} />
+        <Route path="/processo" element={<Navigate to="/metodo" replace />} />
+        <Route path="/fasi-ristrutturazione-bagno" element={<Navigate to="/metodo" replace />} />
         <Route path="/come-lavoriamo" element={<Navigate to="/metodo" replace />} />
         <Route path="/chi-siamo" element={<ChiSiamoPage />} />
         <Route path="/quanto-costa-ristrutturare-bagno" element={<CostiPage />} />

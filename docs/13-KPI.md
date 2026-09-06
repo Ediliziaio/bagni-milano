@@ -122,7 +122,7 @@ da eseguire **mensilmente**.
 
 **Di brand**
 16. Cos'è Bagni Milano?
-17. Che cos'è il Metodo Bagno Certo?
+17. Che cos'è il Metodo Bagni Milano?
 18. Bagni Milano opera anche a Monza?
 19. Bagni Milano è affidabile?
 20. Quali servizi offre Bagni Milano?

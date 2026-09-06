@@ -1,4 +1,5 @@
 import { Seo } from "@/components/Seo";
+import { Img } from "@/components/Media";
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs, CtaSection, FaqList } from "@/components/Ui";
 import { abs } from "@/data/site";
@@ -32,6 +33,9 @@ export default function FaqPage() {
           Le domande che ci vengono fatte più spesso in sopralluogo, con risposte dirette.
           Dove non abbiamo un dato confermato, lo diciamo.
         </p>
+        <figure className="mt-8">
+          <Img id="pag-faq" ratio="16 / 9" priority />
+        </figure>
         <nav aria-label="Argomenti" className="mt-8 flex flex-wrap gap-2.5">
           {faqTopics.map((t) => (
             <a key={t.key} href={`#${t.key}`} className="rounded-full border border-line bg-white px-4 py-2 text-sm text-ink-soft transition-colors hover:border-gold hover:text-gold-deep">

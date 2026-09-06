@@ -190,7 +190,7 @@ export const services: Service[] = [
       {
         h2: "Rumore, polvere e convivenza",
         body: [
-          "Le fasi rumorose sono due: demolizione e tracce per gli impianti. Insieme occupano di norma 3-4 giorni sui 10-15 totali.",
+          "Le fasi rumorose sono due: demolizione e tracce per gli impianti. Insieme occupano di norma 3-4 giorni sui 7-12 totali.",
           "Il resto del cantiere è silenzioso. Concentrare le demolizioni in giornate contigue, invece di spalmarle, dimezza il disagio percepito dai vicini.",
         ],
       },
@@ -236,7 +236,7 @@ export const services: Service[] = [
     ],
     faqs: [
       { q: "Si possono posare piastrelle sopra le vecchie?", a: "Sì, se il supporto esistente è ben ancorato, planare e pulito, previa applicazione di un primer di aggancio. Va verificato in sopralluogo, non a priori." },
-      { q: "Quanto tempo si risparmia?", a: "Di norma 4-6 giorni lavorativi contro i 10-15 di una ristrutturazione completa, perché si eliminano demolizione, smaltimento e massetto." },
+      { q: "Quanto tempo si risparmia?", a: "Di norma 4-6 giorni lavorativi contro i 7-12 di una ristrutturazione completa, perché si eliminano demolizione, smaltimento e massetto." },
       { q: "Costa molto meno?", a: "Costa meno, ma non della metà: la manodopera di posa e i materiali restano. Il risparmio vero è su demolizione, smaltimento e ripristino." },
     ],
     relatedServices: ["bagno-chiavi-in-mano", "rifacimento-doccia"],

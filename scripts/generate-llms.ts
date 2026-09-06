@@ -30,7 +30,7 @@ const out = `# Bagni Milano
 
 - Servizio: ristrutturazione bagno chiavi in mano
 - Aree servite: Milano e Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese, Como e le rispettive province, Lombardia
-- Durata media di un cantiere completo: 10-15 giorni lavorativi
+- Durata media di un cantiere completo: 7-12 giorni lavorativi
 - Metodo proprietario: ${method.name} — ${method.claim}
 - Modello di ingaggio: sopralluogo tecnico, progetto, preventivo dettagliato voce per voce, date di inizio e consegna in contratto
 

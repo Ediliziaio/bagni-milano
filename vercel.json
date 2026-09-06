@@ -49,8 +49,13 @@
       "permanent": true
     },
     {
+      "source": "/processo",
+      "destination": "/metodo",
+      "permanent": true
+    },
+    {
       "source": "/fasi-ristrutturazione-bagno",
-      "destination": "/processo",
+      "destination": "/metodo",
       "permanent": true
     }
   ],

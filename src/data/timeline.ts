@@ -1,6 +1,6 @@
 /** Cronoprogramma tipo. Base per la pagina /quanto-tempo-ristrutturare-bagno e per HowTo schema. */
 export const timelineAnswer =
-  "Una ristrutturazione completa del bagno richiede in media 10-15 giorni lavorativi di cantiere, pari a circa 2-3 settimane di calendario. Prima del cantiere servono 2-4 settimane per sopralluogo, progetto, preventivo e ordine dei materiali.";
+  "Una ristrutturazione completa del bagno richiede in media 7-12 giorni lavorativi di cantiere, pari a circa 2-3 settimane di calendario. Prima del cantiere servono 2-4 settimane per sopralluogo, progetto, preventivo e ordine dei materiali.";
 
 export const preWork = [
   { phase: "Sopralluogo tecnico", duration: "1 appuntamento", note: "Rilievo, verifica impianti, scarichi e vincoli." },
@@ -11,11 +11,11 @@ export const preWork = [
 
 export const workDays = [
   { day: "Giorni 1-2", phase: "Demolizione e smaltimento", detail: "Protezione dei percorsi, rimozione di sanitari, rivestimenti e massetto. Sono i giorni più rumorosi.", noisy: true },
-  { day: "Giorni 3-5", phase: "Impianti idraulico ed elettrico", detail: "Tracce, nuove linee di adduzione e scarico, punti luce e prese. Prova di tenuta in pressione prima di richiudere.", noisy: true },
-  { day: "Giorni 5-7", phase: "Massetto e impermeabilizzazione", detail: "Chiusura tracce, livellamento e guaina liquida sulle zone bagnate. Servono tempi tecnici di asciugatura.", noisy: false },
-  { day: "Giorni 7-11", phase: "Posa pavimento e rivestimento", detail: "Posa, stuccatura e siliconature. È la fase più lunga e quella che determina il risultato estetico.", noisy: false },
-  { day: "Giorni 11-13", phase: "Installazione sanitari e arredo", detail: "Montaggio di sanitari, mobile, rubinetteria, box doccia, radiatore e illuminazione.", noisy: false },
-  { day: "Giorni 13-15", phase: "Finiture, collaudo e consegna", detail: "Tinteggiatura, prova di tenuta, pulizia di fine cantiere e consegna con checklist firmata.", noisy: false },
+  { day: "Giorni 2-3", phase: "Impianti idraulico ed elettrico", detail: "Tracce, nuove linee di adduzione e scarico, punti luce e prese. Prova di tenuta in pressione prima di richiudere.", noisy: true },
+  { day: "Giorni 3-5", phase: "Massetto e impermeabilizzazione", detail: "Chiusura tracce, livellamento e guaina liquida sulle zone bagnate. Servono tempi tecnici di asciugatura.", noisy: false },
+  { day: "Giorni 5-8", phase: "Posa pavimento e rivestimento", detail: "Posa, stuccatura e siliconature. È la fase più lunga e quella che determina il risultato estetico.", noisy: false },
+  { day: "Giorni 8-10", phase: "Installazione sanitari e arredo", detail: "Montaggio di sanitari, mobile, rubinetteria, box doccia, radiatore e illuminazione.", noisy: false },
+  { day: "Giorni 10-12", phase: "Finiture, collaudo e consegna", detail: "Tinteggiatura, prova di tenuta, pulizia di fine cantiere e consegna con checklist firmata.", noisy: false },
 ];
 
 export const timeDrivers = [

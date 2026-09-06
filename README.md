@@ -3,7 +3,7 @@
 Sito web di **Bagni Milano**, impresa specializzata nella ristrutturazione bagno chiavi in mano
 a Milano, Monza, Lodi e in Lombardia.
 
-Progettato come asset SEO / Local SEO / GEO / AIO, non come vetrina: **72 pagine HTML statiche**
+Progettato come asset SEO / Local SEO / GEO / AIO, non come vetrina: **71 pagine HTML statiche**
 prerenderizzate, grafo di entità JSON-LD coerente, architettura pillar-cluster e strategia
 documentata in `docs/`.
 
@@ -61,7 +61,7 @@ src/
 │   ├── costs.ts        range indicativi di mercato (NON listino aziendale)
 │   ├── timeline.ts     cronoprogramma di cantiere
 │   ├── faqs.ts         29 FAQ centralizzate, riusate per topic
-│   ├── method.ts       Metodo Bagno Certo, 12 fasi con esito e azione richiesta
+│   ├── method.ts       Metodo Bagni Milano, 12 fasi con esito e azione richiesta
 │   ├── images.ts       31 slot immagine dichiarati, con brief per il fotografo
 │   ├── estimator.ts    modello del calcolatore di costo
 │   └── projects.ts     case study (published: false finché mancano dati reali)

@@ -38,6 +38,10 @@ export default function ChiSiamoPage() {
       <section className="container-x pt-8">
         <p className="eyebrow">Chi siamo</p>
         <h1 className="mt-3 max-w-3xl">Specialisti del bagno, non generalisti dell'edilizia</h1>
+        <figure className="mt-8">
+          <Img id="pag-chi-siamo" ratio="16 / 9" priority />
+        </figure>
+
         <AnswerBlock question="Chi è Bagni Milano?">
           <p>
             Bagni Milano è un'impresa specializzata nella ristrutturazione completa del bagno chiavi in mano.

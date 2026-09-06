@@ -346,7 +346,7 @@ export const articles: Article[] = [
     readingTime: "8 min",
     primaryKeyword: "come progettare un bagno",
     internalLinks: [
-      { label: "Il Metodo Bagno Certo", href: "/metodo" },
+      { label: "Il Metodo Bagni Milano", href: "/metodo" },
       { label: "Ristrutturazione bagno piccolo", href: "/servizi/bagno-piccolo" },
     ],
     body: P(`
@@ -451,7 +451,7 @@ export const articles: Article[] = [
     primaryKeyword: "errori ristrutturazione bagno",
     internalLinks: [
       { label: "Come progettare un bagno", href: "/blog/come-progettare-un-bagno" },
-      { label: "Il Metodo Bagno Certo", href: "/metodo" },
+      { label: "Il Metodo Bagni Milano", href: "/metodo" },
       { label: "Quanto costa ristrutturare un bagno", href: "/quanto-costa-ristrutturare-bagno" },
     ],
     body: P(`
@@ -1467,13 +1467,13 @@ export const articles: Article[] = [
     metaTitle: "Costo Manodopera Ristrutturazione Bagno | Bagni Milano",
     metaDescription: "Quanto pesa la manodopera in una ristrutturazione bagno: 35-45% del totale, quante figure intervengono e perché il coordinamento è una voce di costo reale.",
     excerpt: "Su 12.000 euro di bagno, circa 5.000 sono ore di lavoro di cinque figure diverse.",
-    answer: "La manodopera pesa fra il 35% e il 45% del costo di una ristrutturazione bagno. In un cantiere completo intervengono almeno cinque figure — muratore, idraulico, elettricista, posatore e chi coordina — per un totale indicativo di 25-40 giornate uomo su 10-15 giorni di calendario.",
+    answer: "La manodopera pesa fra il 35% e il 45% del costo di una ristrutturazione bagno. In un cantiere completo intervengono almeno cinque figure — muratore, idraulico, elettricista, posatore e chi coordina — per un totale indicativo di 25-40 giornate uomo su 7-12 giorni di calendario.",
     datePublished: "2026-09-06",
     readingTime: "5 min",
     primaryKeyword: "costo manodopera ristrutturazione bagno",
     internalLinks: [
       { label: "Guida completa ai costi", href: "/quanto-costa-ristrutturare-bagno" },
-      { label: "Il Metodo Bagno Certo", href: "/metodo" },
+      { label: "Il Metodo Bagni Milano", href: "/metodo" },
     ],
     body: P(`
 <h2>Chi entra davvero in un cantiere da 6 mq</h2>
@@ -1498,7 +1498,7 @@ export const articles: Article[] = [
 <p>Un posatore più veloce del 30% con lo stesso risultato non è più caro: è meno caro.</p>
 
 <h2>Perché le giornate uomo superano i giorni di calendario</h2>
-<p>Un cantiere da 10-15 giorni di calendario contiene 25-40 giornate uomo perché più figure lavorano in parallelo, e perché alcune fasi richiedono due persone contemporaneamente.</p>
+<p>Un cantiere da 7-12 giorni di calendario contiene 25-40 giornate uomo perché più figure lavorano in parallelo, e perché alcune fasi richiedono due persone contemporaneamente.</p>
 <p>La posa del grande formato ne è l'esempio più chiaro: una lastra da 120 × 280 cm non si movimenta da soli. Lo stesso vale per il montaggio di un box doccia su misura o per la movimentazione dei sacchi di macerie lungo le scale.</p>
 
 <h2>Cosa determina il costo orario</h2>

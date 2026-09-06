@@ -66,7 +66,7 @@ che afferma tutto con la stessa sicurezza.
 ```
 Bagni Milano → impresa → ristrutturazione bagni → chiavi in mano
              → Milano · Monza · Lodi · Lombardia
-             → Metodo Bagno Certo (12 fasi, referente unico, date in contratto)
+             → Metodo Bagni Milano (12 fasi, referente unico, date in contratto)
 ```
 
 Questa catena è ripetuta, con le stesse parole, in: `llms.txt`, `description` dello schema

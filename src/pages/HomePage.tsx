@@ -51,7 +51,7 @@ export default function HomePage() {
         description="Ristrutturazione bagno chiavi in mano a Milano, Monza, Lodi e in Lombardia. Un unico referente, preventivo chiuso e date scritte in contratto."
         path="/"
         schema={schema}
-        answer="Bagni Milano ristruttura bagni chiavi in mano a Milano, Monza, Lodi e in Lombardia con un unico referente, preventivo chiuso e date in contratto. Una ristrutturazione completa richiede in media 10-15 giorni lavorativi."
+        answer="Bagni Milano ristruttura bagni chiavi in mano a Milano, Monza, Lodi e in Lombardia con un unico referente, preventivo chiuso e date in contratto. Una ristrutturazione completa richiede in media 7-12 giorni lavorativi."
       />
 
       {/* HERO — fascia scura a tutta pagina, come nel prototipo I Bagni Milano */}
@@ -111,7 +111,7 @@ export default function HomePage() {
         <div className="container-x grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <SectionHead
             eyebrow="In breve"
-            title="Una ristrutturazione bagno completa richiede in media 10-15 giorni lavorativi"
+            title="Una ristrutturazione bagno completa richiede in media 7-12 giorni lavorativi"
           />
           <div>
             <p className="leading-relaxed text-ink-soft">

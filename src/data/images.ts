@@ -83,6 +83,28 @@ export const images: ImageSpec[] = [
   { id: "art-progettazione", where: "Articoli del cluster Progettazione", brief: "Bagno di piccole dimensioni ben organizzato.", width: 1400, height: 784, alt: "Bagno piccolo con disposizione ottimizzata dei sanitari", priority: 2, available: true, source: "riferimento" },
   { id: "art-idee", where: "Articoli dei cluster Idee e Materiali", brief: "Dettaglio di finitura contemporanea.", width: 1400, height: 934, alt: "Dettaglio di finitura di un bagno contemporaneo", priority: 3, available: true, source: "riferimento" },
   { id: "art-lombardia", where: "Articoli del cluster Lombardia", brief: "Ambiente bagno in contesto residenziale.", width: 1001, height: 1200, alt: "Bagno in un appartamento residenziale lombardo", priority: 2, available: true, source: "riferimento" },
+  /* ── UNA IMMAGINE PER PAGINA ─────────────────────────────────────── */
+  { id: "geo-milano", where: "Landing Milano — apertura", brief: "Contesto edilizio riconoscibile di Milano.", width: 1600, height: 900, alt: "Edilizia residenziale tipica di Milano, area servita da Bagni Milano", priority: 2, available: false },
+  { id: "geo-monza", where: "Landing Monza — apertura", brief: "Contesto edilizio riconoscibile di Monza.", width: 1600, height: 900, alt: "Edilizia residenziale tipica di Monza, area servita da Bagni Milano", priority: 2, available: false },
+  { id: "geo-lodi", where: "Landing Lodi — apertura", brief: "Contesto edilizio riconoscibile di Lodi.", width: 1600, height: 900, alt: "Edilizia residenziale tipica di Lodi, area servita da Bagni Milano", priority: 2, available: false },
+  { id: "geo-bergamo", where: "Landing Bergamo — apertura", brief: "Contesto edilizio riconoscibile di Bergamo.", width: 1600, height: 900, alt: "Edilizia residenziale tipica di Bergamo, area servita da Bagni Milano", priority: 2, available: false },
+  { id: "geo-varese", where: "Landing Varese — apertura", brief: "Contesto edilizio riconoscibile di Varese.", width: 1600, height: 900, alt: "Edilizia residenziale tipica di Varese, area servita da Bagni Milano", priority: 2, available: false },
+  { id: "geo-como", where: "Landing Como — apertura", brief: "Contesto edilizio riconoscibile di Como.", width: 1600, height: 900, alt: "Edilizia residenziale tipica di Como, area servita da Bagni Milano", priority: 2, available: false },
+  { id: "geo-lombardia", where: "Landing Lombardia — apertura", brief: "Contesto edilizio riconoscibile di Lombardia.", width: 1600, height: 900, alt: "Edilizia residenziale tipica di Lombardia, area servita da Bagni Milano", priority: 2, available: false },
+  { id: "srv-bagno-chiavi-in-mano", where: "Pagina servizio /servizi/bagno-chiavi-in-mano", brief: "Immagine di apertura del servizio.", width: 1600, height: 900, alt: "Intervento di Bagni Milano: bagno chiavi in mano", priority: 2, available: false },
+  { id: "srv-trasformazione-vasca-in-doccia", where: "Pagina servizio /servizi/trasformazione-vasca-in-doccia", brief: "Immagine di apertura del servizio.", width: 1600, height: 900, alt: "Intervento di Bagni Milano: trasformazione vasca in doccia", priority: 2, available: false },
+  { id: "srv-bagno-piccolo", where: "Pagina servizio /servizi/bagno-piccolo", brief: "Immagine di apertura del servizio.", width: 1600, height: 900, alt: "Intervento di Bagni Milano: bagno piccolo", priority: 2, available: false },
+  { id: "srv-ristrutturazione-bagno-condominio", where: "Pagina servizio /servizi/ristrutturazione-bagno-condominio", brief: "Immagine di apertura del servizio.", width: 1600, height: 900, alt: "Intervento di Bagni Milano: ristrutturazione bagno condominio", priority: 2, available: false },
+  { id: "srv-bagno-senza-demolizione", where: "Pagina servizio /servizi/bagno-senza-demolizione", brief: "Immagine di apertura del servizio.", width: 1600, height: 900, alt: "Intervento di Bagni Milano: bagno senza demolizione", priority: 2, available: false },
+  { id: "srv-ristrutturazione-bagno-disabili", where: "Pagina servizio /servizi/ristrutturazione-bagno-disabili", brief: "Immagine di apertura del servizio.", width: 1600, height: 900, alt: "Intervento di Bagni Milano: ristrutturazione bagno disabili", priority: 2, available: false },
+  { id: "srv-rifacimento-impianto-idraulico-bagno", where: "Pagina servizio /servizi/rifacimento-impianto-idraulico-bagno", brief: "Immagine di apertura del servizio.", width: 1600, height: 900, alt: "Intervento di Bagni Milano: rifacimento impianto idraulico bagno", priority: 2, available: false },
+  { id: "srv-rifacimento-doccia", where: "Pagina servizio /servizi/rifacimento-doccia", brief: "Immagine di apertura del servizio.", width: 1600, height: 900, alt: "Intervento di Bagni Milano: rifacimento doccia", priority: 2, available: false },
+  { id: "pag-costi", where: "Money page /costi", brief: "Immagine di apertura della pagina.", width: 1600, height: 900, alt: "Bagni Milano — costi", priority: 2, available: false },
+  { id: "pag-tempi", where: "Money page /tempi", brief: "Immagine di apertura della pagina.", width: 1600, height: 900, alt: "Bagni Milano — tempi", priority: 2, available: false },
+  { id: "pag-preventivo", where: "Money page /preventivo", brief: "Immagine di apertura della pagina.", width: 1600, height: 900, alt: "Bagni Milano — preventivo", priority: 2, available: false },
+  { id: "pag-faq", where: "Money page /faq", brief: "Immagine di apertura della pagina.", width: 1600, height: 900, alt: "Bagni Milano — faq", priority: 2, available: false },
+  { id: "pag-chi-siamo", where: "Money page /chi-siamo", brief: "Immagine di apertura della pagina.", width: 1600, height: 900, alt: "Bagni Milano — chi siamo", priority: 2, available: false },
+
   { id: "og-social", where: "Anteprima social (Open Graph)", brief: "Una delle foto migliori, ritagliata 1200×630 con spazio per il testo.", width: 1200, height: 630, alt: "Bagni Milano — ristrutturazione bagno chiavi in mano", priority: 2, available: false },
 ];
 
@@ -114,6 +136,17 @@ export const articleImage: Record<string, string> = {
   "gres-o-ceramica-per-il-bagno": "art-idee",
   "costo-bagno-6-mq": "ba-porta-nuova-dopo",
   "ristrutturare-bagno-a-milano": "art-lombardia",
+};
+
+/** Immagine di apertura per pagina geografica; i comuni ereditano dalla provincia. */
+export const geoImage = (slug: string, province?: string) => {
+  const own = images.find((i) => i.id === `geo-${slug}`);
+  if (own) return own.id;
+  const byProvince: Record<string, string> = {
+    MI: "geo-milano", MB: "geo-monza", LO: "geo-lodi",
+    BG: "geo-bergamo", VA: "geo-varese", CO: "geo-como",
+  };
+  return byProvince[province ?? ""] ?? "geo-lombardia";
 };
 
 export const imageForArticle = (slug: string, category: string) =>

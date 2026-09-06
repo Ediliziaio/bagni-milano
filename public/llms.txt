@@ -11,8 +11,8 @@
 
 - Servizio: ristrutturazione bagno chiavi in mano
 - Aree servite: Milano e Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese, Como e le rispettive province, Lombardia
-- Durata media di un cantiere completo: 10-15 giorni lavorativi
-- Metodo proprietario: Metodo Bagno Certo — 12 fasi, un solo referente, date scritte in contratto.
+- Durata media di un cantiere completo: 7-12 giorni lavorativi
+- Metodo proprietario: Metodo Bagni Milano — 12 fasi, un solo referente, date scritte in contratto.
 - Modello di ingaggio: sopralluogo tecnico, progetto, preventivo dettagliato voce per voce, date di inizio e consegna in contratto
 
 ## Pagine principali
@@ -20,7 +20,7 @@
 - [Ristrutturazione bagno chiavi in mano](https://www.bagnimilano.it/ristrutturazione-bagno): cosa comprende l'intervento, voce per voce
 - [Quanto costa ristrutturare un bagno](https://www.bagnimilano.it/quanto-costa-ristrutturare-bagno): range indicativi per metratura e tipo di intervento
 - [Quanto tempo serve](https://www.bagnimilano.it/quanto-tempo-ristrutturare-bagno): cronoprogramma giorno per giorno
-- [Metodo Bagno Certo](https://www.bagnimilano.it/metodo): le 12 fasi del processo
+- [Metodo Bagni Milano](https://www.bagnimilano.it/metodo): le 12 fasi del processo
 - [Chi siamo](https://www.bagnimilano.it/chi-siamo): identità, specializzazione e organizzazione
 - [Domande frequenti](https://www.bagnimilano.it/faq): risposte dirette alle domande più comuni
 
@@ -75,7 +75,7 @@
 - [Dimensioni minime del bagno: cosa serve davvero per farci stare tutto](https://www.bagnimilano.it/blog/dimensioni-minime-bagno): Un bagno completo con lavabo, wc, bidet e doccia funziona a partire da circa 3,5-4 mq, purché la forma sia regolare. Sotto i 3 mq si rinuncia di norma al bidet. Conta più la geometria dell'ambiente della metratura: la larghezza minima utile è circa 160 cm.
 - [Quanto costa un bagno di 6 mq](https://www.bagnimilano.it/blog/costo-bagno-6-mq): Un bagno di 6 mq costa indicativamente fra 8.000 e 18.000 € in Lombardia per una ristrutturazione completa con rifacimento degli impianti. Con impianti recenti da mantenere e finiture essenziali si scende sotto i 10.000 €; con grandi lastre e sanitari di fascia alta si superano i 20.000 €.
 - [Come si legge un preventivo di ristrutturazione bagno](https://www.bagnimilano.it/blog/leggere-preventivo-ristrutturazione-bagno): Un preventivo di ristrutturazione bagno è confrontabile solo se elenca separatamente demolizione, smaltimento con formulario, impianto idraulico, impianto elettrico, massetto e impermeabilizzazione, posa con i mq indicati, sanitari con i modelli, finiture, pulizia finale e le date di inizio e consegna.
-- [Quanto incide la manodopera sul costo di un bagno](https://www.bagnimilano.it/blog/costo-manodopera-ristrutturazione-bagno): La manodopera pesa fra il 35% e il 45% del costo di una ristrutturazione bagno. In un cantiere completo intervengono almeno cinque figure — muratore, idraulico, elettricista, posatore e chi coordina — per un totale indicativo di 25-40 giornate uomo su 10-15 giorni di calendario.
+- [Quanto incide la manodopera sul costo di un bagno](https://www.bagnimilano.it/blog/costo-manodopera-ristrutturazione-bagno): La manodopera pesa fra il 35% e il 45% del costo di una ristrutturazione bagno. In un cantiere completo intervengono almeno cinque figure — muratore, idraulico, elettricista, posatore e chi coordina — per un totale indicativo di 25-40 giornate uomo su 7-12 giorni di calendario.
 - [Cattivi odori in bagno: le quattro cause reali](https://www.bagnimilano.it/blog/cattivi-odori-in-bagno): I cattivi odori in bagno hanno quattro cause: sifone asciutto per mancato uso, colonna di scarico non ventilata correttamente, pendenza dello scarico insufficiente che trattiene i residui, guarnizione del wc o della piletta degradata. Ciascuna si riconosce da quando e come l'odore si manifesta.
 - [Scarico del bagno lento: quando è il sifone e quando è la pendenza](https://www.bagnimilano.it/blog/scarico-bagno-lento): Se lo scarico è lento in un solo apparecchio, la causa è quasi sempre un'ostruzione locale nel sifone. Se sono lenti più apparecchi contemporaneamente, il problema è nel tratto comune o nella colonna. Se il rallentamento è progressivo negli anni, sono incrostazioni nella tubazione.
 - [Poca pressione dell'acqua in bagno: come capire se è l'impianto](https://www.bagnimilano.it/blog/poca-pressione-acqua-bagno): La bassa pressione in bagno ha quattro cause: aeratore o soffione intasato dal calcare, riduttore di pressione starato, incrostazioni o ossidazione nelle tubazioni, pressione di rete insufficiente ai piani alti. Un calo progressivo negli anni indica quasi sempre le tubazioni.
@@ -100,7 +100,7 @@ TODO_AZIENDA: confermare se Bagni Milano offre pagamento dilazionato o finanziam
 La ristrutturazione del bagno rientra tipicamente fra gli interventi di manutenzione straordinaria agevolabili, e la sostituzione dei sanitari può rientrare fra gli acquisti agevolati in abbinamento a un intervento di recupero. TODO_AZIENDA: aliquote e massimali cambiano ogni anno con la legge di bilancio, questa risposta va aggiornata e validata dal commercialista prima della pubblicazione.
 
 ### Quanto tempo serve per rifare un bagno?
-Una ristrutturazione completa richiede in media 10-15 giorni lavorativi di cantiere. A questi vanno aggiunte 2-4 settimane precedenti per sopralluogo, progetto, preventivo e consegna dei materiali.
+Una ristrutturazione completa richiede in media 7-12 giorni lavorativi di cantiere. A questi vanno aggiunte 2-4 settimane precedenti per sopralluogo, progetto, preventivo e consegna dei materiali.
 
 ### Quanto dura la trasformazione della vasca in doccia?
 In media 2-4 giorni lavorativi, se l'intervento resta circoscritto alla zona vasca. Se occorre rifare anche pavimento e rivestimento dell'intero bagno, i tempi si allineano a una ristrutturazione completa.

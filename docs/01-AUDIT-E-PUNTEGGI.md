@@ -48,7 +48,7 @@ Su traffico organico è inefficace, per due motivi:
    Un testo persuasivo senza dati non contiene nulla che un LLM possa riportare.
 
 Elementi di valore già presenti e da conservare: il metodo in 6 punti, la tabella comparativa
-"noi vs gli altri", le 9 FAQ (che contengono il dato reale dei 10-15 giorni), la sezione prima/dopo.
+"noi vs gli altri", le 9 FAQ (che contengono il dato reale dei 7-12 giorni), la sezione prima/dopo.
 
 ## 4. Punteggi — stato attuale
 

@@ -8,6 +8,8 @@ import { getCity, getComune, cities, comuni } from "@/data/cities";
 import { method } from "@/data/method";
 import { services } from "@/data/services";
 import { faqs } from "@/data/faqs";
+import { Img } from "@/components/Media";
+import { geoImage } from "@/data/images";
 
 const genericFaqs = faqs.filter((f) =>
   ["Quanto tempo serve per rifare un bagno?", "Fate il sopralluogo prima del preventivo?", "Chi coordina idraulico, elettricista e muratore?"].includes(f.q)
@@ -66,6 +68,10 @@ export default function GeoPage() {
       <section className="container-x pt-8">
         <p className="eyebrow">{city ? `Provincia di ${city.provinceName}` : `${comune!.name} · provincia di ${comune!.provinceName}`}</p>
         <h1 className="mt-3 max-w-3xl">Ristrutturazione bagno {prep}</h1>
+        <figure className="mt-8">
+          <Img id={geoImage(geoSlug, city ? city.province : comune!.province)} ratio="16 / 9" priority />
+        </figure>
+
         <AnswerBlock question={`Bagni Milano opera ${prep}?`}>
           <p>{city ? city.answer : comune!.intro}</p>
         </AnswerBlock>

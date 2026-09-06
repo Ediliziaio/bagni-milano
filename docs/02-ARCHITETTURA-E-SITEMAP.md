@@ -16,11 +16,10 @@
 │
 ├── /ristrutturazione-bagno                PILLAR — servizio, cosa comprende
 │
-├── /metodo                                Metodo Bagno Certo — i 4 principi
-│   └── /come-lavoriamo                    → 301 verso /metodo
-│
-├── /processo                              Le 12 fasi operative, cosa serve dal cliente
-│   └── /fasi-ristrutturazione-bagno       → 301 verso /processo
+├── /metodo                                Metodo Bagni Milano: 4 principi + 12 fasi
+│   ├── /come-lavoriamo                    → 301 verso /metodo
+│   ├── /processo                          → 301 verso /metodo
+│   └── /fasi-ristrutturazione-bagno       → 301 verso /metodo
 │
 ├── /chi-siamo                             Entità, E-E-A-T
 │
@@ -64,20 +63,20 @@
     └── /cookie-policy
 ```
 
-## Conteggio URL in sitemap: 70
+## Conteggio URL in sitemap: 69
 
 | Gruppo | URL |
 |---|---:|
-| Pagine core | 14 |
+| Pagine core | 13 |
 | Geografiche primarie | 7 |
 | Geografiche comuni | 14 |
 | Servizi | 8 |
 | Categorie blog | 7 |
 | Articoli | 20 |
 | Progetti pubblicati | 0 |
-| **Totale** | **70** |
+| **Totale** | **69** |
 
-Prerenderizzati in HTML statico: **72** (70 + le 2 pagine legali `noindex`, che devono
+Prerenderizzati in HTML statico: **71** (69 + le 2 pagine legali `noindex`, che devono
 esistere come file ma non essere indicizzate).
 
 ## Perché le geografiche sono top-level e non sotto `/zone/`

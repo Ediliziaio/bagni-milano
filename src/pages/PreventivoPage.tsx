@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
+import { Img } from "@/components/Media";
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs, CheckList, SectionHead } from "@/components/Ui";
 import { abs, site } from "@/data/site";
@@ -159,6 +160,7 @@ export default function PreventivoPage() {
           </div>
 
           <aside className="space-y-6">
+            <Img id="pag-preventivo" ratio="4 / 3" />
             <div className="card">
               <SectionHead eyebrow="Contatti" title="Parla con noi" />
               <ul className="mt-6 space-y-4 text-sm">

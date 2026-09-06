@@ -40,7 +40,7 @@ const og = `<!doctype html><meta charset="utf-8">${FONTS}<style>
 <div><p class="eyebrow">Milano · Monza · Lodi · Lombardia</p>
   <h1 style="margin-top:26px">Ristrutturazione bagno chiavi in mano</h1>
   <p class="sub">Un unico referente, preventivo chiuso, date scritte in contratto.</p></div>
-<footer><p class="brand">Bagni <span>Milano</span></p><p>10–15 giorni lavorativi</p></footer>`;
+<footer><p class="brand">Bagni <span>Milano</span></p><p>7-12 giorni lavorativi</p></footer>`;
 
 const mark = (size: number, bg: string, fg: string) => `<!doctype html><meta charset="utf-8">${FONTS}<style>
   *{margin:0;box-sizing:border-box}

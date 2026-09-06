@@ -6,6 +6,7 @@ import { abs } from "@/data/site";
 import { graph, baseNodes, webPage, service as serviceSchema, faqPage, breadcrumb } from "@/lib/schema";
 import { getService, services } from "@/data/services";
 import { cities } from "@/data/cities";
+import { Img } from "@/components/Media";
 
 export default function ServizioDetailPage() {
   const { serviceSlug = "" } = useParams();
@@ -36,6 +37,10 @@ export default function ServizioDetailPage() {
         <p className="eyebrow">Servizio</p>
         <h1 className="mt-3 max-w-3xl">{s.title}</h1>
         <p className="lede mt-5 max-w-2xl">{s.intro}</p>
+        <figure className="mt-8">
+          <Img id={`srv-${s.slug}`} ratio="16 / 9" priority />
+        </figure>
+
         <AnswerBlock question="In sintesi">
           <p>{s.answer}</p>
         </AnswerBlock>

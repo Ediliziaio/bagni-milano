@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Seo } from "@/components/Seo";
+import { Img } from "@/components/Media";
 import { Layout } from "@/components/Layout";
 import { AnswerBlock, Breadcrumbs, CheckList, CtaSection, FaqList, SectionHead } from "@/components/Ui";
 import { abs } from "@/data/site";
@@ -61,6 +62,10 @@ export default function CostiPage() {
           Range di riferimento per metratura e tipologia di intervento, dove va davvero il budget e
           quali variabili spostano il preventivo di migliaia di euro.
         </p>
+
+        <figure className="mt-8">
+          <Img id="pag-costi" ratio="16 / 9" priority />
+        </figure>
 
         <AnswerBlock question="Quanto costa ristrutturare un bagno a Milano?">
           <p>

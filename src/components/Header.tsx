@@ -6,7 +6,6 @@ import { site } from "@/data/site";
 const nav = [
   { to: "/ristrutturazione-bagno", label: "Ristrutturazione" },
   { to: "/metodo", label: "Metodo" },
-  { to: "/processo", label: "Processo" },
   { to: "/progetti", label: "Progetti" },
   { to: "/servizi", label: "Servizi" },
   { to: "/quanto-costa-ristrutturare-bagno", label: "Costi" },

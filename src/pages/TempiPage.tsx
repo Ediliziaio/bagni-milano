@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Volume2 } from "lucide-react";
 import { Seo } from "@/components/Seo";
+import { Img } from "@/components/Media";
 import { Layout } from "@/components/Layout";
 import { AnswerBlock, Breadcrumbs, CtaSection, FaqList, SectionHead } from "@/components/Ui";
 import { abs } from "@/data/site";
@@ -28,7 +29,7 @@ export default function TempiPage() {
     <Layout>
       <Seo
         title="Quanto Tempo Serve per Rifare un Bagno | Giorno per Giorno"
-        description="Quanto dura una ristrutturazione bagno: 10-15 giorni di cantiere più 2-4 settimane di preparazione. Cronoprogramma fase per fase."
+        description="Quanto dura una ristrutturazione bagno: 7-12 giorni di cantiere più 2-4 settimane di preparazione. Cronoprogramma fase per fase."
         path={PATH}
         schema={schema}
         answer={timelineAnswer}
@@ -42,6 +43,10 @@ export default function TempiPage() {
           Il cantiere è la parte più corta. Quello che allunga davvero i tempi succede prima,
           e si può controllare.
         </p>
+        <figure className="mt-8">
+          <Img id="pag-tempi" ratio="16 / 9" priority />
+        </figure>
+
         <AnswerBlock question="Quanto dura una ristrutturazione bagno?">
           <p>{timelineAnswer}</p>
         </AnswerBlock>

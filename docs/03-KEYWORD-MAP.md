@@ -18,8 +18,7 @@ rimossa o riorientata: la cannibalizzazione costa più di quanto renda la pagina
 | `/ristrutturazione-bagno` | ristrutturazione bagno | T | MOFU→BOFU | cosa comprende ristrutturazione bagno, rifacimento bagno completo, ristrutturazione bagno chiavi in mano |
 | `/quanto-costa-ristrutturare-bagno` | quanto costa ristrutturare un bagno | I | TOFU→MOFU | costo ristrutturazione bagno, prezzo rifacimento bagno, costo bagno 5 mq, costo bagno 6 mq, costo bagno 8 mq, preventivo bagno |
 | `/quanto-tempo-ristrutturare-bagno` | quanto tempo serve per rifare un bagno | I | MOFU | durata ristrutturazione bagno, rifacimento bagno tempi, tempi cantiere bagno |
-| `/metodo` | metodo ristrutturazione bagno | C | MOFU | come lavoriamo, impresa con referente unico, garanzie ristrutturazione |
-| `/processo` | fasi ristrutturazione bagno | I | TOFU→MOFU | come si svolge una ristrutturazione bagno, passaggi ristrutturazione bagno, cosa succede durante i lavori |
+| `/metodo` | metodo ristrutturazione bagno | C | MOFU | fasi ristrutturazione bagno, come si svolge una ristrutturazione bagno, come lavoriamo, referente unico |
 | `/calcolatore-costo-bagno` | calcolo costo ristrutturazione bagno | I | MOFU | simulatore preventivo bagno, stima costo bagno online |
 | `/chi-siamo` | Bagni Milano *(brand)* | C | MOFU | impresa specializzata bagni Milano, chi è Bagni Milano |
 | `/preventivo` | preventivo ristrutturazione bagno | T | BOFU | richiedi preventivo bagno, sopralluogo gratuito bagno |

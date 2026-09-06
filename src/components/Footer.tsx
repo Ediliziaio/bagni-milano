@@ -58,7 +58,6 @@ export const Footer = () => (
       <nav aria-label="Risorse">
         <p className="text-sm font-semibold text-gold">Risorse</p>
         <ul className="mt-3 space-y-2 text-sm text-cream/70">
-          <li><Link className="hover:text-gold" to="/processo">Le fasi dei lavori</Link></li>
           <li><Link className="hover:text-gold" to="/quanto-costa-ristrutturare-bagno">Quanto costa</Link></li>
           <li><Link className="hover:text-gold" to="/calcolatore-costo-bagno">Calcolatore costi</Link></li>
           <li><Link className="hover:text-gold" to="/quanto-tempo-ristrutturare-bagno">Quanto tempo serve</Link></li>

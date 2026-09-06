@@ -55,7 +55,7 @@ export default function RistrutturazioneBagnoPage() {
         description="Cosa comprende una ristrutturazione bagno completa: demolizione, impianti, massetto, impermeabilizzazione, posa e sanitari. Tempi, costi e processo."
         path={PATH}
         schema={schema}
-        answer="Una ristrutturazione bagno completa comprende demolizione e smaltimento, impianto idraulico ed elettrico, massetto e impermeabilizzazione, posa di pavimento e rivestimento, sanitari e rubinetteria, tinteggiatura e consegna. Richiede in media 10-15 giorni lavorativi."
+        answer="Una ristrutturazione bagno completa comprende demolizione e smaltimento, impianto idraulico ed elettrico, massetto e impermeabilizzazione, posa di pavimento e rivestimento, sanitari e rubinetteria, tinteggiatura e consegna. Richiede in media 7-12 giorni lavorativi."
       />
 
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Ristrutturazione bagno" }]} />
@@ -74,7 +74,7 @@ export default function RistrutturazioneBagnoPage() {
             idraulico ed elettrico, massetto e impermeabilizzazione, posa di pavimento e rivestimento,
             installazione di sanitari e rubinetteria, tinteggiatura e consegna con collaudo.
           </p>
-          <p>Richiede in media 10-15 giorni lavorativi di cantiere.</p>
+          <p>Richiede in media 7-12 giorni lavorativi di cantiere.</p>
         </AnswerBlock>
       </section>
 
@@ -123,7 +123,7 @@ export default function RistrutturazioneBagnoPage() {
             <p className="eyebrow">Tempi</p>
             <h2 className="mt-2 text-2xl">Quanto dura il cantiere</h2>
             <p className="mt-4 leading-relaxed text-ink-soft">
-              In media 10-15 giorni lavorativi, a cui vanno aggiunte 2-4 settimane precedenti per
+              In media 7-12 giorni lavorativi, a cui vanno aggiunte 2-4 settimane precedenti per
               sopralluogo, progetto, preventivo e consegna dei materiali. Le fasi rumorose — demolizione
               e tracce — occupano di norma i primi 3-4 giorni.
             </p>
