@@ -16,18 +16,25 @@
 │
 ├── /ristrutturazione-bagno                PILLAR — servizio, cosa comprende
 │
-├── /metodo                                Metodo Bagno Certo (12 fasi)
+├── /metodo                                Metodo Bagno Certo — i 4 principi
 │   └── /come-lavoriamo                    → 301 verso /metodo
+│
+├── /processo                              Le 12 fasi operative, cosa serve dal cliente
+│   └── /fasi-ristrutturazione-bagno       → 301 verso /processo
 │
 ├── /chi-siamo                             Entità, E-E-A-T
 │
 ├── /quanto-costa-ristrutturare-bagno      MONEY — cluster costi
+│   └── /calcolatore-costo-bagno           strumento + lead magnet
 ├── /quanto-tempo-ristrutturare-bagno      MONEY — cluster tempi
 │
 ├── GEOGRAFICHE (top-level, pattern unico)
 │   ├── /ristrutturazione-bagno-milano         primaria
 │   ├── /ristrutturazione-bagno-monza          primaria
 │   ├── /ristrutturazione-bagno-lodi           primaria
+│   ├── /ristrutturazione-bagno-bergamo        primaria
+│   ├── /ristrutturazione-bagno-varese         primaria
+│   ├── /ristrutturazione-bagno-como           primaria
 │   ├── /ristrutturazione-bagno-lombardia      primaria (hub regionale)
 │   └── /ristrutturazione-bagno-<comune>       14 comuni secondari
 │
@@ -57,20 +64,20 @@
     └── /cookie-policy
 ```
 
-## Conteggio URL in sitemap: 57
+## Conteggio URL in sitemap: 70
 
 | Gruppo | URL |
 |---|---:|
-| Pagine core | 12 |
-| Geografiche primarie | 4 |
+| Pagine core | 14 |
+| Geografiche primarie | 7 |
 | Geografiche comuni | 14 |
 | Servizi | 8 |
 | Categorie blog | 7 |
-| Articoli | 12 |
+| Articoli | 20 |
 | Progetti pubblicati | 0 |
-| **Totale** | **57** |
+| **Totale** | **70** |
 
-Prerenderizzati in HTML statico: **59** (57 + le 2 pagine legali `noindex`, che devono
+Prerenderizzati in HTML statico: **72** (70 + le 2 pagine legali `noindex`, che devono
 esistere come file ma non essere indicizzate).
 
 ## Perché le geografiche sono top-level e non sotto `/zone/`

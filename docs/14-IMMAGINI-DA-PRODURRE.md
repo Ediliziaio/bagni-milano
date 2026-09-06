@@ -2,7 +2,7 @@
 
 > Generato automaticamente da `src/data/images.ts`. Non modificare a mano: `npm run images`.
 
-**Stato: 0 di 21 disponibili.**
+**Stato: 0 di 31 disponibili.**
 Finché una foto manca, il sito mostra un segnaposto che dichiara formato e soggetto — non un
 box vuoto e non uno stock che non è di Bagni Milano.
 
@@ -49,6 +49,12 @@ Il testo alternativo è già scritto per ogni immagine nel registro: non va rein
 | `cantiere-impianti` | Pagina Metodo — fase 9 | 1600×1067 px | Tracce a muro con le nuove linee idrauliche ed elettriche in vista, prima della chiusura. Dettaglio tecnico leggibile. |
 | `cantiere-impermeabilizzazione` | Pagina Metodo — fase 10 e articolo sulle infiltrazioni | 1600×1067 px | Guaina liquida stesa sul piatto doccia e sulle pareti, con nastro di rinforzo sugli angoli. È la lavorazione che nessuno vede: mostrarla è un argomento di vendita. |
 | `og-social` | Anteprima social di tutte le pagine (Open Graph) | 1200×630 px | Una delle foto 'dopo' migliori, ritagliata 1200×630 con spazio a sinistra per il testo. Sostituisce l'anteprima tipografica generata automaticamente. |
+| `art-costi` | Articoli del cluster Costi — immagine di testata | 1600×900 px | Preventivo cartaceo su un tavolo con metro, calcolatrice e un campione di gres. Luce naturale laterale, ripresa dall'alto a 45°. Nessun logo di terzi leggibile e nessun importo reale visibile. |
+| `art-progettazione` | Articoli del cluster Progettazione — immagine di testata | 1600×900 px | Pianta quotata di un bagno stampata, con matita e scalimetro appoggiati. Deve leggersi che è un disegno tecnico reale, non una grafica. |
+| `art-problemi` | Articoli del cluster Problemi — immagine di testata | 1600×900 px | Dettaglio ravvicinato di un angolo di bagno con muffa o di una siliconatura degradata. Deve essere un caso reale, riconoscibile: è la foto che fa dire al lettore «è il mio bagno». |
+| `art-lombardia` | Articoli del cluster Lombardia — immagine di testata | 1600×900 px | Facciata di un condominio milanese anni Cinquanta-Settanta, ripresa dal cortile interno. È il patrimonio edilizio di cui parlano questi articoli. |
+| `art-vasca-doccia` | Articoli sulla trasformazione vasca in doccia | 1600×900 px | Zona vasca demolita, con lo scarico in vista prima del rifacimento. Mostra il vero contenuto tecnico dell'intervento. |
+| `home-banda` | Homepage — fascia immagine a tutta larghezza | 2400×800 px | Scatto orizzontale molto ampio di un bagno finito, adatto a essere tagliato a fascia bassa (proporzione 3:1). Materiali scuri e ottone. |
 
 ## Priorità 3 — quando possibile
 
@@ -56,6 +62,10 @@ Il testo alternativo è già scritto per ogni immagine nel registro: non va rein
 |---|---|---|---|
 | `cantiere-posa` | Pagina Metodo — fase 10 | 1600×1067 px | Posa del rivestimento in corso, con livella o crociere in vista. |
 | `materiali` | Pagina Metodo — fase 6, e articoli sui materiali | 1600×1600 px | Composizione dall'alto dei campioni: lastre di gres, campioni di fuga, finiture di rubinetteria, moodboard. Sfondo neutro. |
+| `art-normative` | Articoli del cluster Normative — immagine di testata | 1600×900 px | Documenti di cantiere su una scrivania: modulo di comunicazione, planimetria, penna. Oscurare o omettere dati personali e riferimenti reali. |
+| `art-idee` | Articoli del cluster Idee e design — immagine di testata | 1600×900 px | Dettaglio di finitura ben riuscito: incontro fra rivestimento e specchio, o nicchia doccia illuminata. |
+| `art-sanitari` | Articoli su sanitari e installazione | 1600×900 px | Telaio metallico per sanitari sospesi montato, prima della chiusura della controparete. |
+| `showroom` | Homepage e contatti | 1600×1067 px | Showroom o area di consulenza dove si scelgono i materiali, con i campioni esposti. |
 
 ---
 

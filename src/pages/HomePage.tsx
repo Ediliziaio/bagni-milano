@@ -4,6 +4,8 @@ import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { SectionHead, FaqList, CtaSection, AnswerBlock } from "@/components/Ui";
 import { Img, BeforeAfter } from "@/components/Media";
+import { PhaseOverview } from "@/components/Phases";
+import { Reveal } from "@/components/Reveal";
 import { site, abs } from "@/data/site";
 import { graph, baseNodes, webPage, service, faqPage } from "@/lib/schema";
 import { method } from "@/data/method";
@@ -127,11 +129,11 @@ export default function HomePage() {
             lede="Quasi tutti i problemi di una ristrutturazione bagno nascono nello stesso punto: nessuno risponde dell'insieme."
           />
           <ul className="space-y-4">
-            {problems.map((p) => (
-              <li key={p} className="card flex gap-4">
-                <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-gold" aria-hidden />
+            {problems.map((p, i) => (
+              <Reveal as="li" key={p} delay={i * 80} className="card flex gap-4">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-deep" aria-hidden />
                 <span className="text-ink-soft">{p}</span>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </div>
@@ -145,11 +147,11 @@ export default function HomePage() {
             {method.pillars.map((p, i) => {
               const Icon = pillarIcons[i] ?? UserCheck;
               return (
-                <div key={p.title} className="card">
+                <Reveal key={p.title} delay={i * 80} className="card">
                   <Icon size={22} className="text-gold" aria-hidden />
                   <h3 className="mt-4 text-lg">{p.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{p.text}</p>
-                </div>
+                  <p className="mt-2 text-sm leading-relaxed text-cream/65">{p.text}</p>
+                </Reveal>
               );
             })}
           </div>
@@ -158,6 +160,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* LE FASI */}
+      <PhaseOverview dark={false} />
 
       {/* SERVIZI */}
       <section className="section">
@@ -261,16 +266,16 @@ export default function HomePage() {
             center
           />
           <div className="mt-14 grid gap-10 sm:grid-cols-2">
-            <BeforeAfter
-              group="milano-centro"
-              title="Milano centro — bagno padronale"
-              caption="Da rivestimento anni Ottanta a finitura contemporanea."
-            />
-            <BeforeAfter
-              group="porta-nuova"
-              title="Porta Nuova — bagno compatto"
-              caption="4 mq riorganizzati: doccia walk-in e mobile sospeso al posto della vasca."
-            />
+            {[
+              { g: "milano-centro", t: "Milano centro — bagno padronale", c: "Da rivestimento anni Ottanta a finitura contemporanea." },
+              { g: "porta-nuova", t: "Porta Nuova — bagno compatto", c: "4 mq riorganizzati: doccia walk-in e mobile sospeso al posto della vasca." },
+              { g: "brera", t: "Brera — bagno stretto", c: "Riorganizzazione dei sanitari in un ambiente stretto e alto." },
+              { g: "navigli", t: "Navigli — rifacimento completo", c: "Bagno anni Settanta, impianto idraulico rifatto integralmente." },
+            ].map((x, i) => (
+              <Reveal key={x.g} delay={(i % 2) * 90}>
+                <BeforeAfter group={x.g} title={x.t} caption={x.c} />
+              </Reveal>
+            ))}
           </div>
           <div className="mt-12 text-center">
             <Link to="/progetti" className="btn-outline-light">Tutte le trasformazioni</Link>
@@ -292,20 +297,82 @@ export default function HomePage() {
               { id: "progetto-brera", t: "Brera", d: "Bagno stretto in edificio storico" },
               { id: "progetto-navigli", t: "Navigli", d: "Rifacimento completo anni '70" },
               { id: "progetto-milano-centro", t: "Milano centro", d: "Bagno padronale" },
-            ].map((x) => (
-              <figure key={x.id}>
+            ].map((x, i) => (
+              <Reveal as="figure" key={x.id} delay={i * 80}>
                 <Img id={x.id} ratio="4 / 3" />
                 <figcaption className="mt-3">
                   <p className="font-display text-lg">{x.t}</p>
                   <p className="mt-0.5 text-sm text-ink-muted">{x.d}</p>
                 </figcaption>
-              </figure>
+              </Reveal>
             ))}
           </div>
           <p className="mt-8 text-sm text-ink-muted">
             Le schede progetto complete vengono pubblicate quando dispongono di dati reali di
             cantiere e delle fotografie. <Link to="/progetti" className="text-gold-deep underline underline-offset-4 hover:text-ink">Vai ai progetti</Link>
           </p>
+        </div>
+      </section>
+
+      {/* FASCIA IMMAGINE */}
+      <section aria-hidden className="relative h-[220px] overflow-hidden sm:h-[300px] lg:h-[380px]">
+        <Img id="home-banda" ratio="3 / 1" className="!h-full !border-0 !rounded-none" />
+      </section>
+
+      {/* IL CANTIERE — le lavorazioni che non si vedono */}
+      <section className="on-dark section">
+        <div className="container-x">
+          <Reveal>
+            <SectionHead
+              eyebrow="Il cantiere"
+              title="Le lavorazioni che non vedrai mai"
+              lede="Impianti e impermeabilizzazione finiscono sotto il rivestimento. Sono anche le due fasi che decidono se il bagno terrà nel tempo: per questo le fotografiamo e te le mostriamo."
+            />
+          </Reveal>
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {[
+              { id: "cantiere-demolizione", t: "Demolizione", d: "Protezioni sui percorsi, smaltimento in discarica autorizzata con formulario." },
+              { id: "cantiere-impianti", t: "Impianti", d: "Nuove linee in traccia e prova di tenuta in pressione prima di richiudere." },
+              { id: "cantiere-impermeabilizzazione", t: "Impermeabilizzazione", d: "Guaina liquida e nastro di rinforzo sugli angoli: è ciò che evita le infiltrazioni." },
+            ].map((x, i) => (
+              <Reveal as="figure" key={x.id} delay={i * 90}>
+                <Img id={x.id} ratio="3 / 2" />
+                <figcaption className="mt-4">
+                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold">{x.t}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-cream/65">{x.d}</p>
+                </figcaption>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="mt-12">
+            <Link to="/metodo" className="btn-gold">Come lavoriamo</Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* MATERIALI E CONSULENZA */}
+      <section className="section">
+        <div className="container-x grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+          <Reveal>
+            <Img id="materiali" ratio="1 / 1" />
+          </Reveal>
+          <Reveal delay={90}>
+            <p className="eyebrow">Materiali</p>
+            <h2 className="mt-3">La scelta avviene dentro il budget, non oltre</h2>
+            <p className="mt-5 leading-relaxed text-ink-soft">
+              Gres, rivestimenti, sanitari e rubinetteria vengono proposti su tre fasce di prezzo,
+              tutte compatibili con il preventivo già approvato. Nessuna selezione che sposta il
+              totale a lavori iniziati.
+            </p>
+            <p className="mt-4 leading-relaxed text-ink-soft">
+              Se arrivi con materiali già scelti, ne verifichiamo la compatibilità tecnica prima
+              dell'ordine: spessori, planarità richiesta e quote di posa.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/blog/categoria/materiali" className="btn-outline">Guide sui materiali</Link>
+              <Link to="/preventivo" className="btn-ink">Richiedi un sopralluogo</Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 

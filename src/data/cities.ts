@@ -118,6 +118,90 @@ export const cities: City[] = [
     ],
   },
   {
+    slug: "bergamo",
+    name: "Bergamo",
+    preposition: "a Bergamo",
+    province: "BG",
+    provinceName: "Bergamo",
+    tier: "primary",
+    metaTitle: "Ristrutturazione Bagno a Bergamo | Chiavi in Mano | Bagni Milano",
+    metaDescription: "Ristrutturazione bagno a Bergamo e provincia: città alta, borghi collinari e condomini di pianura. Referente unico, preventivo chiuso e date in contratto.",
+    answer:
+      "Bagni Milano ristruttura bagni chiavi in mano a Bergamo e in provincia. Il territorio unisce edifici storici vincolati in Città Alta, case di collina spesso su più livelli e condomini di pianura degli anni Sessanta e Settanta: tre contesti tecnici molto diversi fra loro.",
+    housingStock:
+      "Bergamo ha un patrimonio edilizio nettamente stratificato. Città Alta e il borgo storico presentano edifici in muratura portante con vincoli, solai in legno e altezze importanti, dove ogni intervento va calibrato su spessori ridotti e carichi contenuti. La città bassa è dominata da palazzine e condomini della ricostruzione, con bagni compatti e impianti spesso originali. Nelle valli e sulle colline prevalgono case indipendenti su due o tre livelli, con bagni multipli e frequenti servizi ricavati in sottotetto. La provincia, dalla Val Seriana all'Isola bergamasca, alterna nuclei storici in pietra a zone di espansione recente.",
+    localIssues: [
+      { title: "Vincoli in Città Alta e nei borghi storici", text: "Gli interventi su edifici vincolati richiedono verifiche preliminari e soluzioni a basso spessore. Non è un ostacolo, ma va messo in conto nei tempi di progetto." },
+      { title: "Case su più livelli con bagni multipli", text: "Sulle colline e nelle valli si lavora quasi sempre su due o tre bagni. Si può intervenire a fasi mantenendo un servizio funzionante." },
+      { title: "Bagni ricavati in sottotetto", text: "Molto frequenti nei recuperi. Altezze utili, percorso dello scarico e ventilazione sono i tre punti che decidono la fattibilità." },
+      { title: "Murature in pietra nei nuclei storici", text: "Le tracce impiantistiche richiedono attrezzatura e tempi diversi rispetto ai tramezzi in laterizio." },
+    ],
+    zones: ["Bergamo Città Alta", "Bergamo Città Bassa", "Borgo Santa Caterina", "Longuelo", "Colognola", "Seriate", "Dalmine", "Treviglio", "Albino", "Alzano Lombardo", "Curno", "Stezzano", "Ponte San Pietro", "Osio Sotto"],
+    logistics:
+      "Bergamo e la provincia rientrano nell'area di intervento. Trattandosi di un'area più distante dalla base operativa, il calendario viene organizzato in blocchi continuativi, così da concentrare le lavorazioni e ridurre i tempi morti.",
+    faqs: [
+      { q: "Operate anche in provincia di Bergamo?", a: "Sì, su Bergamo città e sui comuni della provincia. La copertura del singolo comune viene confermata al primo contatto, in funzione della distanza." },
+      { q: "Lavorate su edifici vincolati in Città Alta?", a: "Sì. In quei casi il sopralluogo verifica tipologia di solaio, spessori disponibili e presenza di vincoli, e il progetto viene adattato con sistemi di posa a basso spessore." },
+      { q: "Fate bagni in sottotetto?", a: "Sì, ed è una richiesta frequente in provincia di Bergamo. Verifichiamo in sopralluogo altezze utili, percorso dello scarico e possibilità di ventilazione meccanica." },
+    ],
+  },
+  {
+    slug: "varese",
+    name: "Varese",
+    preposition: "a Varese",
+    province: "VA",
+    provinceName: "Varese",
+    tier: "primary",
+    metaTitle: "Ristrutturazione Bagno a Varese | Chiavi in Mano | Bagni Milano",
+    metaDescription: "Ristrutturazione bagno a Varese e provincia: ville, case indipendenti e seconde case sui laghi. Referente unico, preventivo chiuso e date in contratto.",
+    answer:
+      "Bagni Milano ristruttura bagni chiavi in mano a Varese e in provincia. Il territorio è caratterizzato da una quota elevata di case indipendenti e ville, spesso con più bagni distribuiti su due o tre livelli, e da una presenza significativa di seconde case nelle zone lacustri e prealpine.",
+    housingStock:
+      "Varese è storicamente città di ville e giardini, e questo si riflette sul patrimonio residenziale: molte case indipendenti, villini di inizio Novecento e residenze signorili con bagni ampi ma spesso rimasti alle finiture originali degli anni Settanta e Ottanta. Nella cintura urbana e nei comuni della provincia prevalgono villette singole e bifamiliari costruite dagli anni Settanta in poi. Le zone del Verbano, del Lago di Varese e della Valcuvia hanno una componente rilevante di seconde case, dove il bagno viene usato in modo discontinuo e presenta problematiche specifiche legate all'umidità e ai sifoni asciutti.",
+    localIssues: [
+      { title: "Ville e villini d'epoca con finiture datate", text: "Bagni ampi con impianti originali: la metratura non riduce il costo, perché la superficie da rivestire è maggiore e le lavorazioni impiantistiche restano tutte." },
+      { title: "Bagni multipli su più livelli", text: "Nelle case indipendenti si lavora quasi sempre su due o tre bagni, con la possibilità di procedere a fasi senza lasciare l'abitazione." },
+      { title: "Seconde case e utilizzo discontinuo", text: "Sifoni che si asciugano, cattivi odori al rientro e umidità stagnante: sono problemi di ventilazione e di uso, non di impianto, e si risolvono in progetto." },
+      { title: "Umidità nelle zone lacustri e prealpine", text: "Il clima più umido rende la ventilazione meccanica un requisito, non un accessorio, anche nei bagni finestrati." },
+    ],
+    zones: ["Varese centro", "Biumo", "Casbeno", "Masnago", "Busto Arsizio", "Gallarate", "Saronno", "Somma Lombardo", "Tradate", "Luino", "Laveno-Mombello", "Cassano Magnago", "Malnate", "Castellanza"],
+    logistics:
+      "Varese e la provincia rientrano nell'area di intervento. Nelle case indipendenti carico, scarico e deposito dei materiali sono più agevoli, il che riduce i tempi morti fra una fase e l'altra rispetto a un cantiere in condominio.",
+    faqs: [
+      { q: "Operate anche in provincia di Varese?", a: "Sì, su Varese città e sui comuni della provincia, incluse le zone del Verbano e dell'Alto Milanese. La copertura del singolo comune viene confermata al primo contatto." },
+      { q: "Lavorate su seconde case?", a: "Sì. Nelle case a uso discontinuo dedichiamo particolare attenzione a ventilazione e sifoni: sono la causa dei problemi più frequenti al rientro dopo periodi di chiusura." },
+      { q: "Posso far rifare un bagno alla volta in una villa con tre bagni?", a: "Sì, ed è quello che consigliamo. Si procede in sequenza mantenendo sempre almeno un servizio funzionante." },
+    ],
+  },
+  {
+    slug: "como",
+    name: "Como",
+    preposition: "a Como",
+    province: "CO",
+    provinceName: "Como",
+    tier: "primary",
+    metaTitle: "Ristrutturazione Bagno a Como | Chiavi in Mano | Bagni Milano",
+    metaDescription: "Ristrutturazione bagno a Como e provincia: centro storico, case sul lago e residenze in pendio. Referente unico, preventivo chiuso e date scritte in contratto.",
+    answer:
+      "Bagni Milano ristruttura bagni chiavi in mano a Como e in provincia. Il territorio presenta un centro storico di impianto romano con edifici in muratura portante, e una fascia lacustre con abitazioni costruite in pendio, dove il percorso degli scarichi è il primo vincolo di progetto.",
+    housingStock:
+      "Como ha un centro storico compatto, di impianto romano, con edifici in muratura portante e cortili interni stretti, dove il bagno è quasi sempre stato ricavato in un secondo momento. La fascia lacustre, da Cernobbio a Bellagio, ha abitazioni costruite in pendio, spesso su livelli sfalsati, con percorsi di scarico lunghi e articolati. Nella zona pianeggiante verso Cantù e la Brianza comasca prevalgono villette e palazzine, con impianti mediamente più recenti. A questo si aggiunge una componente significativa di seconde case e di immobili a uso ricettivo, che hanno esigenze di finitura più alte e tempi di intervento vincolati alla stagionalità.",
+    localIssues: [
+      { title: "Abitazioni in pendio con livelli sfalsati", text: "Sul lago il percorso dello scarico è il vincolo dominante: va verificato prima di qualsiasi ipotesi sulla disposizione dei sanitari." },
+      { title: "Centro storico con murature in pietra", text: "Tracce impiantistiche più lente e cortili stretti che condizionano carico e scarico dei materiali." },
+      { title: "Umidità e clima lacustre", text: "Ventilazione meccanica e impermeabilizzazione curata contano più che altrove: l'umidità ambientale di base è più alta." },
+      { title: "Immobili a uso ricettivo", text: "Standard di finitura più alti e finestre temporali di intervento vincolate alla stagione turistica: il cronoprogramma va costruito su quelle date." },
+    ],
+    zones: ["Como centro", "Borghi storici", "Cernobbio", "Cantù", "Erba", "Mariano Comense", "Olgiate Comasco", "Lomazzo", "Fino Mornasco", "Appiano Gentile", "Menaggio", "Bellagio"],
+    logistics:
+      "Como e la provincia rientrano nell'area di intervento. Nelle abitazioni in pendio e nei borghi lacustri l'accessibilità del cantiere va verificata in sopralluogo: è un elemento che incide sui tempi e che dichiariamo esplicitamente in preventivo.",
+    faqs: [
+      { q: "Operate anche in provincia di Como?", a: "Sì, su Como città e sui comuni della provincia, incluse le zone lacustri. La copertura del singolo comune viene confermata al primo contatto." },
+      { q: "Lavorate su case sul lago con accesso difficile?", a: "Sì, verificando in sopralluogo le condizioni di accesso. Quando l'accessibilità incide sui tempi lo indichiamo esplicitamente in preventivo, senza nasconderlo in altre voci." },
+      { q: "Potete intervenire fuori stagione su una struttura ricettiva?", a: "Sì. In questi casi il cronoprogramma viene costruito sulle finestre di chiusura, con date di inizio e consegna scritte in contratto." },
+    ],
+  },
+  {
     slug: "lombardia",
     name: "Lombardia",
     preposition: "in Lombardia",
@@ -127,7 +211,7 @@ export const cities: City[] = [
     metaTitle: "Ristrutturazione Bagno in Lombardia | Bagni Milano",
     metaDescription: "Ristrutturazione bagno in Lombardia: Milano, Monza e Brianza, Lodi e province limitrofe. Referente unico, preventivo chiuso e date in contratto.",
     answer:
-      "Bagni Milano opera in Lombardia con base a Milano, coprendo in modo strutturato Milano e provincia, Monza e Brianza e il Lodigiano. Per le altre province lombarde la fattibilità viene valutata caso per caso in funzione della distanza e della dimensione dell'intervento.",
+      "Bagni Milano opera in Lombardia con base a Milano, coprendo in modo strutturato Milano e provincia, Monza e Brianza, Lodi, Bergamo, Varese e Como. Per le restanti province lombarde la fattibilità viene valutata caso per caso in funzione della distanza e della dimensione dell'intervento.",
     housingStock:
       "La Lombardia non ha un patrimonio edilizio omogeneo, e questo si riflette direttamente sul modo in cui si ristruttura un bagno. L'area metropolitana milanese è dominata da condomini della ricostruzione con bagni piccoli e ciechi. La Brianza è terra di villette e bifamiliari con bagni multipli. Il Lodigiano e la bassa pianura hanno case di corte e centri storici in muratura portante. Le zone pedemontane e lacustri hanno una quota rilevante di seconde case e di edifici con solai in legno. Un'impresa che lavora su scala regionale deve saper leggere queste differenze prima di preventivare, non dopo.",
     localIssues: [
@@ -136,11 +220,11 @@ export const cities: City[] = [
       { title: "Bassa pianura: bagni ricavati", text: "Nel Lodigiano e nelle zone di corte il vincolo principale è il percorso dello scarico." },
       { title: "Clima continentale e umidità", text: "Inverni umidi e nebbiosi, estati afose: nei bagni ciechi la ventilazione meccanica non è un accessorio ma un requisito." },
     ],
-    zones: ["Milano e Città metropolitana", "Monza e Brianza", "Lodi e Lodigiano", "Pavia (su valutazione)", "Como (su valutazione)", "Varese (su valutazione)", "Bergamo (su valutazione)", "Cremona (su valutazione)"],
+    zones: ["Milano e Città metropolitana", "Monza e Brianza", "Lodi e Lodigiano", "Bergamo e provincia", "Varese e provincia", "Como e provincia", "Pavia (su valutazione)", "Cremona (su valutazione)", "Brescia (su valutazione)"],
     logistics:
-      "Milano, la Città metropolitana, Monza e Brianza e il Lodigiano sono coperti in modo continuativo. Per le altre province lombarde la copertura viene confermata al primo contatto, in funzione della distanza e della dimensione del progetto.",
+      "Milano e la Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese e Como sono coperte in modo continuativo. Per le restanti province lombarde la copertura viene confermata al primo contatto, in funzione della distanza e della dimensione del progetto.",
     faqs: [
-      { q: "In quali province lombarde operate?", a: "In modo continuativo su Milano e Città metropolitana, Monza e Brianza e Lodi. Sulle altre province lombarde valutiamo caso per caso al primo contatto." },
+      { q: "In quali province lombarde operate?", a: "In modo continuativo su Milano e Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese e Como. Sulle restanti province lombarde valutiamo caso per caso al primo contatto." },
       { q: "La distanza incide sul preventivo?", a: "Può incidere sulla voce di trasferta per i cantieri più distanti. Quando accade lo indichiamo esplicitamente nel preventivo, non lo nascondiamo in altre voci." },
       { q: "Il metodo di lavoro cambia da provincia a provincia?", a: "No. Il Metodo Bagno Certo è lo stesso ovunque: referente unico, preventivo chiuso e date scritte in contratto. Cambia l'adattamento tecnico al tipo di edificio." },
     ],

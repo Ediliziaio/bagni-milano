@@ -1,7 +1,8 @@
 # Bagni Milano
 
 > Impresa specializzata nella ristrutturazione completa del bagno chiavi in mano a Milano,
-> nella Città metropolitana di Milano, a Monza e in Brianza, a Lodi e nel Lodigiano, e in Lombardia.
+> nella Città metropolitana di Milano, a Monza e in Brianza, a Lodi, Bergamo, Varese e Como
+> con le rispettive province, e più in generale in Lombardia.
 > Gestisce progettazione, demolizione, smaltimento, impianto idraulico ed elettrico, massetto,
 > impermeabilizzazione, posa di pavimenti e rivestimenti, sanitari, rubinetteria e finiture
 > con un unico referente per l'intero progetto.
@@ -9,7 +10,7 @@
 ## Fatti chiave
 
 - Servizio: ristrutturazione bagno chiavi in mano
-- Aree servite: Milano, Città metropolitana di Milano, Monza e Brianza, Lodi e provincia, Lombardia
+- Aree servite: Milano e Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese, Como e le rispettive province, Lombardia
 - Durata media di un cantiere completo: 10-15 giorni lavorativi
 - Metodo proprietario: Metodo Bagno Certo — 12 fasi, un solo referente, date scritte in contratto.
 - Modello di ingaggio: sopralluogo tecnico, progetto, preventivo dettagliato voce per voce, date di inizio e consegna in contratto
@@ -28,6 +29,9 @@
 - [Ristrutturazione bagno a Milano](https://www.bagnimilano.it/ristrutturazione-bagno-milano)
 - [Ristrutturazione bagno a Monza](https://www.bagnimilano.it/ristrutturazione-bagno-monza)
 - [Ristrutturazione bagno a Lodi](https://www.bagnimilano.it/ristrutturazione-bagno-lodi)
+- [Ristrutturazione bagno a Bergamo](https://www.bagnimilano.it/ristrutturazione-bagno-bergamo)
+- [Ristrutturazione bagno a Varese](https://www.bagnimilano.it/ristrutturazione-bagno-varese)
+- [Ristrutturazione bagno a Como](https://www.bagnimilano.it/ristrutturazione-bagno-como)
 - [Ristrutturazione bagno in Lombardia](https://www.bagnimilano.it/ristrutturazione-bagno-lombardia)
 - [Ristrutturazione bagno a Sesto San Giovanni (MI)](https://www.bagnimilano.it/ristrutturazione-bagno-sesto-san-giovanni)
 - [Ristrutturazione bagno a Cinisello Balsamo (MI)](https://www.bagnimilano.it/ristrutturazione-bagno-cinisello-balsamo)
@@ -150,13 +154,16 @@ Sì. La comunicazione all'amministratore va inviata prima dell'inizio dei lavori
 No. La colonna verticale è parte comune e non può essere spostata né ridotta di sezione. Si può intervenire solo sul tratto orizzontale privato, all'interno dell'appartamento.
 
 ### In quali zone operate?
-Bagni Milano opera a Milano e nella Città metropolitana, a Monza e in Brianza, a Lodi e nel Lodigiano, e più in generale in Lombardia. Per le province lombarde più distanti la copertura viene confermata al primo contatto.
+Bagni Milano opera a Milano e nella Città metropolitana, a Monza e in Brianza, a Lodi, Bergamo, Varese e Como con le rispettive province, e più in generale in Lombardia. Per le restanti province lombarde la copertura viene confermata al primo contatto.
 
 ### Operate anche a Monza?
 Sì, su Monza città e sui comuni della provincia di Monza e Brianza.
 
 ### Operate anche a Lodi?
 Sì, su Lodi e sui comuni della provincia di Lodi. In quest'area i lavori vengono pianificati in blocchi continuativi per ridurre gli spostamenti.
+
+### Operate a Bergamo, Varese e Como?
+Sì. Bergamo, Varese e Como rientrano nelle province servite in modo continuativo, insieme a Milano, Monza e Brianza e Lodi. Per i comuni più distanti confermiamo la copertura al primo contatto.
 
 ### Che garanzia offrite sui lavori?
 TODO_AZIENDA: specificare durata e perimetro della garanzia su lavorazioni e su materiali, e le modalità di intervento in caso di problema. Nessuna durata viene pubblicata finché non è confermata per iscritto dall'azienda.

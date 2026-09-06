@@ -14,7 +14,7 @@ che il GBP non copre (informative, di costo, di procedura).
 | Nome | Esattamente la forma scelta in `00-DATI-DA-VALIDARE.md`. Nessuna keyword aggiunta al nome: è una violazione delle linee guida e comporta sospensione |
 | Categoria primaria | **Impresa di ristrutturazioni** (o "Bathroom remodeler" se disponibile nella lingua del profilo) |
 | Categorie secondarie | Idraulico, Piastrellista, Impresa edile — solo quelle realmente esercitate |
-| Area di servizio | Milano, Città metropolitana, Monza e Brianza, Lodi. Impostare come *service area business* se non c'è showroom con accesso al pubblico |
+| Area di servizio | Milano, Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese, Como. Impostare come *service area business* se non c'è showroom con accesso al pubblico |
 | Descrizione | 750 caratteri che ripetono l'entità: cosa fa, dove, con quale metodo. Riusare la formulazione di `llms.txt` per coerenza |
 | Servizi | Voci separate per ciascuna pagina servizio del sito, con link diretto alla pagina corrispondente |
 | Prodotti | Le tipologie di intervento con range di prezzo, una volta validati |
@@ -66,17 +66,20 @@ portali di preventivi edilizi
 Camera di Commercio · associazioni artigiane locali · consorzi edili ·
 albo fornitori di amministratori di condominio · registro imprese
 
-## 4. Presidio dei tre poli
+## 4. Presidio dei poli
 
 | Polo | Leva prevalente | Azione specifica |
 |---|---|---|
 | **Milano** | Volume e competizione alta | Landing città + quartieri (solo con progetti reali) + recensioni concentrate + post GBP settimanali |
 | **Monza e Brianza** | Competizione minore, ticket più alto | Landing Monza + 4 comuni. Partnership con showroom di arredo bagno brianzoli: è un territorio con filiera dell'arredo densa |
 | **Lodi** | Competizione bassa, distanza maggiore | Landing Lodi + 2 comuni. Posizionamento su "case di corte" e "bagni ricavati", nicchia poco presidiata |
+| **Bergamo** | Patrimonio molto stratificato | Landing Bergamo. Angolo su Città Alta vincolata e bagni in sottotetto: due nicchie tecniche che pochi presidiano |
+| **Varese** | Ville, case indipendenti, seconde case | Landing Varese. Angolo su bagni multipli e seconde case a uso discontinuo |
+| **Como** | Lago, pendii, immobili ricettivi | Landing Como. Angolo su abitazioni in pendio e interventi fuori stagione per strutture ricettive |
 
 ## 5. Segnali locali sul sito già implementati
 
-- 22 pagine geografiche con patrimonio edilizio, criticità e zone specifiche
+- 25 pagine geografiche con patrimonio edilizio, criticità e zone specifiche
 - `areaServed` nello schema `Organization` e `HomeAndConstructionBusiness`
 - `Service` con `areaServed` puntuale su ogni landing geografica
 - Meta `geo.region` / `geo.placename`

@@ -47,6 +47,11 @@
       "source": "/contatto",
       "destination": "/contatti",
       "permanent": true
+    },
+    {
+      "source": "/fasi-ristrutturazione-bagno",
+      "destination": "/processo",
+      "permanent": true
     }
   ],
   "headers": [

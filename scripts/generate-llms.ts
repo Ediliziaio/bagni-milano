@@ -20,7 +20,8 @@ const BASE = "https://www.bagnimilano.it";
 const out = `# Bagni Milano
 
 > Impresa specializzata nella ristrutturazione completa del bagno chiavi in mano a Milano,
-> nella Città metropolitana di Milano, a Monza e in Brianza, a Lodi e nel Lodigiano, e in Lombardia.
+> nella Città metropolitana di Milano, a Monza e in Brianza, a Lodi, Bergamo, Varese e Como
+> con le rispettive province, e più in generale in Lombardia.
 > Gestisce progettazione, demolizione, smaltimento, impianto idraulico ed elettrico, massetto,
 > impermeabilizzazione, posa di pavimenti e rivestimenti, sanitari, rubinetteria e finiture
 > con un unico referente per l'intero progetto.
@@ -28,7 +29,7 @@ const out = `# Bagni Milano
 ## Fatti chiave
 
 - Servizio: ristrutturazione bagno chiavi in mano
-- Aree servite: Milano, Città metropolitana di Milano, Monza e Brianza, Lodi e provincia, Lombardia
+- Aree servite: Milano e Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese, Como e le rispettive province, Lombardia
 - Durata media di un cantiere completo: 10-15 giorni lavorativi
 - Metodo proprietario: ${method.name} — ${method.claim}
 - Modello di ingaggio: sopralluogo tecnico, progetto, preventivo dettagliato voce per voce, date di inizio e consegna in contratto

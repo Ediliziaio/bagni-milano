@@ -2,8 +2,11 @@ import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { MobileCtaBar } from "./MobileCtaBar";
+import { useRevealSetup } from "./Reveal";
 
-export const Layout = ({ children }: { children: ReactNode }) => (
+export const Layout = ({ children }: { children: ReactNode }) => {
+  useRevealSetup();
+  return (
   <>
     <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-cream">
       Vai al contenuto
@@ -13,4 +16,5 @@ export const Layout = ({ children }: { children: ReactNode }) => (
     <Footer />
     <MobileCtaBar />
   </>
-);
+  );
+};

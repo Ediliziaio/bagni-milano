@@ -3,9 +3,12 @@
 Sito web di **Bagni Milano**, impresa specializzata nella ristrutturazione bagno chiavi in mano
 a Milano, Monza, Lodi e in Lombardia.
 
-Progettato come asset SEO / Local SEO / GEO / AIO, non come vetrina: **59 pagine HTML statiche**
+Progettato come asset SEO / Local SEO / GEO / AIO, non come vetrina: **72 pagine HTML statiche**
 prerenderizzate, grafo di entità JSON-LD coerente, architettura pillar-cluster e strategia
 documentata in `docs/`.
+
+Aree servite: Milano e Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese, Como e
+più in generale la Lombardia.
 
 ---
 
@@ -51,14 +54,16 @@ npx tsc --noEmit     # typecheck
 src/
 ├── data/           ← la strategia vive qui, non nei componenti
 │   ├── site.ts         entità aziendale, aree servite, placeholder
-│   ├── cities.ts       4 landing primarie + 14 comuni, contenuto differenziato
+│   ├── cities.ts       7 landing provinciali + 14 comuni, contenuto differenziato
 │   ├── services.ts     8 pagine servizio con decisioni anti-cannibalizzazione
-│   ├── articles.ts     12 guide complete
+│   ├── articles.ts     20 guide complete, tutte oltre le 900 parole
 │   ├── blog-categories.ts  7 cluster, ognuno dichiara la money page che sostiene
 │   ├── costs.ts        range indicativi di mercato (NON listino aziendale)
 │   ├── timeline.ts     cronoprogramma di cantiere
 │   ├── faqs.ts         29 FAQ centralizzate, riusate per topic
-│   ├── method.ts       Metodo Bagno Certo, 12 fasi
+│   ├── method.ts       Metodo Bagno Certo, 12 fasi con esito e azione richiesta
+│   ├── images.ts       31 slot immagine dichiarati, con brief per il fotografo
+│   ├── estimator.ts    modello del calcolatore di costo
 │   └── projects.ts     case study (published: false finché mancano dati reali)
 ├── lib/schema.ts   ← factory JSON-LD, grafo con @id stabili
 ├── components/     ← Seo, Layout, Header, Footer, MobileCtaBar, Ui
@@ -95,6 +100,7 @@ in `src/data/`. Rotte, sitemap, `llms.txt`, footer e link interni si aggiornano 
 | [11 — CRO](docs/11-CRO.md) | Elementi implementati, test in ordine di impatto |
 | [12 — Roadmap](docs/12-ROADMAP.md) | P1 / 30 / 60 / 90 / 180-365 giorni con effort |
 | [13 — KPI](docs/13-KPI.md) | Cruscotto e protocollo di misurazione della visibilità AI |
+| [14 — Immagini da produrre](docs/14-IMMAGINI-DA-PRODURRE.md) | **Brief fotografico generato dal codice**, con le regole per le coppie prima/dopo |
 
 ## Scelte non negoziabili
 

@@ -18,7 +18,9 @@ rimossa o riorientata: la cannibalizzazione costa più di quanto renda la pagina
 | `/ristrutturazione-bagno` | ristrutturazione bagno | T | MOFU→BOFU | cosa comprende ristrutturazione bagno, rifacimento bagno completo, ristrutturazione bagno chiavi in mano |
 | `/quanto-costa-ristrutturare-bagno` | quanto costa ristrutturare un bagno | I | TOFU→MOFU | costo ristrutturazione bagno, prezzo rifacimento bagno, costo bagno 5 mq, costo bagno 6 mq, costo bagno 8 mq, preventivo bagno |
 | `/quanto-tempo-ristrutturare-bagno` | quanto tempo serve per rifare un bagno | I | MOFU | durata ristrutturazione bagno, rifacimento bagno tempi, tempi cantiere bagno |
-| `/metodo` | metodo ristrutturazione bagno | C | MOFU | come lavoriamo, processo ristrutturazione bagno, fasi ristrutturazione bagno |
+| `/metodo` | metodo ristrutturazione bagno | C | MOFU | come lavoriamo, impresa con referente unico, garanzie ristrutturazione |
+| `/processo` | fasi ristrutturazione bagno | I | TOFU→MOFU | come si svolge una ristrutturazione bagno, passaggi ristrutturazione bagno, cosa succede durante i lavori |
+| `/calcolatore-costo-bagno` | calcolo costo ristrutturazione bagno | I | MOFU | simulatore preventivo bagno, stima costo bagno online |
 | `/chi-siamo` | Bagni Milano *(brand)* | C | MOFU | impresa specializzata bagni Milano, chi è Bagni Milano |
 | `/preventivo` | preventivo ristrutturazione bagno | T | BOFU | richiedi preventivo bagno, sopralluogo gratuito bagno |
 | `/progetti` | ristrutturazione bagno prima e dopo | C | MOFU | lavori realizzati bagno, case study bagno Milano |
@@ -31,6 +33,9 @@ rimossa o riorientata: la cannibalizzazione costa più di quanto renda la pagina
 | `/ristrutturazione-bagno-milano` | ristrutturazione bagno Milano | T/L |
 | `/ristrutturazione-bagno-monza` | ristrutturazione bagno Monza | T/L |
 | `/ristrutturazione-bagno-lodi` | ristrutturazione bagno Lodi | T/L |
+| `/ristrutturazione-bagno-bergamo` | ristrutturazione bagno Bergamo | T/L |
+| `/ristrutturazione-bagno-varese` | ristrutturazione bagno Varese | T/L |
+| `/ristrutturazione-bagno-como` | ristrutturazione bagno Como | T/L |
 | `/ristrutturazione-bagno-lombardia` | ristrutturazione bagno Lombardia | T/L |
 | `/ristrutturazione-bagno-<comune>` | ristrutturazione bagno *<comune>* | T/L |
 
@@ -68,7 +73,7 @@ rimossa o riorientata: la cannibalizzazione costa più di quanto renda la pagina
 
 Da usare in modo naturale e coerente nei testi, mai forzato:
 
-**Geografiche** — Milano, Città metropolitana di Milano, Monza, Brianza, Lodi, Lodigiano, Lombardia
+**Geografiche** — Milano, Città metropolitana di Milano, Monza, Brianza, Lodi, Lodigiano, Bergamo, Varese, Como, Lombardia
 **Tecniche** — bagno, ristrutturazione, demolizione, massetto, impermeabilizzazione, guaina,
 impianto idraulico, impianto elettrico, colonna di scarico, pendenza, sanitari sospesi, gres
 porcellanato, piatto doccia, box doccia, rubinetteria, ventilazione meccanica

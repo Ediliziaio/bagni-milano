@@ -94,6 +94,14 @@ for (const file of pages) {
 for (const [t, routes] of titles) if (routes.length > 1) errors.push(`title duplicato "${t}" su: ${routes.join(", ")}`);
 for (const [d, routes] of descriptions) if (routes.length > 1) errors.push(`description duplicata su: ${routes.join(", ")}`);
 
+// 8b. Nessun articolo sotto le 900 parole: sotto quella soglia il contenuto non è esaustivo.
+import("../src/data/articles").then(({ articles }) => {
+  articles.forEach((a) => {
+    const w = a.body.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+    if (w < 900) warnings.push(`articolo troppo corto: ${a.slug} (${w} parole)`);
+  });
+}).catch(() => {});
+
 // 9. Ogni asset referenziato da meta o schema deve esistere.
 for (const asset of ["og-image.png", "logo.png", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "favicon.svg", "robots.txt", "sitemap.xml", "llms.txt", "site.webmanifest"])
   if (!existsSync(path.join(DIST, asset))) errors.push(`asset mancante in dist/: ${asset}`);

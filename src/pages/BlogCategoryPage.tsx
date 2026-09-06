@@ -6,6 +6,9 @@ import { abs } from "@/data/site";
 import { graph, baseNodes, webPage, breadcrumb } from "@/lib/schema";
 import { getCategory, blogCategories } from "@/data/blog-categories";
 import { articlesByCategory } from "@/data/articles";
+import { Img } from "@/components/Media";
+import { imageForArticle } from "@/data/images";
+import { Reveal } from "@/components/Reveal";
 
 export default function BlogCategoryPage() {
   const { categorySlug = "" } = useParams();
@@ -52,15 +55,16 @@ export default function BlogCategoryPage() {
               <Link to="/blog" className="mt-4 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">Torna al blog</Link>
             </div>
           ) : (
-            <ul className="divide-y divide-line border-y border-line">
-              {list.map((a) => (
-                <li key={a.slug}>
-                  <Link to={`/blog/${a.slug}`} className="group block py-6">
-                    <p className="text-xs uppercase tracking-wider text-gold-deep">{a.readingTime}</p>
-                    <h2 className="mt-2 text-xl transition-colors group-hover:text-gold-deep">{a.title}</h2>
-                    <p className="mt-2 max-w-3xl leading-relaxed text-ink-soft">{a.excerpt}</p>
+            <ul className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+              {list.map((a, i) => (
+                <Reveal as="li" key={a.slug} delay={(i % 3) * 80}>
+                  <Link to={`/blog/${a.slug}`} className="group block">
+                    <Img id={imageForArticle(a.slug, a.category)} ratio="16 / 9" />
+                    <p className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">{a.readingTime}</p>
+                    <h2 className="mt-2 text-lg transition-colors group-hover:text-gold-deep">{a.title}</h2>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-muted">{a.excerpt}</p>
                   </Link>
-                </li>
+                </Reveal>
               ))}
             </ul>
           )}

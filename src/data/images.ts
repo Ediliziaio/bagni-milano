@@ -218,7 +218,122 @@ export const images: ImageSpec[] = [
     alt: "Bagni Milano — ristrutturazione bagno chiavi in mano",
     priority: 2, available: false,
   },
+
+  /* ── 6. EDITORIALI — testate degli articoli ──────────────────────── */
+  {
+    id: "art-costi",
+    where: "Articoli del cluster Costi — immagine di testata",
+    brief:
+      "Preventivo cartaceo su un tavolo con metro, calcolatrice e un campione di gres. Luce naturale laterale, ripresa dall'alto a 45°. Nessun logo di terzi leggibile e nessun importo reale visibile.",
+    width: 1600, height: 900,
+    alt: "Preventivo di ristrutturazione bagno con campioni di materiale e metro",
+    priority: 2, available: false,
+  },
+  {
+    id: "art-progettazione",
+    where: "Articoli del cluster Progettazione — immagine di testata",
+    brief:
+      "Pianta quotata di un bagno stampata, con matita e scalimetro appoggiati. Deve leggersi che è un disegno tecnico reale, non una grafica.",
+    width: 1600, height: 900,
+    alt: "Pianta quotata di un bagno con la disposizione dei sanitari",
+    priority: 2, available: false,
+  },
+  {
+    id: "art-problemi",
+    where: "Articoli del cluster Problemi — immagine di testata",
+    brief:
+      "Dettaglio ravvicinato di un angolo di bagno con muffa o di una siliconatura degradata. Deve essere un caso reale, riconoscibile: è la foto che fa dire al lettore «è il mio bagno».",
+    width: 1600, height: 900,
+    alt: "Muffa nell'angolo alto di un bagno e siliconatura degradata",
+    priority: 2, available: false,
+  },
+  {
+    id: "art-normative",
+    where: "Articoli del cluster Normative — immagine di testata",
+    brief:
+      "Documenti di cantiere su una scrivania: modulo di comunicazione, planimetria, penna. Oscurare o omettere dati personali e riferimenti reali.",
+    width: 1600, height: 900,
+    alt: "Documenti per la comunicazione dei lavori all'amministratore di condominio",
+    priority: 3, available: false,
+  },
+  {
+    id: "art-lombardia",
+    where: "Articoli del cluster Lombardia — immagine di testata",
+    brief:
+      "Facciata di un condominio milanese anni Cinquanta-Settanta, ripresa dal cortile interno. È il patrimonio edilizio di cui parlano questi articoli.",
+    width: 1600, height: 900,
+    alt: "Cortile interno di un condominio milanese degli anni Sessanta",
+    priority: 2, available: false,
+  },
+  {
+    id: "art-idee",
+    where: "Articoli del cluster Idee e design — immagine di testata",
+    brief: "Dettaglio di finitura ben riuscito: incontro fra rivestimento e specchio, o nicchia doccia illuminata.",
+    width: 1600, height: 900,
+    alt: "Dettaglio di finitura di un bagno ristrutturato: nicchia doccia illuminata",
+    priority: 3, available: false,
+  },
+  {
+    id: "art-vasca-doccia",
+    where: "Articoli sulla trasformazione vasca in doccia",
+    brief:
+      "Zona vasca demolita, con lo scarico in vista prima del rifacimento. Mostra il vero contenuto tecnico dell'intervento.",
+    width: 1600, height: 900,
+    alt: "Zona vasca demolita con lo scarico in vista prima della trasformazione in doccia",
+    priority: 2, available: false,
+  },
+  {
+    id: "art-sanitari",
+    where: "Articoli su sanitari e installazione",
+    brief: "Telaio metallico per sanitari sospesi montato, prima della chiusura della controparete.",
+    width: 1600, height: 900,
+    alt: "Telaio metallico per sanitari sospesi installato prima della controparete",
+    priority: 3, available: false,
+  },
+  {
+    id: "home-banda",
+    where: "Homepage — fascia immagine a tutta larghezza",
+    brief:
+      "Scatto orizzontale molto ampio di un bagno finito, adatto a essere tagliato a fascia bassa (proporzione 3:1). Materiali scuri e ottone.",
+    width: 2400, height: 800,
+    alt: "Bagno ristrutturato da Bagni Milano, vista d'insieme",
+    priority: 2, available: false,
+  },
+  {
+    id: "showroom",
+    where: "Homepage e contatti",
+    brief: "Showroom o area di consulenza dove si scelgono i materiali, con i campioni esposti.",
+    width: 1600, height: 1067,
+    alt: "Area di consulenza di Bagni Milano con i campioni dei materiali",
+    priority: 3, available: false,
+  },
 ];
+
+/** Testata di default per categoria del blog. */
+export const categoryImage: Record<string, string> = {
+  costi: "art-costi",
+  progettazione: "art-progettazione",
+  materiali: "materiali",
+  problemi: "art-problemi",
+  normative: "art-normative",
+  lombardia: "art-lombardia",
+  "idee-e-design": "art-idee",
+};
+
+/** Override per singolo articolo, dove esiste una foto più pertinente. */
+export const articleImage: Record<string, string> = {
+  "impermeabilizzazione-bagno": "cantiere-impermeabilizzazione",
+  "quanto-costa-trasformare-vasca-in-doccia": "art-vasca-doccia",
+  "sanitari-sospesi": "art-sanitari",
+  "infiltrazioni-dal-bagno": "cantiere-impermeabilizzazione",
+  "costo-manodopera-ristrutturazione-bagno": "cantiere-impianti",
+  "poca-pressione-acqua-bagno": "cantiere-impianti",
+  "scarico-bagno-lento": "cantiere-impianti",
+  "errori-da-evitare-ristrutturazione-bagno": "cantiere-demolizione",
+};
+
+export const imageForArticle = (slug: string, category: string) =>
+  articleImage[slug] ?? categoryImage[category] ?? "art-progettazione";
 
 export const getImage = (id: string) => images.find((i) => i.id === id);
 export const beforeAfterGroups = [...new Set(images.filter((i) => i.group).map((i) => i.group!))];

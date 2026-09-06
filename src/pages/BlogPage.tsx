@@ -6,6 +6,9 @@ import { abs } from "@/data/site";
 import { graph, baseNodes, webPage, breadcrumb } from "@/lib/schema";
 import { blogCategories } from "@/data/blog-categories";
 import { articles, articlesByCategory } from "@/data/articles";
+import { Img } from "@/components/Media";
+import { imageForArticle } from "@/data/images";
+import { Reveal } from "@/components/Reveal";
 
 const PATH = "/blog";
 
@@ -42,6 +45,23 @@ export default function BlogPage() {
         </p>
       </section>
 
+      {/* IN EVIDENZA */}
+      <section className="section pt-12">
+        <div className="container-x">
+          <Link to={`/blog/${articles[0].slug}`} className="group grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-center">
+            <Img id={imageForArticle(articles[0].slug, articles[0].category)} ratio="16 / 10" priority />
+            <div>
+              <p className="eyebrow">In evidenza · {blogCategories.find((c) => c.slug === articles[0].category)?.name}</p>
+              <h2 className="mt-3 transition-colors group-hover:text-gold-deep">{articles[0].title}</h2>
+              <p className="lede mt-4">{articles[0].excerpt}</p>
+              <span className="mt-6 inline-block text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                Leggi la guida — {articles[0].readingTime}
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* HUB CATEGORIE */}
       <section className="section">
         <div className="container-x">
@@ -67,17 +87,18 @@ export default function BlogPage() {
       <section className="section border-t border-line">
         <div className="container-x">
           <SectionHead eyebrow="Tutte le guide" title="Ultime pubblicazioni" />
-          <ul className="mt-8 divide-y divide-line border-y border-line">
-            {articles.map((a) => (
-              <li key={a.slug}>
-                <Link to={`/blog/${a.slug}`} className="group block py-6">
-                  <p className="text-xs uppercase tracking-wider text-gold-deep">
+          <ul className="mt-10 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {articles.map((a, i) => (
+              <Reveal as="li" key={a.slug} delay={(i % 3) * 80}>
+                <Link to={`/blog/${a.slug}`} className="group block">
+                  <Img id={imageForArticle(a.slug, a.category)} ratio="16 / 9" />
+                  <p className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
                     {blogCategories.find((c) => c.slug === a.category)?.name} · {a.readingTime}
                   </p>
-                  <h3 className="mt-2 text-xl transition-colors group-hover:text-gold-deep">{a.title}</h3>
-                  <p className="mt-2 max-w-3xl leading-relaxed text-ink-soft">{a.excerpt}</p>
+                  <h3 className="mt-2 text-lg transition-colors group-hover:text-gold-deep">{a.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{a.excerpt}</p>
                 </Link>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </div>

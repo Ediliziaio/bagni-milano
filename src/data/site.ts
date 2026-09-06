@@ -62,6 +62,12 @@ export const areaServed = [
   { name: "Provincia di Monza e della Brianza", type: "AdministrativeArea" },
   { name: "Lodi", type: "City" },
   { name: "Provincia di Lodi", type: "AdministrativeArea" },
+  { name: "Bergamo", type: "City" },
+  { name: "Provincia di Bergamo", type: "AdministrativeArea" },
+  { name: "Varese", type: "City" },
+  { name: "Provincia di Varese", type: "AdministrativeArea" },
+  { name: "Como", type: "City" },
+  { name: "Provincia di Como", type: "AdministrativeArea" },
   { name: "Lombardia", type: "State" },
 ] as const;
 

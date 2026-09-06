@@ -25,6 +25,7 @@ const urls: Url[] = [
   { loc: "/calcolatore-costo-bagno", lastmod: today, changefreq: "monthly", priority: "0.85" },
   { loc: "/quanto-tempo-ristrutturare-bagno", lastmod: today, changefreq: "monthly", priority: "0.85" },
   { loc: "/metodo", lastmod: today, changefreq: "monthly", priority: "0.8" },
+  { loc: "/processo", lastmod: today, changefreq: "monthly", priority: "0.85" },
   { loc: "/chi-siamo", lastmod: today, changefreq: "monthly", priority: "0.8" },
   { loc: "/servizi", lastmod: today, changefreq: "monthly", priority: "0.8" },
   { loc: "/progetti", lastmod: today, changefreq: "monthly", priority: "0.7" },

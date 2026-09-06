@@ -66,6 +66,13 @@ async function render(browser: Browser, url: string, port: number) {
     // Lascia a <Seo /> il tempo di scrivere title/meta/JSON-LD.
     await new Promise((r) => setTimeout(r, 250));
 
+    // Rimuove lo stato iniziale delle animazioni: l'HTML statico non deve mai
+    // contenere contenuto a opacity 0, né per i crawler né per chi ha JS disattivato.
+    await page.evaluate(() => {
+      document.documentElement.classList.remove("js-reveal");
+      document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-in"));
+    });
+
     let html = await page.content();
     html = html.replace(/https?:\/\/localhost:\d+\//g, "/");
     // Non si scrive su disco adesso: sovrascrivere dist/index.html mentre il

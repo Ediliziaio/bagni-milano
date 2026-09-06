@@ -5,6 +5,8 @@ import { abs } from "@/data/site";
 import { graph, baseNodes, webPage, howTo, breadcrumb } from "@/lib/schema";
 import { method } from "@/data/method";
 import { Img } from "@/components/Media";
+import { PhaseOverview } from "@/components/Phases";
+import { Reveal } from "@/components/Reveal";
 
 const PATH = "/metodo";
 
@@ -36,6 +38,8 @@ export default function MetodoPage() {
         </AnswerBlock>
       </section>
 
+      <PhaseOverview dark />
+
       <section className="section">
         <div className="container-x">
           <SectionHead eyebrow="I quattro principi" title="Su cosa si regge il metodo" />
@@ -50,19 +54,22 @@ export default function MetodoPage() {
         </div>
       </section>
 
-      <section className="section border-y border-line bg-sand/40">
+      <section className="section bg-sand">
         <div className="container-x">
           <SectionHead eyebrow="Le 12 fasi" title="Dal primo contatto alla consegna" lede="Ogni fase ha un esito verificabile. Non si passa alla successiva finché la precedente non è chiusa." />
-          <ol className="mt-12 space-y-6 border-l-2 border-gold/30 pl-6 sm:pl-10">
+          <ol className="mt-12 space-y-8 border-l border-line pl-8 sm:pl-12">
             {method.steps.map((s) => (
-              <li key={s.n} className="relative">
-                <span className="absolute -left-[2.05rem] top-1 flex h-7 w-7 items-center justify-center rounded-full bg-gold text-xs font-semibold text-white sm:-left-[3.05rem]" aria-hidden>
+              <Reveal as="li" key={s.n} className="relative">
+                <span
+                  className="absolute -left-[2.9rem] top-0.5 flex h-8 w-8 items-center justify-center rounded-full border border-gold-deep/40 bg-cream font-display text-xs text-gold-deep sm:-left-[3.9rem]"
+                  aria-hidden
+                >
                   {s.n}
                 </span>
                 <h3 className="text-lg">{s.name}</h3>
                 <p className="mt-1.5 max-w-2xl leading-relaxed text-ink-soft">{s.text}</p>
-                <p className="mt-2 text-xs uppercase tracking-wider text-ink-muted">Durata indicativa: {s.duration}</p>
-              </li>
+                <p className="mt-2 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">Durata indicativa: {s.duration}</p>
+              </Reveal>
             ))}
           </ol>
         </div>

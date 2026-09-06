@@ -20,7 +20,7 @@ export const organization = () => ({
   logo: { "@type": "ImageObject", url: abs("/logo.png"), width: 512, height: 512 },
   image: abs(site.ogImage),
   description:
-    "Bagni Milano è un'impresa specializzata nella ristrutturazione completa del bagno chiavi in mano a Milano, Monza, Lodi e in Lombardia: progettazione, demolizione, impianti, posa, finiture e consegna con un unico referente.",
+    "Bagni Milano è un'impresa specializzata nella ristrutturazione completa del bagno chiavi in mano a Milano, Monza, Lodi, Bergamo, Varese, Como e in Lombardia: progettazione, demolizione, impianti, posa, finiture e consegna con un unico referente.",
   telephone: site.telephone,
   email: site.email,
   vatID: site.vatId,
