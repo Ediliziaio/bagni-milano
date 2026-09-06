@@ -103,10 +103,18 @@ async function main() {
   const server = http.createServer((req, res) => serve(req, res, () => { res.statusCode = 404; res.end(); }));
   await new Promise<void>((r) => server.listen(port, r));
 
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
-  });
+  // Su Vercel il Chromium scaricato da puppeteer non trova le shared library del
+  // container (libnspr4 e altre): si usa @sparticuz/chromium, che le include.
+  let executablePath: string | undefined;
+  let args = ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"];
+  if (process.env.VERCEL === "1") {
+    const { default: chromium } = await import("@sparticuz/chromium");
+    executablePath = await chromium.executablePath();
+    args = [...chromium.args, "--disable-dev-shm-usage"];
+    console.log(`Chromium serverless: ${executablePath}`);
+  }
+
+  const browser = await puppeteer.launch({ headless: true, executablePath, args });
 
   console.log(`Prerender di ${urls.length} URL (concorrenza ${CONCURRENCY})...`);
   const start = Date.now();
