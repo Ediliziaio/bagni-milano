@@ -2,8 +2,8 @@
 
 > Generato da `src/data/images.ts` e `src/data/image-prompts.ts`. Non modificare a mano: `npm run images`.
 
-**Stato: 3 definitive · 36 da sostituire · 14 da creare.**
-Totale libreria: 53 immagini.
+**Stato: 3 definitive · 49 da sostituire · 2 da creare.**
+Totale libreria: 54 immagini.
 
 ---
 
@@ -56,226 +56,10 @@ Con fotografie reali vale lo stesso: treppiede, altezza annotata, posizione segn
 
 ---
 
-## Priorità 1 — servono per il lancio
-
-### `cantiere-demolizione.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `cantiere-demolizione.jpg` |
-| **Dimensioni minime** | 1600 × 1067 px |
-| **Proporzione** | 3:2 orizzontale |
-| **Dove compare** | Metodo e processo — fase 8 |
-| **Testo alternativo** | Cantiere Bagni Milano durante la demolizione, con protezioni sui percorsi |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Cantiere reale di ristrutturazione bagno durante la demolizione: teli di protezione sul pavimento del corridoio, sacchi big bag per le macerie allineati, vecchie piastrelle rimosse impilate ordinatamente, attrezzi appoggiati in ordine, aspiratore per polveri. L'ambiente deve trasmettere ORDINE e organizzazione, non disordine.
-```
-
----
-
-### `cantiere-impianti.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `cantiere-impianti.jpg` |
-| **Dimensioni minime** | 1600 × 1067 px |
-| **Proporzione** | 3:2 orizzontale |
-| **Dove compare** | Metodo e processo — fase 9 |
-| **Testo alternativo** | Nuovo impianto idraulico ed elettrico in traccia durante una ristrutturazione bagno |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Dettaglio tecnico di un bagno in ristrutturazione: pareti con tracce aperte e nuove tubazioni multistrato rosse e blu in vista, collettore idraulico, scatole elettriche incassate con cavi, prima della chiusura delle tracce. Illuminazione da lampada da cantiere. Il dettaglio tecnico deve essere leggibile e credibile.
-```
-
----
-
-### `cantiere-impermeabilizzazione.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `cantiere-impermeabilizzazione.jpg` |
-| **Dimensioni minime** | 1600 × 1067 px |
-| **Proporzione** | 3:2 orizzontale |
-| **Dove compare** | Metodo, processo e articolo sulle infiltrazioni |
-| **Testo alternativo** | Impermeabilizzazione con guaina liquida della zona doccia prima della posa |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Dettaglio ravvicinato della zona doccia di un bagno in costruzione, con guaina liquida impermeabilizzante di colore azzurro o grigio stesa uniformemente sul fondo e sulle pareti, nastro di rinforzo bianco visibile su tutti gli angoli e attorno alla piletta di scarico. Rullo e secchio del prodotto appoggiati a terra. Prima della posa delle piastrelle.
-```
-
----
-
-### `referente.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `referente.jpg` |
-| **Dimensioni minime** | 1200 × 1500 px |
-| **Proporzione** | 4:5 verticale |
-| **Dove compare** | Chi siamo — E-E-A-T |
-| **Testo alternativo** | Il referente unico di Bagni Milano in cantiere |
-
-**Prompt da usare:**
-
-```
-Ritratto fotografico professionale in formato verticale di un uomo italiano sui 40 anni, responsabile di cantiere, camicia scura o polo tecnica, sguardo diretto in camera, espressione seria e affidabile, in piedi in un bagno appena ristrutturato leggermente sfocato sullo sfondo. Luce naturale morbida. Nessun logo visibile. Fotografia realistica, non ritratto in studio.
-```
-
 
 ---
 
 ## Priorità 2 — entro 30 giorni
-
-### `materiali.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `materiali.jpg` |
-| **Dimensioni minime** | 1600 × 1600 px |
-| **Proporzione** | 1:1 quadrato |
-| **Dove compare** | Home e metodo — selezione materiali |
-| **Testo alternativo** | Campioni di gres, fughe e finiture di rubinetteria selezionati per un progetto |
-
-**Prompt da usare:**
-
-```
-Composizione fotografica dall'alto (flat lay) su fondo neutro chiaro: campioni di gres porcellanato effetto marmo scuro e pietra chiara, campioncini di fuga in diverse tonalità, un miscelatore in ottone spazzolato, una piastrella di grande formato appoggiata di taglio, un metro a nastro. Luce naturale diffusa, ombre morbide. Nessun marchio leggibile. Formato quadrato.
-```
-
----
-
-### `geo-milano.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `geo-milano.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Landing Milano — apertura |
-| **Testo alternativo** | Edilizia residenziale tipica di Milano, area servita da Bagni Milano |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Facciata di un condominio milanese anni Cinquanta-Settanta vista dal cortile interno, ringhiere in ferro, finestre allineate, atmosfera urbana. Nessuna persona, nessuna targa o insegna leggibile. Formato orizzontale.
-```
-
----
-
-### `geo-monza.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `geo-monza.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Landing Monza — apertura |
-| **Testo alternativo** | Edilizia residenziale tipica di Monza, area servita da Bagni Milano |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Villetta bifamiliare brianzola degli anni Ottanta vista dal giardino, mattoni a vista e intonaco chiaro, siepe curata. Nessuna persona, nessuna targa o insegna leggibile. Formato orizzontale.
-```
-
----
-
-### `geo-lodi.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `geo-lodi.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Landing Lodi — apertura |
-| **Testo alternativo** | Edilizia residenziale tipica di Lodi, area servita da Bagni Milano |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Cascina lodigiana recuperata a uso residenziale, corte interna in mattoni, portico con travi in legno. Nessuna persona, nessuna targa o insegna leggibile. Formato orizzontale.
-```
-
----
-
-### `geo-bergamo.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `geo-bergamo.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Landing Bergamo — apertura |
-| **Testo alternativo** | Edilizia residenziale tipica di Bergamo, area servita da Bagni Milano |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Scorcio di Bergamo Città Alta, edifici in pietra e portoni antichi lungo una via stretta in salita. Nessuna persona, nessuna targa o insegna leggibile. Formato orizzontale.
-```
-
----
-
-### `geo-varese.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `geo-varese.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Landing Varese — apertura |
-| **Testo alternativo** | Edilizia residenziale tipica di Varese, area servita da Bagni Milano |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Villa varesina di inizio Novecento immersa nel verde, facciata chiara con persiane, vialetto di ghiaia. Nessuna persona, nessuna targa o insegna leggibile. Formato orizzontale.
-```
-
----
-
-### `geo-como.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `geo-como.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Landing Como — apertura |
-| **Testo alternativo** | Edilizia residenziale tipica di Como, area servita da Bagni Milano |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Abitazione affacciata sul lago di Como costruita in pendio, terrazzo con ringhiera, acqua e montagne sullo sfondo. Nessuna persona, nessuna targa o insegna leggibile. Formato orizzontale.
-```
-
----
-
-### `geo-lombardia.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `geo-lombardia.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Landing Lombardia — apertura |
-| **Testo alternativo** | Edilizia residenziale tipica di Lombardia, area servita da Bagni Milano |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Paesaggio urbano lombardo con edifici residenziali di epoche diverse affiancati, cielo velato di pianura. Nessuna persona, nessuna targa o insegna leggibile. Formato orizzontale.
-```
-
----
 
 ### `og-social.jpg`
 
@@ -345,10 +129,23 @@ portare `source` a `"propria"`: nessuna modifica al codice.
 - `ba-ospiti-dopo.jpg` — Comparatore prima/dopo
 - `ba-walkin-prima.jpg` — Comparatore prima/dopo
 - `ba-walkin-dopo.jpg` — Comparatore prima/dopo
+- `cantiere-demolizione.jpg` — Metodo e processo — fase 8
+- `cantiere-impianti.jpg` — Metodo e processo — fase 9
+- `cantiere-impermeabilizzazione.jpg` — Metodo, processo e articolo sulle infiltrazioni
+- `referente.jpg` — Chi siamo — E-E-A-T
+- `materiali.jpg` — Home e metodo — selezione materiali
+- `team.jpg` — Chi siamo — fascia squadra
 - `art-costi.jpg` — Articoli del cluster Costi
 - `art-progettazione.jpg` — Articoli del cluster Progettazione
 - `art-idee.jpg` — Articoli dei cluster Idee e Materiali
 - `art-lombardia.jpg` — Articoli del cluster Lombardia
+- `geo-milano.jpg` — Landing Milano — apertura
+- `geo-monza.jpg` — Landing Monza — apertura
+- `geo-lodi.jpg` — Landing Lodi — apertura
+- `geo-bergamo.jpg` — Landing Bergamo — apertura
+- `geo-varese.jpg` — Landing Varese — apertura
+- `geo-como.jpg` — Landing Como — apertura
+- `geo-lombardia.jpg` — Landing Lombardia — apertura
 - `srv-bagno-chiavi-in-mano.jpg` — Pagina servizio /servizi/bagno-chiavi-in-mano
 - `srv-trasformazione-vasca-in-doccia.jpg` — Pagina servizio /servizi/trasformazione-vasca-in-doccia
 - `srv-bagno-piccolo.jpg` — Pagina servizio /servizi/bagno-piccolo

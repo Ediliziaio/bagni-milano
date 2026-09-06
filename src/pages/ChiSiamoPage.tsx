@@ -99,6 +99,20 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
+      {/* LA SQUADRA */}
+      <section className="section">
+        <div className="container-x">
+          <SectionHead
+            eyebrow="La squadra"
+            title="Chi entra davvero in cantiere"
+            lede="Progettazione, cantiere e assistenza sono tre funzioni distinte, coordinate dallo stesso referente. Non è un'impresa che si compone di volta in volta."
+          />
+          <figure className="mt-12">
+            <Img id="team" ratio="3 / 2" />
+          </figure>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container-x grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>

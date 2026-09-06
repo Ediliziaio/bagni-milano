@@ -13,6 +13,9 @@ import { services } from "@/data/services";
 import { cities } from "@/data/cities";
 import { faqs } from "@/data/faqs";
 import { costBySize, costsDisclaimer } from "@/data/costs";
+import { articles } from "@/data/articles";
+import { blogCategories } from "@/data/blog-categories";
+import { imageForArticle } from "@/data/images";
 
 const homeFaqs = faqs.filter((f) =>
   ["Quanto costa rifare un bagno a Milano?", "Quanto tempo serve per rifare un bagno?", "Posso vivere in casa durante i lavori?", "In quali zone operate?", "Offrite un servizio chiavi in mano?", "Chi coordina idraulico, elettricista e muratore?"].includes(f.q)
@@ -382,6 +385,39 @@ export default function HomePage() {
               <Link to="/preventivo" className="btn-ink">Richiedi un sopralluogo</Link>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* GUIDE — le pagine informative che sostengono le money page */}
+      <section className="section border-t border-line">
+        <div className="container-x">
+          <Reveal>
+            <SectionHead
+              eyebrow="Guide"
+              title="Le risposte che cerchi prima di decidere"
+              lede="Ogni guida apre con una risposta diretta, poi entra nel dettaglio. Sono le domande che ci vengono fatte in sopralluogo."
+            />
+          </Reveal>
+          <ul className="mt-12 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {["quanto-costa-rifare-un-bagno", "come-progettare-un-bagno", "muffa-in-bagno-cause-e-soluzioni"]
+              .map((slug) => articles.find((a) => a.slug === slug))
+              .filter(Boolean)
+              .map((a, i) => (
+                <Reveal as="li" key={a!.slug} delay={i * 90}>
+                  <Link to={`/blog/${a!.slug}`} className="group block">
+                    <Img id={imageForArticle(a!.slug, a!.category)} ratio="16 / 9" />
+                    <p className="mt-4 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-gold-deep">
+                      {blogCategories.find((c) => c.slug === a!.category)?.name} · {a!.readingTime}
+                    </p>
+                    <h3 className="mt-2 text-lg transition-colors group-hover:text-gold-deep">{a!.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-muted">{a!.excerpt}</p>
+                  </Link>
+                </Reveal>
+              ))}
+          </ul>
+          <div className="mt-10">
+            <Link to="/blog" className="btn-outline">Tutte le guide <ArrowRight size={16} aria-hidden /></Link>
+          </div>
         </div>
       </section>
 

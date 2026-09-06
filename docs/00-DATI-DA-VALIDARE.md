@@ -35,7 +35,7 @@ esattamente ciò che il brief vieta, e comporta rischio reputazionale e di penal
 | 18 | Dati reali dei 4 progetti + foto prima/dopo | `src/data/projects.ts` — oggi `published: false` | ⬜ |
 | 19 | Recensioni verificabili (Google/Trustpilot) | Nessun `aggregateRating` finché non esistono | ⬜ |
 | 20 | Aliquote e massimali detrazioni in vigore | Articolo detrazioni, servizio bagno accessibile | ⬜ |
-| 21 | **Sostituire le immagini di riferimento con fotografie proprie** | 8 coppie prima/dopo e 7 immagini editoriali | ⬜ |
+| 21 | **Sostituire le immagini di riferimento con fotografie proprie** | 49 immagini su 54, incluse le 3 di cantiere | ⬜ |
 | 22 | **Verificare la licenza d'uso delle immagini generiche** | Immagini editoriali e sfondi | ⬜ |
 
 ## Nota sulle immagini attualmente pubblicate
