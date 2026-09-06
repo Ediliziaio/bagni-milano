@@ -1,0 +1,9 @@
+{
+  "name": "Bagni Milano",
+  "short_name": "Bagni Milano",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F4",
+  "theme_color": "#1D1A17",
+  "icons": []
+}

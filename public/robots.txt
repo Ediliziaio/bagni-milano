@@ -1,0 +1,49 @@
+# Bagni Milano — robots.txt
+# Aggiornare il dominio prima del go-live.
+
+User-agent: *
+Allow: /
+
+# Crawler dei motori generativi: accesso esplicitamente consentito.
+# È il prerequisito tecnico della strategia GEO/AIO: se il crawler non entra,
+# il contenuto non può essere né citato né sintetizzato.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://www.bagnimilano.it/sitemap.xml

@@ -1,0 +1,87 @@
+import { Seo } from "@/components/Seo";
+import { Layout } from "@/components/Layout";
+import { AnswerBlock, Breadcrumbs, CtaSection, SectionHead } from "@/components/Ui";
+import { abs } from "@/data/site";
+import { graph, baseNodes, webPage, howTo, breadcrumb } from "@/lib/schema";
+import { method } from "@/data/method";
+
+const PATH = "/metodo";
+
+export default function MetodoPage() {
+  const schema = graph(
+    ...baseNodes(),
+    webPage({ url: abs(PATH), name: `${method.name} — come lavoriamo`, description: method.promise }),
+    howTo({ name: method.name, description: method.promise, steps: method.steps.map((s) => ({ name: s.name, text: s.text })) }),
+    breadcrumb([{ name: "Home", url: abs("/") }, { name: "Metodo", url: abs(PATH) }])
+  );
+
+  return (
+    <Layout>
+      <Seo
+        title={`${method.name}: Come Lavoriamo in 12 Fasi | Bagni Milano`}
+        description="Il Metodo Bagno Certo di Bagni Milano: 12 fasi dal primo contatto alla consegna, con referente unico, preventivo chiuso e date scritte in contratto."
+        path={PATH}
+        schema={schema}
+        answer={method.promise}
+      />
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Metodo" }]} />
+
+      <section className="container-x pt-8">
+        <p className="eyebrow">Come lavoriamo</p>
+        <h1 className="mt-3 max-w-3xl">{method.name}</h1>
+        <p className="lede mt-5 max-w-2xl">{method.claim}</p>
+        <AnswerBlock question={`Che cos'è il ${method.name}?`}>
+          <p>{method.promise}</p>
+        </AnswerBlock>
+      </section>
+
+      <section className="section">
+        <div className="container-x">
+          <SectionHead eyebrow="I quattro principi" title="Su cosa si regge il metodo" />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            {method.pillars.map((p) => (
+              <div key={p.title} className="card">
+                <h3 className="text-lg">{p.title}</h3>
+                <p className="mt-2 leading-relaxed text-ink-soft">{p.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section border-y border-line bg-travertine/40">
+        <div className="container-x">
+          <SectionHead eyebrow="Le 12 fasi" title="Dal primo contatto alla consegna" lede="Ogni fase ha un esito verificabile. Non si passa alla successiva finché la precedente non è chiusa." />
+          <ol className="mt-12 space-y-6 border-l-2 border-brass/30 pl-6 sm:pl-10">
+            {method.steps.map((s) => (
+              <li key={s.n} className="relative">
+                <span className="absolute -left-[2.05rem] top-1 flex h-7 w-7 items-center justify-center rounded-full bg-brass text-xs font-semibold text-white sm:-left-[3.05rem]" aria-hidden>
+                  {s.n}
+                </span>
+                <h3 className="text-lg">{s.name}</h3>
+                <p className="mt-1.5 max-w-2xl leading-relaxed text-ink-soft">{s.text}</p>
+                <p className="mt-2 text-xs uppercase tracking-wider text-ink-muted">Durata indicativa: {s.duration}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container-x">
+          <div className="card max-w-3xl">
+            <p className="eyebrow">Perché lo abbiamo scritto</p>
+            <h2 className="mt-2 text-2xl">Un metodo esiste per essere verificato</h2>
+            <p className="mt-4 leading-relaxed text-ink-soft">
+              Dichiarare un metodo significa accettare di essere misurati su di esso. Se una fase salta,
+              il cliente se ne accorge — ed è esattamente il punto. Le imprese che non scrivono il proprio
+              processo non lo fanno per riservatezza: lo fanno perché un processo scritto è un impegno.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <CtaSection title="Vuoi vedere il metodo applicato al tuo bagno?" text="Partiamo dal sopralluogo tecnico: è la fase due, e da lì in poi ogni passaggio è definito." cta="Prenota il sopralluogo" />
+    </Layout>
+  );
+}

@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Palette Bagni Milano — marmo, ottone, grafite */
+    --ink: 30 12% 10%;          /* #1D1A17 grafite calda */
+    --ink-soft: 30 8% 24%;
+    --ink-muted: 30 6% 45%;
+    --alabaster: 38 33% 97%;    /* #FAF8F4 */
+    --travertine: 36 26% 92%;   /* #EFEAE2 */
+    --brass: 36 34% 51%;        /* #B08D57 ottone satinato */
+    --brass-dark: 36 38% 38%;
+    --brass-light: 36 40% 68%;
+    --line: 36 18% 86%;
+    --background: 38 33% 97%;
+    --foreground: 30 12% 10%;
+  }
+
+  * { @apply border-line; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 { @apply font-display font-semibold tracking-tight text-balance; }
+  h1 { @apply text-[clamp(2rem,5vw,3.5rem)] leading-[1.08]; }
+  h2 { @apply text-[clamp(1.6rem,3.4vw,2.5rem)] leading-[1.15]; }
+  h3 { @apply text-[clamp(1.15rem,2vw,1.5rem)] leading-snug; }
+  /* Riserva spazio immagini: difesa CLS */
+  img { @apply max-w-full h-auto; }
+  ::selection { background: hsl(var(--brass) / 0.25); }
+  :focus-visible { outline: 2px solid hsl(var(--brass-dark)); outline-offset: 2px; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8; }
+  .eyebrow { @apply font-accent text-brass-dark uppercase tracking-[0.18em] text-sm font-semibold; }
+  .lede { @apply text-lg sm:text-xl leading-relaxed text-ink-soft; }
+
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[0.95rem] font-semibold transition-colors duration-200 min-h-[48px]; }
+  .btn-primary { @apply btn bg-ink text-alabaster hover:bg-ink-soft; }
+  .btn-brass { @apply btn bg-brass text-white hover:bg-brass-dark; }
+  .btn-ghost { @apply btn border border-ink/25 text-ink hover:bg-ink hover:text-alabaster; }
+
+  .card { @apply rounded-2xl border border-line bg-white p-6 sm:p-7; }
+  .section { @apply py-14 sm:py-20; }
+
+  /* Blocco "risposta diretta" GEO: risposta estraibile in <=60 parole */
+  .answer-block { @apply rounded-2xl border-l-4 border-brass bg-travertine/70 p-5 sm:p-6 text-ink-soft; }
+  .answer-block > p:first-child { @apply text-ink font-medium; }
+
+  .prose-bm { @apply max-w-prose text-ink-soft leading-relaxed; }
+  .prose-bm h2 { @apply mt-12 mb-4 text-ink; }
+  .prose-bm h3 { @apply mt-8 mb-3 text-ink; }
+  .prose-bm p { @apply mb-4; }
+  .prose-bm ul { @apply mb-5 space-y-2 pl-5 list-disc marker:text-brass; }
+  .prose-bm ol { @apply mb-5 space-y-2 pl-5 list-decimal marker:text-brass; }
+  .prose-bm a { @apply text-brass-dark underline underline-offset-4 hover:text-ink; }
+  .prose-bm table { @apply w-full my-6 text-sm border-collapse; }
+  .prose-bm th { @apply bg-travertine text-ink text-left font-semibold p-3 border border-line; }
+  .prose-bm td { @apply p-3 border border-line align-top; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
