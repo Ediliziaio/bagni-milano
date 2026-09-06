@@ -2,7 +2,7 @@
 
 > Generato da `src/data/images.ts` e `src/data/image-prompts.ts`. Non modificare a mano: `npm run images`.
 
-**Stato: 3 definitive · 23 da sostituire · 27 da creare.**
+**Stato: 3 definitive · 36 da sostituire · 14 da creare.**
 Totale libreria: 53 immagini.
 
 ---
@@ -277,240 +277,6 @@ fotografia di interni realistica, luce naturale morbida da finestra laterale, pr
 
 ---
 
-### `srv-bagno-chiavi-in-mano.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `srv-bagno-chiavi-in-mano.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Pagina servizio /servizi/bagno-chiavi-in-mano |
-| **Testo alternativo** | Intervento di Bagni Milano: bagno chiavi in mano |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Bagno completamente finito e pronto all'uso, vista d'insieme dall'ingresso. finiture contemporanee: grande formato effetto marmo scuro o pietra chiara, rubinetteria in ottone spazzolato, mobile sospeso in legno chiaro, specchio retroilluminato, sanitari sospesi bianchi, doccia walk-in con vetro trasparente. Formato orizzontale.
-```
-
----
-
-### `srv-trasformazione-vasca-in-doccia.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `srv-trasformazione-vasca-in-doccia.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Pagina servizio /servizi/trasformazione-vasca-in-doccia |
-| **Testo alternativo** | Intervento di Bagni Milano: trasformazione vasca in doccia |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Doccia walk-in a filo pavimento installata dove prima c'era una vasca, vetro fisso trasparente. finiture contemporanee: grande formato effetto marmo scuro o pietra chiara, rubinetteria in ottone spazzolato, mobile sospeso in legno chiaro, specchio retroilluminato, sanitari sospesi bianchi, doccia walk-in con vetro trasparente. Formato orizzontale.
-```
-
----
-
-### `srv-bagno-piccolo.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `srv-bagno-piccolo.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Pagina servizio /servizi/bagno-piccolo |
-| **Testo alternativo** | Intervento di Bagni Milano: bagno piccolo |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Bagno di 4 mq ottimizzato, sanitari sospesi, doccia rettangolare stretta e porta scorrevole. finiture contemporanee: grande formato effetto marmo scuro o pietra chiara, rubinetteria in ottone spazzolato, mobile sospeso in legno chiaro, specchio retroilluminato, sanitari sospesi bianchi, doccia walk-in con vetro trasparente. Formato orizzontale.
-```
-
----
-
-### `srv-ristrutturazione-bagno-condominio.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `srv-ristrutturazione-bagno-condominio.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Pagina servizio /servizi/ristrutturazione-bagno-condominio |
-| **Testo alternativo** | Intervento di Bagni Milano: ristrutturazione bagno condominio |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Bagno di appartamento in condominio appena rifatto, con porta d'ingresso e corridoio protetto da teli sullo sfondo. finiture contemporanee: grande formato effetto marmo scuro o pietra chiara, rubinetteria in ottone spazzolato, mobile sospeso in legno chiaro, specchio retroilluminato, sanitari sospesi bianchi, doccia walk-in con vetro trasparente. Formato orizzontale.
-```
-
----
-
-### `srv-bagno-senza-demolizione.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `srv-bagno-senza-demolizione.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Pagina servizio /servizi/bagno-senza-demolizione |
-| **Testo alternativo** | Intervento di Bagni Milano: bagno senza demolizione |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Posa di nuovo rivestimento sopra piastrelle esistenti, dettaglio del bordo fra vecchio e nuovo. finiture contemporanee: grande formato effetto marmo scuro o pietra chiara, rubinetteria in ottone spazzolato, mobile sospeso in legno chiaro, specchio retroilluminato, sanitari sospesi bianchi, doccia walk-in con vetro trasparente. Formato orizzontale.
-```
-
----
-
-### `srv-ristrutturazione-bagno-disabili.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `srv-ristrutturazione-bagno-disabili.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Pagina servizio /servizi/ristrutturazione-bagno-disabili |
-| **Testo alternativo** | Intervento di Bagni Milano: ristrutturazione bagno disabili |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Bagno accessibile con doccia a filo pavimento, seduta ribaltabile a parete e maniglioni di appoggio, estetica contemporanea non ospedaliera. finiture contemporanee: grande formato effetto marmo scuro o pietra chiara, rubinetteria in ottone spazzolato, mobile sospeso in legno chiaro, specchio retroilluminato, sanitari sospesi bianchi, doccia walk-in con vetro trasparente. Formato orizzontale.
-```
-
----
-
-### `srv-rifacimento-impianto-idraulico-bagno.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `srv-rifacimento-impianto-idraulico-bagno.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Pagina servizio /servizi/rifacimento-impianto-idraulico-bagno |
-| **Testo alternativo** | Intervento di Bagni Milano: rifacimento impianto idraulico bagno |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Parete di bagno con tracce aperte e nuove tubazioni multistrato rosse e blu collegate a un collettore. finiture contemporanee: grande formato effetto marmo scuro o pietra chiara, rubinetteria in ottone spazzolato, mobile sospeso in legno chiaro, specchio retroilluminato, sanitari sospesi bianchi, doccia walk-in con vetro trasparente. Formato orizzontale.
-```
-
----
-
-### `srv-rifacimento-doccia.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `srv-rifacimento-doccia.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Pagina servizio /servizi/rifacimento-doccia |
-| **Testo alternativo** | Intervento di Bagni Milano: rifacimento doccia |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Piatto doccia a filo pavimento appena posato con piletta lineare e rivestimento in grande formato. finiture contemporanee: grande formato effetto marmo scuro o pietra chiara, rubinetteria in ottone spazzolato, mobile sospeso in legno chiaro, specchio retroilluminato, sanitari sospesi bianchi, doccia walk-in con vetro trasparente. Formato orizzontale.
-```
-
----
-
-### `pag-costi.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `pag-costi.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Money page /costi |
-| **Testo alternativo** | Bagni Milano — costi |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Tavolo con preventivo dettagliato, campioni di gres di tre fasce diverse allineati e calcolatrice, ripresa dall'alto a 45 gradi. Formato orizzontale.
-```
-
----
-
-### `pag-tempi.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `pag-tempi.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Money page /tempi |
-| **Testo alternativo** | Bagni Milano — tempi |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Calendario da cantiere appeso a parete accanto a un bagno in lavorazione, con le giornate segnate a pennarello, nessun testo leggibile. Formato orizzontale.
-```
-
----
-
-### `pag-preventivo.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `pag-preventivo.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Money page /preventivo |
-| **Testo alternativo** | Bagni Milano — preventivo |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Tecnico che prende le misure di un bagno con metro laser, inquadratura sulle mani e sullo strumento, volto non visibile. Formato orizzontale.
-```
-
----
-
-### `pag-faq.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `pag-faq.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Money page /faq |
-| **Testo alternativo** | Bagni Milano — faq |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Dettaglio ordinato di un bagno finito, angolo lavabo con specchio retroilluminato. Formato orizzontale.
-```
-
----
-
-### `pag-chi-siamo.jpg`
-
-| | |
-|---|---|
-| **Nome file** | `pag-chi-siamo.jpg` |
-| **Dimensioni minime** | 1600 × 900 px |
-| **Proporzione** | 16:9 orizzontale |
-| **Dove compare** | Money page /chi-siamo |
-| **Testo alternativo** | Bagni Milano — chi siamo |
-
-**Prompt da usare:**
-
-```
-fotografia di interni realistica, luce naturale morbida da finestra laterale, prospettiva a un punto con verticali perfettamente diritte, obiettivo grandangolare 24mm, nessuna persona, nessun testo o logo visibile, nessun riflesso del fotografo negli specchi, ambiente italiano residenziale, colori fedeli, nessuna saturazione eccessiva. Squadra di cantiere di tre persone vista di spalle mentre lavora in un bagno in ristrutturazione, volti non riconoscibili. Formato orizzontale.
-```
-
----
-
 ### `og-social.jpg`
 
 | | |
@@ -583,6 +349,19 @@ portare `source` a `"propria"`: nessuna modifica al codice.
 - `art-progettazione.jpg` — Articoli del cluster Progettazione
 - `art-idee.jpg` — Articoli dei cluster Idee e Materiali
 - `art-lombardia.jpg` — Articoli del cluster Lombardia
+- `srv-bagno-chiavi-in-mano.jpg` — Pagina servizio /servizi/bagno-chiavi-in-mano
+- `srv-trasformazione-vasca-in-doccia.jpg` — Pagina servizio /servizi/trasformazione-vasca-in-doccia
+- `srv-bagno-piccolo.jpg` — Pagina servizio /servizi/bagno-piccolo
+- `srv-ristrutturazione-bagno-condominio.jpg` — Pagina servizio /servizi/ristrutturazione-bagno-condominio
+- `srv-bagno-senza-demolizione.jpg` — Pagina servizio /servizi/bagno-senza-demolizione
+- `srv-ristrutturazione-bagno-disabili.jpg` — Pagina servizio /servizi/ristrutturazione-bagno-disabili
+- `srv-rifacimento-impianto-idraulico-bagno.jpg` — Pagina servizio /servizi/rifacimento-impianto-idraulico-bagno
+- `srv-rifacimento-doccia.jpg` — Pagina servizio /servizi/rifacimento-doccia
+- `pag-costi.jpg` — Money page /costi
+- `pag-tempi.jpg` — Money page /tempi
+- `pag-preventivo.jpg` — Money page /preventivo
+- `pag-faq.jpg` — Money page /faq
+- `pag-chi-siamo.jpg` — Money page /chi-siamo
 
 ---
 

@@ -210,7 +210,7 @@ export default function HomePage() {
       {/* ZONE SERVITE */}
       <section className="on-dark section">
         <div className="container-x">
-          <SectionHead eyebrow="Zone servite" title="Dove lavoriamo" lede="Copertura continuativa su Milano e Città metropolitana, Monza e Brianza, Lodi e Lodigiano." />
+          <SectionHead eyebrow="Zone servite" title="Dove lavoriamo" lede="Copertura continuativa su Milano e Città metropolitana, Monza e Brianza, Lodi, Bergamo, Varese e Como." />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {cities.map((c) => (
               <Link key={c.slug} to={`/ristrutturazione-bagno-${c.slug}`} className="card group transition-colors hover:border-gold">
@@ -315,9 +315,10 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
-          <p className="mt-8 text-sm text-ink-muted">
+          <p className="mt-12 max-w-2xl text-sm leading-relaxed text-ink-muted">
             Le schede progetto complete vengono pubblicate quando dispongono di dati reali di
-            cantiere e delle fotografie. <Link to="/progetti" className="text-gold-deep underline underline-offset-4 hover:text-ink">Vai ai progetti</Link>
+            cantiere e delle fotografie.{" "}
+            <Link to="/progetti" className="text-gold-deep underline underline-offset-4 hover:text-ink">Vai ai progetti</Link>
           </p>
         </div>
       </section>

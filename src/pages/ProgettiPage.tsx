@@ -81,9 +81,9 @@ export default function ProgettiPage() {
                 lede="Abbiamo scelto di non pubblicare case study incompleti. Una scheda è utile — per chi legge e per i motori di ricerca — solo con dati reali: metratura effettiva, lavorazioni eseguite, durata del cantiere e fotografie."
               />
               <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {projects.map((p) => (
+                {projects.map((p, i) => (
                   <li key={p.slug}>
-                    <Img id="art-progettazione" ratio="4 / 3" />
+                    <Img id={["ba-porta-nuova-dopo", "ba-brera-dopo", "ba-navigli-dopo", "ba-padronale-dopo"][i % 4]} ratio="4 / 3" />
                     <p className="mt-3 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">{p.locality}</p>
                     <h3 className="mt-1.5 text-lg">{p.title}</h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{p.before}</p>

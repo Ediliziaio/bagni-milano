@@ -36,8 +36,13 @@ export const Img = ({
     );
   }
 
+  // Il contenitore impone la proporzione: senza, le immagini si renderizzano ad
+  // altezza naturale e in griglia le didascalie finiscono a quote diverse.
   return (
-    <picture>
+    <div
+      className={cn("relative overflow-hidden rounded-[2px] bg-sand", className)}
+      style={{ aspectRatio: ratio }}
+    >
       <img
         src={`/img/${spec.id}.jpg`}
         alt={spec.alt}
@@ -46,9 +51,9 @@ export const Img = ({
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : "auto"}
         decoding={priority ? "sync" : "async"}
-        className={cn("h-full w-full object-cover", className)}
+        className="absolute inset-0 h-full w-full object-cover"
       />
-    </picture>
+    </div>
   );
 };
 

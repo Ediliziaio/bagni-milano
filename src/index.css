@@ -59,6 +59,18 @@
   .on-dark { @apply bg-ink text-cream; }
   .on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4 { @apply text-cream; }
 
+  /* Su fondo scuro le utility di testo chiaro vanno neutralizzate: la specificità
+     `.on-dark .text-ink-soft` (0,2,0) batte l'utility (0,1,0). Senza questa regola
+     un `text-ink-soft` dimenticato in una sezione scura diventa illeggibile. */
+  .on-dark .text-ink { @apply text-cream; }
+  .on-dark .text-ink-soft { color: hsl(var(--cream) / 0.72); }
+  .on-dark .text-ink-muted { color: hsl(var(--cream) / 0.5); }
+  .on-dark .text-gold-deep { @apply text-gold; }
+  .on-dark .border-line { border-color: hsl(var(--line-dark)); }
+  .on-dark .divide-line > * + * { border-color: hsl(var(--line-dark)); }
+  .on-dark .bg-sand { background-color: hsl(var(--ink-2)); }
+  .on-dark .bg-cream-hi { background-color: hsl(var(--ink-3)); }
+
   /* ── Etichette in maiuscoletto spaziato, come nel prototipo ── */
   .eyebrow {
     @apply font-sans text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-gold-deep;
