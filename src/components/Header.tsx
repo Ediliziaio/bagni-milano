@@ -49,9 +49,16 @@ export const Header = () => {
           ))}
         </nav>
 
-        <Link to="/preventivo" className="hidden lg:inline-flex btn-gold !min-h-0 !py-3 !px-6">
-          Consulenza
-        </Link>
+        <div className="hidden lg:flex items-center gap-5">
+          <a
+            href={`tel:${site.telephoneE164}`}
+            className="text-[0.72rem] font-semibold tracking-[0.06em] text-cream/80 transition-colors hover:text-gold"
+            data-cta="header-call"
+          >
+            {site.telephone}
+          </a>
+          <Link to="/preventivo" className="btn-gold !min-h-0 !py-3 !px-6">Consulenza</Link>
+        </div>
 
         <button
           type="button"
@@ -79,10 +86,13 @@ export const Header = () => {
                 </Link>
               </li>
             ))}
-            <li className="py-4">
+            <li className="py-4 space-y-2.5">
               <Link to="/preventivo" onClick={() => setOpen(false)} className="btn-gold w-full">
                 Richiedi la consulenza
               </Link>
+              <a href={`tel:${site.telephoneE164}`} className="btn-outline-light w-full" data-cta="menu-call">
+                {site.telephone}
+              </a>
             </li>
           </ul>
         </nav>

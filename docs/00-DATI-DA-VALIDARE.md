@@ -12,7 +12,7 @@ esattamente ciò che il brief vieta, e comporta rischio reputazionale e di penal
 | 1 | Dominio definitivo | `src/data/site.ts`, `scripts/*`, `index.html`, `robots.txt`, `vercel.json` | ⬜ |
 | 2 | Ragione sociale completa | Footer, schema Organization, informativa privacy | ⬜ |
 | 3 | Partita IVA | Footer, schema, fatturazione | ⬜ |
-| 4 | Telefono principale (formato `+39...`) | Header, barra CTA mobile, schema, GBP | ⬜ |
+| 4 | ~~Telefono principale~~ **+39 352 067 9764** | Header, barra CTA mobile, WhatsApp, schema, GBP | ✅ |
 | 5 | Email commerciale | Contatti, schema, form | ⬜ |
 | 6 | Indirizzo sede/showroom + CAP | Schema LocalBusiness, GBP, NAP | ⬜ |
 | 7 | Coordinate GPS della sede | Schema `geo`, coerenza con GBP | ⬜ |

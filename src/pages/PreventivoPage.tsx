@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Img } from "@/components/Media";
 import { Layout } from "@/components/Layout";
@@ -164,7 +164,14 @@ export default function PreventivoPage() {
             <div className="card">
               <SectionHead eyebrow="Contatti" title="Parla con noi" />
               <ul className="mt-6 space-y-4 text-sm">
-                <li className="flex gap-3"><Phone size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.telephone}</span></li>
+                <li className="flex gap-3">
+                  <Phone size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
+                  <a href={`tel:${site.telephoneE164}`} className="text-gold-deep underline underline-offset-4 hover:text-ink" data-cta="quote-call">{site.telephone}</a>
+                </li>
+                <li className="flex gap-3">
+                  <MessageCircle size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
+                  <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-gold-deep underline underline-offset-4 hover:text-ink" data-cta="quote-whatsapp">Scrivici su WhatsApp</a>
+                </li>
                 <li className="flex gap-3"><Mail size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.email}</span></li>
                 <li className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.address.street}, {site.address.locality}</span></li>
                 <li className="flex gap-3"><Clock size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">Lun-Ven 9:00-18:00</span></li>

@@ -32,6 +32,7 @@ export default function MetodoPage() {
     howTo({
       name: method.name,
       description: "Processo completo dal primo contatto alla consegna, con durata ed esito di ogni fase.",
+      totalTime: "P12D",
       steps: method.steps.map((s) => ({ name: s.name, text: s.text })),
     }),
     faqPage(metodoFaqs),

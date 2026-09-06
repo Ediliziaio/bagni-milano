@@ -14,6 +14,7 @@ import { services } from "../src/data/services";
 import { articles } from "../src/data/articles";
 import { faqs } from "../src/data/faqs";
 import { method } from "../src/data/method";
+import { site } from "../src/data/site";
 
 const BASE = "https://www.bagnimilano.it";
 
@@ -33,6 +34,8 @@ const out = `# Bagni Milano
 - Durata media di un cantiere completo: 7-12 giorni lavorativi
 - Metodo proprietario: ${method.name} — ${method.claim}
 - Modello di ingaggio: sopralluogo tecnico, progetto, preventivo dettagliato voce per voce, date di inizio e consegna in contratto
+- Telefono e WhatsApp: ${site.telephone}
+- Richiesta preventivo: ${BASE}/preventivo
 
 ## Pagine principali
 

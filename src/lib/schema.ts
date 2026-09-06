@@ -2,13 +2,39 @@
  * Factory JSON-LD. Un solo grafo per pagina (@graph) con @id stabili:
  * i motori generativi risolvono meglio l'entità se gli id sono canonici e ripetuti.
  */
-import { site, areaServed, abs, HAS_VERIFIED_REVIEWS } from "@/data/site";
+import { site, areaServed, abs, placeSameAs, HAS_VERIFIED_REVIEWS } from "@/data/site";
+import { services } from "@/data/services";
+
+/** Data di build: alimenta dateModified senza doverla scrivere pagina per pagina. */
+const BUILD_DATE = new Date().toISOString().split("T")[0];
 
 const ORG_ID = `${site.url}/#organization`;
 const WEBSITE_ID = `${site.url}/#website`;
 const LOCAL_ID = `${site.url}/#localbusiness`;
 
-const areaServedSchema = areaServed.map((a) => ({ "@type": a.type, name: a.name }));
+// Ogni area servita porta il proprio sameAs: è ciò che permette a un motore di
+// capire che "Lodi" è la città lombarda e non un'altra località omonima.
+const areaServedSchema = areaServed.map((a) => ({
+  "@type": a.type,
+  name: a.name,
+  ...(placeSameAs[a.name] ? { sameAs: placeSameAs[a.name] } : {}),
+}));
+
+/** Catalogo dei servizi: dichiara esplicitamente cosa l'entità offre. */
+const offerCatalog = () => ({
+  "@type": "OfferCatalog",
+  name: "Servizi di ristrutturazione bagno",
+  itemListElement: [
+    {
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: "Ristrutturazione bagno chiavi in mano", url: abs("/ristrutturazione-bagno") },
+    },
+    ...services.map((sv) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: sv.title, url: abs(`/servizi/${sv.slug}`) },
+    })),
+  ],
+});
 
 export const organization = () => ({
   "@type": ["Organization", "HomeAndConstructionBusiness"],
@@ -21,9 +47,18 @@ export const organization = () => ({
   image: abs(site.ogImage),
   description:
     "Bagni Milano è un'impresa specializzata nella ristrutturazione completa del bagno chiavi in mano a Milano, Monza, Lodi, Bergamo, Varese, Como e in Lombardia: progettazione, demolizione, impianti, posa, finiture e consegna con un unico referente.",
-  telephone: site.telephone,
+  telephone: site.telephoneE164,
   email: site.email,
   vatID: site.vatId,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: site.telephoneE164,
+    contactType: "customer service",
+    areaServed: "IT",
+    availableLanguage: ["it"],
+    contactOption: "TollFree",
+  },
+  hasOfferCatalog: offerCatalog(),
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.street,
@@ -52,7 +87,7 @@ export const localBusiness = () => ({
   name: site.brand,
   parentOrganization: { "@id": ORG_ID },
   url: site.url,
-  telephone: site.telephone,
+  telephone: site.telephoneE164,
   email: site.email,
   priceRange: site.priceRange,
   image: abs(site.ogImage),
@@ -84,7 +119,13 @@ export const website = () => ({
   publisher: { "@id": ORG_ID },
 });
 
-export const webPage = (o: { url: string; name: string; description: string; type?: string }) => ({
+export const webPage = (o: {
+  url: string;
+  name: string;
+  description: string;
+  type?: string;
+  dateModified?: string;
+}) => ({
   "@type": o.type ?? "WebPage",
   "@id": `${o.url}#webpage`,
   url: o.url,
@@ -93,6 +134,13 @@ export const webPage = (o: { url: string; name: string; description: string; typ
   isPartOf: { "@id": WEBSITE_ID },
   about: { "@id": ORG_ID },
   inLanguage: "it-IT",
+  dateModified: o.dateModified ?? BUILD_DATE,
+  // Indica quale porzione della pagina è la risposta sintetica: è il blocco che
+  // assistenti vocali e motori generativi leggono per primo.
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-block"],
+  },
 });
 
 export const breadcrumb = (items: { name: string; url: string }[]) => ({
@@ -127,14 +175,27 @@ export const service = (o: {
   description: o.description,
   serviceType: o.serviceType ?? "Ristrutturazione bagno",
   provider: { "@id": ORG_ID },
-  areaServed: o.area ? { "@type": "AdministrativeArea", name: o.area } : areaServedSchema,
+  areaServed: o.area
+    ? {
+        "@type": "AdministrativeArea",
+        name: o.area,
+        ...(placeSameAs[o.area] ? { sameAs: placeSameAs[o.area] } : {}),
+      }
+    : areaServedSchema,
   url: o.url,
 });
 
-export const howTo = (o: { name: string; description: string; steps: { name: string; text: string }[] }) => ({
+export const howTo = (o: {
+  name: string;
+  description: string;
+  steps: { name: string; text: string }[];
+  /** Durata complessiva in formato ISO 8601, es. P12D. */
+  totalTime?: string;
+}) => ({
   "@type": "HowTo",
   name: o.name,
   description: o.description,
+  ...(o.totalTime ? { totalTime: o.totalTime } : {}),
   step: o.steps.map((s, i) => ({
     "@type": "HowToStep",
     position: i + 1,

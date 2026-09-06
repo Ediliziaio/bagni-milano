@@ -20,8 +20,10 @@ export const site = {
   /** ⚠️ Dominio provvisorio: sostituire ovunque prima del deploy. */
   url: "https://www.bagnimilano.it",
 
-  telephone: TODO("telefono principale in formato +39XXXXXXXXXX"),
-  whatsapp: TODO("numero WhatsApp business"),
+  telephone: "+39 352 067 9764",
+  /** Formato E.164, per i link tel: e wa.me */
+  telephoneE164: "+393520679764",
+  whatsapp: "393520679764",
   email: TODO("email commerciale"),
   vatId: TODO("partita IVA"),
 
@@ -70,6 +72,26 @@ export const areaServed = [
   { name: "Provincia di Como", type: "AdministrativeArea" },
   { name: "Lombardia", type: "State" },
 ] as const;
+
+/**
+ * Disambiguazione delle entità geografiche per Google e per i motori generativi.
+ * "Milano" da solo è ambiguo; con un sameAs verso la voce enciclopedica non lo è più.
+ */
+export const placeSameAs: Record<string, string> = {
+  Milano: "https://it.wikipedia.org/wiki/Milano",
+  Monza: "https://it.wikipedia.org/wiki/Monza",
+  Lodi: "https://it.wikipedia.org/wiki/Lodi",
+  Bergamo: "https://it.wikipedia.org/wiki/Bergamo",
+  Varese: "https://it.wikipedia.org/wiki/Varese",
+  Como: "https://it.wikipedia.org/wiki/Como",
+  Lombardia: "https://it.wikipedia.org/wiki/Lombardia",
+  "Città metropolitana di Milano": "https://it.wikipedia.org/wiki/Citt%C3%A0_metropolitana_di_Milano",
+  "Provincia di Monza e della Brianza": "https://it.wikipedia.org/wiki/Provincia_di_Monza_e_della_Brianza",
+  "Provincia di Lodi": "https://it.wikipedia.org/wiki/Provincia_di_Lodi",
+  "Provincia di Bergamo": "https://it.wikipedia.org/wiki/Provincia_di_Bergamo",
+  "Provincia di Varese": "https://it.wikipedia.org/wiki/Provincia_di_Varese",
+  "Provincia di Como": "https://it.wikipedia.org/wiki/Provincia_di_Como",
+};
 
 export const abs = (path: string) => `${site.url}${path.startsWith("/") ? path : `/${path}`}`;
 

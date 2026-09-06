@@ -125,7 +125,16 @@ async function main() {
 
   console.log(`Prerender di ${urls.length} URL (concorrenza ${CONCURRENCY})...`);
   const start = Date.now();
-  const results = await pool(urls, CONCURRENCY, (u) => render(browser, u, port));
+  let results = await pool(urls, CONCURRENCY, (u) => render(browser, u, port));
+
+  // Un timeout isolato non deve far mancare una pagina dalla build: si riprova
+  // una volta, in serie, prima di considerarla persa.
+  const retry = results.filter((r) => !r.ok).map((r) => r.url);
+  if (retry.length) {
+    console.log(`Riprovo ${retry.length} URL falliti...`);
+    const second = await pool(retry, 1, (u) => render(browser, u, port));
+    results = results.map((r) => (r.ok ? r : second.find((x) => x.url === r.url) ?? r));
+  }
 
   await browser.close();
   server.close();

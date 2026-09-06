@@ -13,7 +13,12 @@ export const Footer = () => (
           Ristrutturazione bagno chiavi in mano a Milano, Monza, Lodi e in Lombardia.
           Un unico referente, preventivo chiuso, date in contratto.
         </p>
-        <p className="mt-4 text-xs text-cream/50">
+        <p className="mt-5">
+          <a href={`tel:${site.telephoneE164}`} className="font-display text-lg text-gold hover:text-gold-soft" data-cta="footer-call">
+            {site.telephone}
+          </a>
+        </p>
+        <p className="mt-3 text-xs text-cream/50">
           {site.legalName} · P.IVA {site.vatId}
         </p>
         <div className="mt-6 border-t border-line-dark pt-5">

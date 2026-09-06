@@ -19,6 +19,7 @@ export default function TempiPage() {
     howTo({
       name: "Cronoprogramma di una ristrutturazione bagno",
       description: timelineAnswer,
+      totalTime: "P12D",
       steps: workDays.map((w) => ({ name: `${w.day} — ${w.phase}`, text: w.detail })),
     }),
     faqPage(timeFaqs.map((f) => ({ q: f.q, a: f.a }))),

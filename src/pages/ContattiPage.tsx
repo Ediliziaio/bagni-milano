@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs, SectionHead } from "@/components/Ui";
@@ -33,7 +33,14 @@ export default function ContattiPage() {
           <div className="card">
             <SectionHead title="Recapiti" />
             <ul className="mt-6 space-y-4">
-              <li className="flex gap-3"><Phone size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.telephone}</span></li>
+              <li className="flex gap-3">
+                <Phone size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
+                <a href={`tel:${site.telephoneE164}`} className="text-gold-deep underline underline-offset-4 hover:text-ink" data-cta="contact-call">{site.telephone}</a>
+              </li>
+              <li className="flex gap-3">
+                <MessageCircle size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
+                <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-gold-deep underline underline-offset-4 hover:text-ink" data-cta="contact-whatsapp">WhatsApp</a>
+              </li>
               <li className="flex gap-3"><Mail size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.email}</span></li>
               <li className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.address.street} — {site.address.postalCode} {site.address.locality} ({site.address.region})</span></li>
             </ul>

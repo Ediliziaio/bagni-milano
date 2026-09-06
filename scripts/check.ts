@@ -103,7 +103,7 @@ import("../src/data/articles").then(({ articles }) => {
 }).catch(() => {});
 
 // 9. Ogni asset referenziato da meta o schema deve esistere.
-for (const asset of ["og-image.png", "logo.png", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "favicon.svg", "robots.txt", "sitemap.xml", "llms.txt", "site.webmanifest"])
+for (const asset of ["og-image.png", "logo.png", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "favicon.svg", "robots.txt", "sitemap.xml", "llms.txt", "site.webmanifest", "feed.xml"])
   if (!existsSync(path.join(DIST, asset))) errors.push(`asset mancante in dist/: ${asset}`);
 
 // 10. Ogni URL della sitemap deve avere una pagina prerenderizzata.

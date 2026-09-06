@@ -39,6 +39,7 @@ export default function RistrutturazioneBagnoPage() {
     howTo({
       name: `Come si svolge una ristrutturazione bagno con il ${method.name}`,
       description: method.promise,
+      totalTime: "P12D",
       steps: method.steps.map((s) => ({ name: s.name, text: s.text })),
     }),
     faqPage(pillarFaqs.map((f) => ({ q: f.q, a: f.a }))),
