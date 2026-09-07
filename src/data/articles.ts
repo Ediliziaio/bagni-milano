@@ -1251,7 +1251,7 @@ export const articles: Article[] = [
     readingTime: "6 min",
     primaryKeyword: "costo bagno 6 mq",
     internalLinks: [
-      { label: "Calcolatore: stima il costo del tuo bagno", href: "/calcolatore-costo-bagno" },
+      { label: "Come si compone il costo di una ristrutturazione", href: "/quanto-costa-ristrutturare-bagno" },
       { label: "Guida completa ai costi", href: "/quanto-costa-ristrutturare-bagno" },
     ],
     body: P(`

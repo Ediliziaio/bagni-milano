@@ -4,7 +4,7 @@ import { Seo } from "@/components/Seo";
 import { Img } from "@/components/Media";
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs, CheckList, SectionHead } from "@/components/Ui";
-import { abs, site } from "@/data/site";
+import { abs, site, isPending } from "@/data/site";
 import { graph, baseNodes, webPage, breadcrumb } from "@/lib/schema";
 import { method } from "@/data/method";
 
@@ -172,8 +172,16 @@ export default function PreventivoPage() {
                   <MessageCircle size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
                   <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-gold-deep underline underline-offset-4 hover:text-ink" data-cta="quote-whatsapp">Scrivici su WhatsApp</a>
                 </li>
-                <li className="flex gap-3"><Mail size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.email}</span></li>
-                <li className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.address.street}, {site.address.locality}</span></li>
+                {!isPending(site.email) && (
+                  <li className="flex gap-3">
+                    <Mail size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
+                    <a href={`mailto:${site.email}`} className="text-gold-deep underline underline-offset-4 hover:text-ink">{site.email}</a>
+                  </li>
+                )}
+                <li className="flex gap-3">
+                  <MapPin size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
+                  <span className="text-ink-soft">{site.address.locality} e provincia</span>
+                </li>
                 <li className="flex gap-3"><Clock size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">Lun-Ven 9:00-18:00</span></li>
               </ul>
             </div>

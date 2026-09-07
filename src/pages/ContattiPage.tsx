@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { Layout } from "@/components/Layout";
 import { Breadcrumbs, SectionHead } from "@/components/Ui";
-import { abs, site, areaServed } from "@/data/site";
+import { abs, site, areaServed, show, isPending } from "@/data/site";
 import { graph, baseNodes, webPage, breadcrumb } from "@/lib/schema";
 
 const PATH = "/contatti";
@@ -41,13 +41,22 @@ export default function ContattiPage() {
                 <MessageCircle size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
                 <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-gold-deep underline underline-offset-4 hover:text-ink" data-cta="contact-whatsapp">WhatsApp</a>
               </li>
-              <li className="flex gap-3"><Mail size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.email}</span></li>
-              <li className="flex gap-3"><MapPin size={18} className="mt-0.5 shrink-0 text-gold" aria-hidden /><span className="text-ink-soft">{site.address.street} — {site.address.postalCode} {site.address.locality} ({site.address.region})</span></li>
+              {!isPending(site.email) && (
+                <li className="flex gap-3">
+                  <Mail size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
+                  <a href={`mailto:${site.email}`} className="text-gold-deep underline underline-offset-4 hover:text-ink">{site.email}</a>
+                </li>
+              )}
+              <li className="flex gap-3">
+                <MapPin size={18} className="mt-0.5 shrink-0 text-gold-deep" aria-hidden />
+                <span className="text-ink-soft">
+                  {isPending(site.address.street) ? `${site.address.locality} e provincia` : `${site.address.street} — ${site.address.postalCode} ${site.address.locality} (${site.address.region})`}
+                </span>
+              </li>
             </ul>
             <p className="mt-6 text-xs leading-relaxed text-ink-muted">
-              I recapiti riportati sono segnaposto in attesa dei dati definitivi. La coerenza fra nome,
-              indirizzo e telefono su sito, Google Business Profile e directory è un requisito di Local SEO:
-              vanno pubblicati una sola volta, nella forma definitiva.
+              Il modo più rapido per avere una risposta è il telefono o WhatsApp: rispondiamo
+              negli orari di ufficio, dal lunedì al venerdì.
             </p>
             <Link to="/preventivo" className="btn-gold mt-8">Richiedi un preventivo</Link>
           </div>

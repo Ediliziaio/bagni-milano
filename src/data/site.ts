@@ -92,6 +92,19 @@ export const placeSameAs: Record<string, string> = {
   "Provincia di Como": "https://it.wikipedia.org/wiki/Provincia_di_Como",
 };
 
+/**
+ * Rende un valore aziendale a video.
+ *
+ * I `TODO_AZIENDA` servono a tracciare cosa manca, ma il token grezzo non deve
+ * finire sotto gli occhi di un cliente: finché il dato non c'è si mostra una
+ * dicitura neutra. Il tracciamento resta nel codice e in docs/00.
+ */
+export const show = (value: string, fallback = "In aggiornamento") =>
+  value.startsWith("TODO_AZIENDA") ? fallback : value;
+
+/** True quando il dato è ancora un segnaposto: per nascondere righe intere. */
+export const isPending = (value: string) => value.startsWith("TODO_AZIENDA");
+
 export const abs = (path: string) => `${site.url}${path.startsWith("/") ? path : `/${path}`}`;
 
 /**

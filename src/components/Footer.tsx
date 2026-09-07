@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { site } from "@/data/site";
+import { site, isPending } from "@/data/site";
 import { cities, comuni } from "@/data/cities";
 import { services } from "@/data/services";
 import { blogCategories } from "@/data/blog-categories";
@@ -18,9 +18,11 @@ export const Footer = () => (
             {site.telephone}
           </a>
         </p>
-        <p className="mt-3 text-xs text-cream/50">
-          {site.legalName} · P.IVA {site.vatId}
-        </p>
+        {!isPending(site.legalName) && (
+          <p className="mt-3 text-xs text-cream/50">
+            {site.legalName} · P.IVA {site.vatId}
+          </p>
+        )}
         <div className="mt-6 border-t border-line-dark pt-5">
           <p className="text-[0.75rem] sm:text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-cream/40">Partner</p>
           <img src="/img/partner-gruppo-bea.png" alt="Gruppo BEA, partner di Bagni Milano" width={600} height={200} loading="lazy" className="mt-3 h-9 w-auto opacity-80" />
@@ -64,7 +66,6 @@ export const Footer = () => (
         <p className="text-sm font-semibold text-gold">Risorse</p>
         <ul className="mt-3 space-y-2 text-sm text-cream/70">
           <li><Link className="hover:text-gold" to="/quanto-costa-ristrutturare-bagno">Quanto costa</Link></li>
-          <li><Link className="hover:text-gold" to="/calcolatore-costo-bagno">Calcolatore costi</Link></li>
           <li><Link className="hover:text-gold" to="/quanto-tempo-ristrutturare-bagno">Quanto tempo serve</Link></li>
           <li><Link className="hover:text-gold" to="/faq">Domande frequenti</Link></li>
           <li><Link className="hover:text-gold" to="/progetti">Progetti realizzati</Link></li>
