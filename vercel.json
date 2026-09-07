@@ -57,6 +57,11 @@
       "source": "/fasi-ristrutturazione-bagno",
       "destination": "/metodo",
       "permanent": true
+    },
+    {
+      "source": "/calcolatore-costo-bagno",
+      "destination": "/preventivo",
+      "permanent": true
     }
   ],
   "headers": [

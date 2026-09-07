@@ -170,8 +170,8 @@ export default function RistrutturazioneBagnoPage() {
             <p className="eyebrow">Costi</p>
             <h2 className="mt-2 text-2xl">Quanto costa</h2>
             <p className="mt-4 leading-relaxed text-ink-soft">
-              Per un bagno di 5-6 mq i range di mercato indicativi vanno da circa 8.000 a 18.000 €
-              in Lombardia. La variabile che pesa di più è lo stato dell'impianto idraulico, non la metratura.
+              Dipende da sei variabili, e quella che pesa di più è lo stato dell'impianto idraulico,
+              non la metratura. Il preventivo si costruisce dopo il sopralluogo, dettagliato voce per voce.
             </p>
             <Link to="/quanto-costa-ristrutturare-bagno" className="mt-5 inline-block text-sm text-gold-deep underline underline-offset-4 hover:text-ink">Guida completa ai costi</Link>
           </div>

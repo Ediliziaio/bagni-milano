@@ -89,7 +89,6 @@ export const localBusiness = () => ({
   url: site.url,
   telephone: site.telephoneE164,
   email: site.email,
-  priceRange: site.priceRange,
   image: abs(site.ogImage),
   address: {
     "@type": "PostalAddress",

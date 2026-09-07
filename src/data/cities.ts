@@ -55,7 +55,7 @@ export const cities: City[] = [
     logistics:
       "Su Milano città il sopralluogo viene fissato di norma entro pochi giorni lavorativi dalla richiesta. Il cantiere viene organizzato concentrando le lavorazioni rumorose nei primi giorni, per ridurre il disagio a vicini e condomini.",
     faqs: [
-      { q: "Quanto costa ristrutturare un bagno a Milano?", a: "I range di mercato per un bagno completo di 5-6 mq a Milano si collocano indicativamente tra 8.000 e 18.000 €, in funzione di metratura, rifacimento impianti e livello delle finiture. Il preventivo definitivo si costruisce solo dopo il sopralluogo." },
+      { q: "Quanto costa ristrutturare un bagno a Milano?", a: "Dipende da metratura, stato dell'impianto idraulico e livello delle finiture: a Milano la variabile che pesa di più è l'età dell'impianto, molto diffusa negli edifici anteriori alla metà degli anni Settanta. Il preventivo si costruisce dopo il sopralluogo, dettagliato voce per voce." },
       { q: "Lavorate anche in edifici storici del centro?", a: "Sì. In quel caso il sopralluogo verifica tipologia di solaio, spessori disponibili e presenza di vincoli, e il progetto viene adattato di conseguenza." },
       { q: "Quanto tempo serve per rifare un bagno a Milano?", a: "In media 7-12 giorni lavorativi per una ristrutturazione completa. Interventi mirati, come la trasformazione della vasca in doccia, richiedono 2-4 giorni." },
       { q: "Come gestite lo smaltimento delle macerie in centro?", a: "Con trasporto in discarica autorizzata e formulario rifiuti, pianificando carico e scarico negli orari compatibili con ZTL e regolamento condominiale." },

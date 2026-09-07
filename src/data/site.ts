@@ -50,7 +50,6 @@ export const site = {
   /** Partner dichiarato sul prototipo. Confermare natura del rapporto. */
   partner: { name: "Gruppo BEA", note: TODO("natura del rapporto con Gruppo BEA") },
 
-  priceRange: "€€–€€€",
   foundingDate: TODO("anno di fondazione"),
   ogImage: "/og-image.png",
   locale: "it_IT",

@@ -13,7 +13,7 @@ export const featuredGuides = [
     readingTime: "8 min",
     title: "Quanto costa rifare un bagno: la struttura reale del prezzo",
     excerpt:
-      "Il prezzo di un bagno non si stima a metro quadro. Dipende da sei variabili, e una sola di queste può valere qualche migliaio di euro.",
+      "Il prezzo di un bagno non si stima a metro quadro. Dipende da sei variabili, e una sola di queste pesa più di tutte le altre.",
     image: "art-quanto-costa-rifare-un-bagno",
   },
   {

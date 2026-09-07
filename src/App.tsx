@@ -9,7 +9,6 @@ const RistrutturazioneBagnoPage = lazy(() => import("./pages/RistrutturazioneBag
 const MetodoPage = lazy(() => import("./pages/MetodoPage"));
 const ChiSiamoPage = lazy(() => import("./pages/ChiSiamoPage"));
 const CostiPage = lazy(() => import("./pages/CostiPage"));
-const CalcolatorePage = lazy(() => import("./pages/CalcolatorePage"));
 const TempiPage = lazy(() => import("./pages/TempiPage"));
 const GeoPage = lazy(() => import("./pages/GeoPage"));
 const ServiziPage = lazy(() => import("./pages/ServiziPage"));
@@ -48,7 +47,7 @@ const App = () => (
         <Route path="/come-lavoriamo" element={<Navigate to="/metodo" replace />} />
         <Route path="/chi-siamo" element={<ChiSiamoPage />} />
         <Route path="/quanto-costa-ristrutturare-bagno" element={<CostiPage />} />
-        <Route path="/calcolatore-costo-bagno" element={<CalcolatorePage />} />
+        <Route path="/calcolatore-costo-bagno" element={<Navigate to="/preventivo" replace />} />
         <Route path="/quanto-tempo-ristrutturare-bagno" element={<TempiPage />} />
 
         {geoSlugs.map((slug) => (

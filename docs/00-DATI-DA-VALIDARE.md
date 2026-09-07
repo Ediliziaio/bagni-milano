@@ -31,7 +31,7 @@ esattamente ciò che il brief vieta, e comporta rischio reputazionale e di penal
 | 14 | Esiste pagamento dilazionato / finanziamento? | FAQ costi, CRO | ⬜ |
 | 15 | URL Google Business Profile + Place ID | Local SEO, `sameAs` | ⬜ |
 | 16 | Profili social ufficiali | `sameAs` nello schema | ⬜ |
-| 17 | Range di prezzo reali dell'azienda | `src/data/costs.ts` — oggi sono range **di mercato**, non aziendali | ⬜ |
+| 17 | ~~Range di prezzo~~ — **scelta editoriale: le pagine del sito non pubblicano importi**. Gli ordini di grandezza restano solo negli articoli del blog | Pagine e schema | ✅ |
 | 18 | Dati reali dei 4 progetti + foto prima/dopo | `src/data/projects.ts` — oggi `published: false` | ⬜ |
 | 19 | Recensioni verificabili (Google/Trustpilot) | Nessun `aggregateRating` finché non esistono | ⬜ |
 | 20 | Aliquote e massimali detrazioni in vigore | Articolo detrazioni, servizio bagno accessibile | ⬜ |

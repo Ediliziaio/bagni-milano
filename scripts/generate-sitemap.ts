@@ -29,7 +29,6 @@ const urls: Url[] = [
   { loc: "/", lastmod: today, changefreq: "weekly", priority: "1.0" },
   { loc: "/ristrutturazione-bagno", lastmod: today, changefreq: "weekly", priority: "0.95" },
   { loc: "/quanto-costa-ristrutturare-bagno", lastmod: today, changefreq: "monthly", priority: "0.9" },
-  { loc: "/calcolatore-costo-bagno", lastmod: today, changefreq: "monthly", priority: "0.85" },
   { loc: "/quanto-tempo-ristrutturare-bagno", lastmod: today, changefreq: "monthly", priority: "0.85" },
   { loc: "/metodo", lastmod: today, changefreq: "monthly", priority: "0.85" },
   { loc: "/chi-siamo", lastmod: today, changefreq: "monthly", priority: "0.8" },

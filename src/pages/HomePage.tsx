@@ -12,7 +12,7 @@ import { method } from "@/data/method";
 import { services } from "@/data/services";
 import { cities } from "@/data/cities";
 import { faqs } from "@/data/faqs";
-import { costBySize, costsDisclaimer } from "@/data/costs";
+import { costDrivers } from "@/data/costs";
 import { featuredGuides } from "@/data/featured";
 
 const homeFaqs = faqs.filter((f) =>
@@ -226,42 +226,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* COSTI */}
+      {/* COSTI — nessun importo: il preventivo si fa in sopralluogo */}
       <section className="section">
         <div className="container-x">
-          <SectionHead eyebrow="Costi" title="Quanto costa rifare un bagno" lede="Un ordine di grandezza per orientarsi, prima ancora del sopralluogo." />
-          <AnswerBlock>
-            <p>
-              Rifare un bagno completo di 5-6 mq costa indicativamente fra 8.000 e 18.000 € in
-              Lombardia, impianti inclusi. La variabile che pesa di più non è la metratura ma lo
-              stato dell'impianto idraulico esistente.
+          <Reveal>
+            <SectionHead
+              eyebrow="Costi"
+              title="Perché non troverai un listino"
+              lede="A parità di metri quadri due bagni possono costare in modo molto diverso. Pubblicare un prezzo medio servirebbe a noi per farci chiamare, non a te per decidere."
+            />
+          </Reveal>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {costDrivers.map((d, i) => (
+              <Reveal key={d.title} delay={(i % 3) * 80} className="card">
+                <span className="font-display text-2xl text-gold-deep/40">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-1 text-lg">{d.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{d.text}</p>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="mt-12">
+            <p className="max-w-2xl leading-relaxed text-ink-soft">
+              Dopo il sopralluogo ricevi un preventivo dettagliato voce per voce, che si chiude
+              prima della demolizione e resta quello fino alla consegna.
             </p>
-          </AnswerBlock>
-          <div className="mt-2 overflow-x-auto">
-            <table className="w-full min-w-[520px] border-collapse text-sm">
-              <caption className="sr-only">Range indicativi di costo per metratura</caption>
-              <thead>
-                <tr>
-                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Metratura</th>
-                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Range indicativo</th>
-                  <th scope="col" className="border border-line bg-sand p-3 text-left font-semibold">Note</th>
-                </tr>
-              </thead>
-              <tbody>
-                {costBySize.map((r) => (
-                  <tr key={r.label}>
-                    <th scope="row" className="border border-line p-3 text-left font-medium">{r.label}</th>
-                    <td className="border border-line p-3 whitespace-nowrap">{r.min.toLocaleString("it-IT")} – {r.max.toLocaleString("it-IT")} €</td>
-                    <td className="border border-line p-3 text-ink-soft">{r.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-4 text-xs leading-relaxed text-ink-muted">{costsDisclaimer}</p>
-          <div className="mt-8">
-            <Link to="/quanto-costa-ristrutturare-bagno" className="btn-ink">Guida completa ai costi <ArrowRight size={18} aria-hidden /></Link>
-          </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/quanto-costa-ristrutturare-bagno" className="btn-ink">Come si compone il costo</Link>
+              <Link to="/preventivo" className="btn-outline">Richiedi un preventivo</Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 

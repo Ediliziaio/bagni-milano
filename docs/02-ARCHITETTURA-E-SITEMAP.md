@@ -24,7 +24,6 @@
 ├── /chi-siamo                             Entità, E-E-A-T
 │
 ├── /quanto-costa-ristrutturare-bagno      MONEY — cluster costi
-│   └── /calcolatore-costo-bagno           strumento + lead magnet
 ├── /quanto-tempo-ristrutturare-bagno      MONEY — cluster tempi
 │
 ├── GEOGRAFICHE (top-level, pattern unico)

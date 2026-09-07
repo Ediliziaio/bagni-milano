@@ -11,7 +11,7 @@ export interface Faq {
 }
 
 export const faqs: Faq[] = [
-  { topic: "costi", q: "Quanto costa rifare un bagno a Milano?", a: "Per un bagno completo di 5-6 mq a Milano i range di mercato indicativi vanno da circa 8.000 a 18.000 €, in funzione del rifacimento degli impianti e del livello delle finiture. Il prezzo reale si definisce dopo il sopralluogo, con un preventivo dettagliato voce per voce." },
+  { topic: "costi", q: "Quanto costa rifare un bagno a Milano?", a: "Non pubblichiamo listini, perché a parità di metratura due bagni possono costare in modo molto diverso: contano lo stato dell'impianto idraulico, l'eventuale spostamento dei sanitari e il livello delle finiture. Dopo il sopralluogo ricevi un preventivo dettagliato voce per voce, che resta quello fino alla consegna." },
   { topic: "costi", q: "Il preventivo può cambiare durante i lavori?", a: "Solo per varianti richieste dal cliente o per criticità strutturali non visibili in sopralluogo, e in entrambi i casi previa approvazione scritta. Le lavorazioni già previste restano al prezzo firmato." },
   { topic: "costi", q: "Sono incluse le piastrelle e i sanitari?", a: "Sì. Nella formula chiavi in mano fornitura e posa di pavimenti, rivestimenti, sanitari, mobile e rubinetteria sono comprese nel preventivo, dentro il budget concordato." },
   { topic: "costi", q: "È possibile rateizzare o finanziare i lavori?", a: "TODO_AZIENDA: confermare se Bagni Milano offre pagamento dilazionato o finanziamento tramite istituto convenzionato, e a quali condizioni. Nessuna informazione viene pubblicata finché non è verificata." },
