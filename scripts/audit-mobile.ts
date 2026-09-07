@@ -61,7 +61,7 @@ async function main() {
     // che nel contesto della pagina non esistono.
     const res = (await page.evaluate(`(() => {
       const vw = ${W};
-      const out = { overflow: document.documentElement.scrollWidth - vw, wide: [], small: [], taps: [] };
+      const out = { overflow: document.documentElement.scrollWidth - vw, wide: [], small: [], taps: [], overlap: [], broken: [], longWords: [] };
       const label = (el) => {
         const c = (el.className || "").toString().split(/\\s+/).filter(Boolean).slice(0, 3).join(".");
         const t = (el.textContent || "").trim().slice(0, 30);
@@ -84,21 +84,63 @@ async function main() {
         const fs = parseFloat(st.fontSize);
         if (el.children.length === 0 && (el.textContent || "").trim().length > 8 && fs < 12) out.small.push(label(el) + " " + fs + "px");
       });
+      // Testi sovrapposti: due elementi di testo che occupano la stessa area.
+      // E' il difetto che a occhio salta subito e che nessun controllo di
+      // larghezza intercetta.
+      const texts = [...document.querySelectorAll("p, h1, h2, h3, h4, li, span, dd, dt, figcaption")]
+        .filter((e) => e.children.length === 0 && (e.textContent || "").trim().length > 12)
+        .map((e) => ({ el: e, r: e.getBoundingClientRect() }))
+        .filter((x) => x.r.width > 0 && x.r.height > 0);
+      for (let i = 0; i < texts.length; i++) {
+        for (let j = i + 1; j < texts.length; j++) {
+          const a = texts[i], b = texts[j];
+          if (a.el.contains(b.el) || b.el.contains(a.el)) continue;
+          const ox = Math.min(a.r.right, b.r.right) - Math.max(a.r.left, b.r.left);
+          const oy = Math.min(a.r.bottom, b.r.bottom) - Math.max(a.r.top, b.r.top);
+          if (ox > 12 && oy > 8) {
+            out.overlap.push(label(a.el) + " ⨯ " + label(b.el));
+            break;
+          }
+        }
+      }
+
+      // Immagini che non hanno caricato o sono collassate
+      document.querySelectorAll("img").forEach((im) => {
+        // Le immagini nascoste a questa larghezza (varianti desktop) non sono rotte.
+        if (!im.offsetParent && getComputedStyle(im).position !== "fixed") return;
+        const b = im.getBoundingClientRect();
+        if (b.width < 4 || b.height < 4) out.broken.push("collassata: " + (im.getAttribute("src") || ""));
+        else if (im.complete && im.naturalWidth === 0) out.broken.push("non caricata: " + (im.getAttribute("src") || ""));
+      });
+
+      // Parole troppo lunghe per la colonna: causano sfondamenti su schermo stretto
+      document.querySelectorAll("p, h1, h2, h3, li").forEach((el) => {
+        if (el.children.length) return;
+        const w = (el.textContent || "").split(" ").find((x) => x.length > 28);
+        if (w) out.longWords.push(label(el) + " → " + w.slice(0, 32));
+      });
+
       document.querySelectorAll("a, button, input, select, [role=button]").forEach((el) => {
         const b = el.getBoundingClientRect();
         if (b.width === 0 || b.height === 0) return;
         const sr = el.className && el.className.toString().includes("sr-only");
+        const t = el.getAttribute("type");
+        const labelled = (t === "checkbox" || t === "radio") && (el.closest("label") || (el.id && document.querySelector('label[for="' + el.id + '"]')));
+        if (labelled) return;
         if (b.height < 44 && !sr && !el.closest("nav[aria-label='Percorso']") && !el.closest(".prose-bm") && !el.closest("footer"))
           out.taps.push(label(el) + " " + Math.round(b.height) + "px");
       });
       return out;
-    })()`)) as { overflow: number; wide: string[]; small: string[]; taps: string[] };
+    })()`)) as { overflow: number; wide: string[]; small: string[]; taps: string[]; overlap: string[]; broken: string[]; longWords: string[] };
 
     const issues: string[] = [];
     if (res.overflow > 1) issues.push(`scorrimento orizzontale +${res.overflow}px`);
     if (res.wide.length) issues.push(`${res.wide.length} elementi fuori viewport: ${[...new Set(res.wide)].slice(0, 3).join(" | ")}`);
     if (res.small.length) issues.push(`${res.small.length} testi <12px: ${[...new Set(res.small)].slice(0, 2).join(" | ")}`);
     if (res.taps.length) issues.push(`${res.taps.length} tap target <44px: ${[...new Set(res.taps)].slice(0, 2).join(" | ")}`);
+    if (res.overlap.length) issues.push(`${res.overlap.length} testi sovrapposti: ${[...new Set(res.overlap)].slice(0, 2).join(" | ")}`);
+    if (res.broken.length) issues.push(`${res.broken.length} immagini non renderizzate: ${[...new Set(res.broken)].slice(0, 2).join(" | ")}`);
+    if (res.longWords.length) issues.push(`${res.longWords.length} parole troppo lunghe: ${[...new Set(res.longWords)].slice(0, 2).join(" | ")}`);
 
     if (issues.length) problems.push(`\n${r}\n  ${issues.join("\n  ")}`);
     else clean++;

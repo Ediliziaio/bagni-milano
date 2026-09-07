@@ -29,11 +29,13 @@ export const Breadcrumbs = ({ items }: { items: { name: string; href?: string }[
       {items.map((it, i) => (
         <li
           key={it.name}
-          /* L'ultima voce ripete l'H1: su mobile occupa righe senza aggiungere nulla. */
+          /* L'ultima voce ripete l'H1: su mobile occupa righe senza aggiungere nulla.
+             Il separatore sta DENTRO la voce che segue, così nascondendo la voce
+             sparisce anche il suo separatore: senza, resta un "Home /" penzolante. */
           className={cn("items-center gap-1.5", i === items.length - 1 ? "hidden sm:flex" : "flex")}
         >
+          {i > 0 && <span className="mr-1.5" aria-hidden>/</span>}
           {it.href ? <Link to={it.href} className="hover:text-gold-deep">{it.name}</Link> : <span className="text-ink-soft">{it.name}</span>}
-          {i < items.length - 1 && <span aria-hidden>/</span>}
         </li>
       ))}
     </ol>

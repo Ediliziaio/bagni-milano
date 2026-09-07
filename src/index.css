@@ -98,7 +98,8 @@
   /* Consenso privacy: la casella resta 16px per convenzione, ma l'etichetta
      accanto e' cliccabile e porta l'area utile oltre i 44px. */
   .consent { @apply flex items-start gap-3 py-2; }
-  .consent input { @apply mt-2 h-5 w-5; }
+  .consent input { @apply mt-1.5 h-6 w-6 shrink-0; }
+  .consent a { display: inline-flex; align-items: center; min-height: 44px; }
   .on-dark .card,
   .card-dark { @apply rounded-[2px] border border-line-dark bg-ink-3 p-6 sm:p-7 text-cream/80; }
   .on-dark .card h3, .card-dark h3 { @apply text-cream; }
